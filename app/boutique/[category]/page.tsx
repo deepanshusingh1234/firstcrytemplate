@@ -139,23 +139,27 @@ export default function BoutiqueCategoryPage() {
         );
     }
 
+    // In your parent page, make sure the sections are stacked without any margins
     return (
         <div className="bg-white">
             <BoutiqueBanner category={data.category} />
 
-            <BoutiqueHeader
-                category={data.category}
-                sortOptions={data.sortOptions}
-                onSortChange={handleSortChange}
-            />
+            {/* Combined Header and Filters - no gap */}
+            <div className="bg-[#3d3d3d]">
+                <BoutiqueHeader
+                    category={data.category}
+                    sortOptions={data.sortOptions}
+                    onSortChange={handleSortChange}
+                />
+                <BoutiqueFilters
+                    filters={data.filters}
+                    onFilterChange={handleFilterChange}
+                    onPincodeCheck={handlePincodeCheck}
+                />
+            </div>
 
-            <BoutiqueFilters
-                filters={data.filters}
-                onFilterChange={handleFilterChange}
-                onPincodeCheck={handlePincodeCheck}
-            />
-
-            <div className=" bg-[#242424]">
+            {/* Product Grid - directly adjacent */}
+            <div className="bg-[#242424]">
                 <BoutiqueProductGrid
                     products={sortedProducts}
                     totalCount={data.category.itemCount}

@@ -18,7 +18,7 @@ const BoutiqueProductGrid: React.FC<Props> = ({ products, totalCount }) => {
     };
 
     return (
-        <div className="mainContainer max-w-[1366px] mx-auto px-4 bg-[#242424]">
+        <div className="mainContainer max-w-[1366px] mx-auto px-4 py-8">
             <div className="innerWrapper">
                 <div className="pcatgory">
                     <ul className="viewfour grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

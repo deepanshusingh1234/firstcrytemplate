@@ -28,10 +28,10 @@ const BoutiqueHeader: React.FC<Props> = ({ category, sortOptions, onSortChange }
 
     return (
         <div className="boutique-flexible">
-            <div className="innerWrapper max-w-[1366px] mx-auto px-4 bg-[#3d3d3d]">
+            <div className="innerWrapper max-w-[1366px] mx-auto px-4">
                 <div className="pcontainer">
                     <div className="filter-main-wrap">
-                        <div className="filter-head phead clearfix flex justify-between items-center mb-4">
+                        <div className="filter-head phead clearfix flex justify-between items-center py-4">
                             <div className="lft flex items-center">
                                 <ul className="lft flex items-center space-x-2">
                                     <li>

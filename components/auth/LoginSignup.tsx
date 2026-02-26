@@ -1,32 +1,26 @@
+// components/auth/LoginSignup.tsx
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
 import { Eye, EyeOff, X, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import { useAuth } from '@/context/AuthContext';
 
 interface LoginSignupProps {
     isOpen?: boolean;
     onClose?: () => void;
-    onLoginSuccess?: (userData: UserData) => void;
     redirectUrl?: string;
-}
-
-interface UserData {
-    fullName: string;
-    emailOrMobile: string;
-    countryCode: string;
-    isLoggedIn: boolean;
-    loginTime: string;
 }
 
 const LoginSignup: React.FC<LoginSignupProps> = ({
     isOpen = true,
     onClose,
-    onLoginSuccess,
-    redirectUrl = 'https://checkout.firstcry.com/pay'
+    redirectUrl = '/'
 }) => {
     const router = useRouter();
+    const { login } = useAuth();
+
     // Default test credentials
     const [fullName, setFullName] = useState('');
     const [emailOrMobile, setEmailOrMobile] = useState('');
@@ -113,8 +107,6 @@ const LoginSignup: React.FC<LoginSignupProps> = ({
 
         // Simulate API call
         setTimeout(() => {
-            setIsLoading(false);
-
             if (isLoginMode) {
                 // Login Logic
                 const storedUsers = localStorage.getItem('firstCryUsers');
@@ -134,7 +126,7 @@ const LoginSignup: React.FC<LoginSignupProps> = ({
                     };
 
                     // Store logged in user
-                    const userData: UserData = {
+                    const userData = {
                         fullName: user.fullName || 'Test User',
                         emailOrMobile: user.emailOrMobile,
                         countryCode: user.countryCode || countryCode,
@@ -146,15 +138,19 @@ const LoginSignup: React.FC<LoginSignupProps> = ({
 
                     console.log('Login successful', { emailOrMobile, countryCode });
 
-                    // Call onLoginSuccess callback
-                    if (onLoginSuccess) {
-                        onLoginSuccess(userData);
-                    }
+                    // Update context
+                    login(userData);
 
-                    // Close modal
+                    // Close modal and redirect
                     if (onClose) onClose();
+
+                    // Redirect to the redirectUrl or home
+                    router.push(redirectUrl);
+
+                    setIsLoading(false);
                 } else {
                     setErrorMessage('Invalid email/mobile or password');
+                    setIsLoading(false);
                 }
             } else {
                 // Registration Logic
@@ -166,12 +162,13 @@ const LoginSignup: React.FC<LoginSignupProps> = ({
 
                 if (userExists) {
                     setErrorMessage('User with this email/mobile already exists');
+                    setIsLoading(false);
                 } else {
                     // Create new user
                     const newUser = {
                         fullName,
                         emailOrMobile,
-                        password, // In production, this should be hashed
+                        password,
                         countryCode,
                         isLoggedIn: false,
                         loginTime: ''
@@ -181,7 +178,7 @@ const LoginSignup: React.FC<LoginSignupProps> = ({
                     localStorage.setItem('firstCryUsers', JSON.stringify(users));
 
                     // Auto login after registration
-                    const userData: UserData = {
+                    const userData = {
                         fullName,
                         emailOrMobile,
                         countryCode,
@@ -193,13 +190,16 @@ const LoginSignup: React.FC<LoginSignupProps> = ({
 
                     console.log('Registration successful', { fullName, emailOrMobile, countryCode });
 
-                    // Call onLoginSuccess callback
-                    if (onLoginSuccess) {
-                        onLoginSuccess(userData);
-                    }
+                    // Update context
+                    login(userData);
 
-                    // Close modal
+                    // Close modal and redirect
                     if (onClose) onClose();
+
+                    // Redirect to the redirectUrl or home
+                    router.push(redirectUrl);
+
+                    setIsLoading(false);
                 }
             }
         }, 1500);
@@ -211,7 +211,7 @@ const LoginSignup: React.FC<LoginSignupProps> = ({
 
         setTimeout(() => {
             // Create a demo user for Google login
-            const userData: UserData = {
+            const userData = {
                 fullName: 'Google User',
                 emailOrMobile: 'google.user@gmail.com',
                 countryCode: '91',
@@ -235,15 +235,16 @@ const LoginSignup: React.FC<LoginSignupProps> = ({
                 localStorage.setItem('firstCryUsers', JSON.stringify(users));
             }
 
-            setIsLoading(false);
+            // Update context
+            login(userData);
 
-            // Call onLoginSuccess callback
-            if (onLoginSuccess) {
-                onLoginSuccess(userData);
-            }
-
-            // Close modal
+            // Close modal and redirect
             if (onClose) onClose();
+
+            // Redirect to the redirectUrl or home
+            router.push(redirectUrl);
+
+            setIsLoading(false);
         }, 1500);
     };
 
@@ -477,7 +478,27 @@ const LoginSignup: React.FC<LoginSignupProps> = ({
                                 </p>
                             </div>
 
+                            {/* OR Divider */}
+                            <div className="mt-6 flex items-center">
+                                <div className="flex-1 h-px bg-gray-200"></div>
+                                <p className="px-4 text-sm text-gray-500">Or log-In with</p>
+                                <div className="flex-1 h-px bg-gray-200"></div>
+                            </div>
 
+                            {/* Social Login */}
+                            <div className="mt-6">
+                                <button
+                                    onClick={handleGoogleLogin}
+                                    className="w-full flex items-center justify-center space-x-3 py-3 border rounded-lg hover:bg-gray-50 transition-colors"
+                                >
+                                    <img
+                                        src="//cdn.fcglcdn.com/brainbees/images/m/loginrev_google.jpg"
+                                        alt="Google"
+                                        className="w-6 h-6"
+                                    />
+                                    <span className="text-base font-medium text-gray-700">Continue with Google</span>
+                                </button>
+                            </div>
 
                             {/* Terms and Privacy Footer */}
                             <div className="mt-6 text-center">

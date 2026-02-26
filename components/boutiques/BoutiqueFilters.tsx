@@ -16,10 +16,10 @@ const BoutiqueFilters: React.FC<Props> = ({ filters, onFilterChange, onPincodeCh
 
     return (
         <div className="boutique-flexible">
-            <div className="innerWrapper max-w-[1366px] mx-auto px-4 bg-[#3d3d3d]">
+            <div className="innerWrapper max-w-[1366px] mx-auto px-4 pb-4">
                 <div id="myfilter">
                     {/* Filter Tabs */}
-                    <div className="filter-tab flex justify-between items-center mb-4">
+                    <div className="filter-tab flex justify-between items-center">
                         <div className="div-ib lft">
                             <ul className="optionCount flex items-center space-x-4">
                                 <li className="text-sm text-white">Filter by:</li>
@@ -47,7 +47,7 @@ const BoutiqueFilters: React.FC<Props> = ({ filters, onFilterChange, onPincodeCh
                     </div>
 
                     {/* Pincode Check */}
-                    <div className="filter-tab flex justify-end mb-4">
+                    <div className="filter-tab flex justify-end">
                         <div className="div-ib rgt">
                             <div className="value_chk flex items-center space-x-2">
                                 <input
@@ -70,7 +70,7 @@ const BoutiqueFilters: React.FC<Props> = ({ filters, onFilterChange, onPincodeCh
 
                     {/* Active Filter Options */}
                     {activeFilter && (
-                        <div className="tab-wrap myptabdetails mb-6">
+                        <div className="tab-wrap myptabdetails mt-4 mb-2">
                             <div className="tab-options pcontents tab active border border-gray-300 rounded p-4">
                                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                                     {filters
