@@ -1,0 +1,684 @@
+{
+    "category": {
+        "id": "holi-celebrations",
+        "name": "Holi Celebrations",
+        "slug": "holi-celebrations",
+        "description": "Explore T-shirt, Ethnic wear, party wear & More",
+        "itemCount": 1041,
+        "bannerImage": "//cdn.fcglcdn.com/brainbees/images/boutique/994x295/38715.webp",
+        "tileImage": "//cdn.fcglcdn.com/brainbees/images/boutique/tileimages/38715.webp",
+        "endDate": "2026-03-31T09:30:00+05:30",
+        "endDateText": "Boutique open until stocks last"
+    },
+    "filters": [
+        {
+            "id": "subcategory",
+            "name": "Subcategory",
+            "type": "subcategory",
+            "options": [
+                {
+                    "id": "ethnic-wear",
+                    "name": "Ethnic Wear",
+                    "count": 305,
+                    "value": "246"
+                },
+                {
+                    "id": "frocks-dresses",
+                    "name": "Frocks and Dresses",
+                    "count": 261,
+                    "value": "168"
+                },
+                {
+                    "id": "onesies-rompers",
+                    "name": "Onesies & Rompers",
+                    "count": 1,
+                    "value": "164"
+                },
+                {
+                    "id": "pajamas-leggings",
+                    "name": "Pajamas & Leggings",
+                    "count": 1,
+                    "value": "269"
+                },
+                {
+                    "id": "party-wear",
+                    "name": "Party Wear",
+                    "count": 265,
+                    "value": "243"
+                },
+                {
+                    "id": "sets-suits",
+                    "name": "Sets & Suits",
+                    "count": 2,
+                    "value": "166"
+                },
+                {
+                    "id": "shorts-skirts-jeans",
+                    "name": "Shorts, Skirts & Jeans",
+                    "count": 142,
+                    "value": "221"
+                },
+                {
+                    "id": "t-shirts",
+                    "name": "T-shirts",
+                    "count": 65,
+                    "value": "26"
+                }
+            ]
+        },
+        {
+            "id": "brands",
+            "name": "Brands",
+            "type": "brand",
+            "options": [
+                {
+                    "id": "babyhug",
+                    "name": "Babyhug",
+                    "count": 332,
+                    "value": "621"
+                },
+                {
+                    "id": "mark-mia",
+                    "name": "Mark & Mia",
+                    "count": 214,
+                    "value": "1005273"
+                },
+                {
+                    "id": "pine-kids",
+                    "name": "Pine Kids",
+                    "count": 129,
+                    "value": "1006125"
+                },
+                {
+                    "id": "babyoye",
+                    "name": "Babyoye",
+                    "count": 55,
+                    "value": "1004078"
+                },
+                {
+                    "id": "ollington-st",
+                    "name": "OLLINGTON ST.",
+                    "count": 22,
+                    "value": "1007141"
+                },
+                {
+                    "id": "hola-bonita",
+                    "name": "Hola Bonita",
+                    "count": 122,
+                    "value": "1006492"
+                },
+                {
+                    "id": "babyhug-disney",
+                    "name": "Babyhug Disney",
+                    "count": 9,
+                    "value": "1009182"
+                },
+                {
+                    "id": "earthy-touch",
+                    "name": "EARTHY TOUCH",
+                    "count": 34,
+                    "value": "1007181"
+                },
+                {
+                    "id": "doodle-poodle",
+                    "name": "Doodle Poodle",
+                    "count": 8,
+                    "value": "1007304"
+                },
+                {
+                    "id": "honeyhap",
+                    "name": "Honeyhap",
+                    "count": 3,
+                    "value": "1006524"
+                },
+                {
+                    "id": "babyhug-marvel",
+                    "name": "Babyhug Marvel",
+                    "count": 1,
+                    "value": "1009184"
+                },
+                {
+                    "id": "bonfino",
+                    "name": "Bonfino",
+                    "count": 22,
+                    "value": "1007256"
+                },
+                {
+                    "id": "carters",
+                    "name": "Carter's",
+                    "count": 9,
+                    "value": "52"
+                },
+                {
+                    "id": "cherry-crumble",
+                    "name": "Cherry Crumble By Nitt Hyman",
+                    "count": 2,
+                    "value": "1003679"
+                },
+                {
+                    "id": "kavee",
+                    "name": "KAVEE",
+                    "count": 59,
+                    "value": "1006737"
+                },
+                {
+                    "id": "ollypop",
+                    "name": "Ollypop",
+                    "count": 2,
+                    "value": "351"
+                },
+                {
+                    "id": "primo-gino",
+                    "name": "Primo Gino",
+                    "count": 14,
+                    "value": "1007257"
+                },
+                {
+                    "id": "ruff",
+                    "name": "Ruff",
+                    "count": 1,
+                    "value": "236"
+                },
+                {
+                    "id": "tiber-taber",
+                    "name": "Tiber Taber",
+                    "count": 1,
+                    "value": "1003757"
+                },
+                {
+                    "id": "ucb",
+                    "name": "UCB",
+                    "count": 1,
+                    "value": "1002532"
+                },
+                {
+                    "id": "zeezeezoo",
+                    "name": "Zeezeezoo",
+                    "count": 1,
+                    "value": "1003245"
+                }
+            ]
+        },
+        {
+            "id": "discounts",
+            "name": "Discount",
+            "type": "discount",
+            "options": [
+                {
+                    "id": "upto-10",
+                    "name": "Upto 10%",
+                    "count": 6,
+                    "value": "d0"
+                },
+                {
+                    "id": "10-20",
+                    "name": "10%-20%",
+                    "count": 307,
+                    "value": "d1"
+                },
+                {
+                    "id": "20-30",
+                    "name": "20%-30%",
+                    "count": 510,
+                    "value": "d2"
+                },
+                {
+                    "id": "30-40",
+                    "name": "30%-40%",
+                    "count": 68,
+                    "value": "d3"
+                },
+                {
+                    "id": "40-plus",
+                    "name": "More than 40%",
+                    "count": 76,
+                    "value": "d4"
+                }
+            ]
+        },
+        {
+            "id": "prices",
+            "name": "Price",
+            "type": "price",
+            "options": [
+                {
+                    "id": "0-250",
+                    "name": "0 to 250",
+                    "count": 4,
+                    "value": "p0"
+                },
+                {
+                    "id": "250-500",
+                    "name": "250 to 500",
+                    "count": 91,
+                    "value": "p1"
+                },
+                {
+                    "id": "500-1000",
+                    "name": "500 to 1000",
+                    "count": 377,
+                    "value": "p2"
+                },
+                {
+                    "id": "1000-2000",
+                    "name": "1000 to 2000",
+                    "count": 526,
+                    "value": "p3"
+                },
+                {
+                    "id": "2000-3000",
+                    "name": "2000 to 3000",
+                    "count": 163,
+                    "value": "p4"
+                },
+                {
+                    "id": "3000-4000",
+                    "name": "3000 to 4000",
+                    "count": 6,
+                    "value": "p5"
+                }
+            ]
+        },
+        {
+            "id": "age",
+            "name": "Age",
+            "type": "age",
+            "options": [
+                {
+                    "id": "0-3-months",
+                    "name": "0-3 Months",
+                    "count": 56,
+                    "value": "0"
+                },
+                {
+                    "id": "3-6-months",
+                    "name": "3-6 Months",
+                    "count": 112,
+                    "value": "1"
+                },
+                {
+                    "id": "6-9-months",
+                    "name": "6-9 Months",
+                    "count": 173,
+                    "value": "2"
+                },
+                {
+                    "id": "9-12-months",
+                    "name": "9-12 Months",
+                    "count": 238,
+                    "value": "3"
+                },
+                {
+                    "id": "12-18-months",
+                    "name": "12-18 Months",
+                    "count": 371,
+                    "value": "4"
+                },
+                {
+                    "id": "18-24-months",
+                    "name": "18-24 Months",
+                    "count": 372,
+                    "value": "5"
+                },
+                {
+                    "id": "2-4-years",
+                    "name": "2-4 Years",
+                    "count": 497,
+                    "value": "6"
+                },
+                {
+                    "id": "4-6-years",
+                    "name": "4-6 Years",
+                    "count": 623,
+                    "value": "7"
+                },
+                {
+                    "id": "6-8-years",
+                    "name": "6-8 Years",
+                    "count": 305,
+                    "value": "8"
+                },
+                {
+                    "id": "8-10-years",
+                    "name": "8-10 Years",
+                    "count": 278,
+                    "value": "9"
+                },
+                {
+                    "id": "10-12-years",
+                    "name": "10-12 Years",
+                    "count": 202,
+                    "value": "10"
+                },
+                {
+                    "id": "12-plus-years",
+                    "name": "12+ Years",
+                    "count": 147,
+                    "value": "11"
+                },
+                {
+                    "id": "preemie",
+                    "name": "Preemie",
+                    "count": 2,
+                    "value": "15"
+                },
+                {
+                    "id": "new-born",
+                    "name": "New born",
+                    "count": 32,
+                    "value": "27"
+                }
+            ]
+        },
+        {
+            "id": "gender",
+            "name": "Gender",
+            "type": "gender",
+            "options": [
+                {
+                    "id": "girl",
+                    "name": "Girl",
+                    "count": 779,
+                    "value": "female"
+                },
+                {
+                    "id": "boy",
+                    "name": "Boy",
+                    "count": 265,
+                    "value": "male"
+                },
+                {
+                    "id": "unisex",
+                    "name": "Unisex",
+                    "count": 3,
+                    "value": "both"
+                }
+            ]
+        },
+        {
+            "id": "colors",
+            "name": "Colors",
+            "type": "color",
+            "options": [
+                {
+                    "id": "beige",
+                    "name": "Beige",
+                    "count": 12,
+                    "value": "1"
+                },
+                {
+                    "id": "black",
+                    "name": "Black",
+                    "count": 50,
+                    "value": "2"
+                },
+                {
+                    "id": "blue",
+                    "name": "Blue",
+                    "count": 119,
+                    "value": "3"
+                },
+                {
+                    "id": "brown",
+                    "name": "Brown",
+                    "count": 10,
+                    "value": "4"
+                },
+                {
+                    "id": "cream",
+                    "name": "Cream",
+                    "count": 3,
+                    "value": "5"
+                },
+                {
+                    "id": "golden",
+                    "name": "Golden",
+                    "count": 3,
+                    "value": "6"
+                },
+                {
+                    "id": "green",
+                    "name": "Green",
+                    "count": 28,
+                    "value": "7"
+                },
+                {
+                    "id": "grey",
+                    "name": "Grey",
+                    "count": 5,
+                    "value": "8"
+                },
+                {
+                    "id": "maroon",
+                    "name": "Maroon",
+                    "count": 51,
+                    "value": "9"
+                },
+                {
+                    "id": "multi",
+                    "name": "Multi Color",
+                    "count": 29,
+                    "value": "10"
+                },
+                {
+                    "id": "offwhite",
+                    "name": "Offwhite",
+                    "count": 6,
+                    "value": "12"
+                },
+                {
+                    "id": "orange",
+                    "name": "Orange",
+                    "count": 9,
+                    "value": "13"
+                },
+                {
+                    "id": "peach",
+                    "name": "Peach",
+                    "count": 10,
+                    "value": "15"
+                },
+                {
+                    "id": "pink",
+                    "name": "Pink",
+                    "count": 98,
+                    "value": "16"
+                },
+                {
+                    "id": "purple",
+                    "name": "Purple",
+                    "count": 34,
+                    "value": "17"
+                },
+                {
+                    "id": "red",
+                    "name": "Red",
+                    "count": 102,
+                    "value": "19"
+                },
+                {
+                    "id": "white",
+                    "name": "White",
+                    "count": 100,
+                    "value": "21"
+                },
+                {
+                    "id": "yellow",
+                    "name": "Yellow",
+                    "count": 49,
+                    "value": "22"
+                }
+            ]
+        },
+        {
+            "id": "materials",
+            "name": "Material",
+            "type": "material",
+            "options": [
+                {
+                    "id": "cotton",
+                    "name": "Cotton",
+                    "count": 153,
+                    "value": "1"
+                },
+                {
+                    "id": "cotton-mix",
+                    "name": "Cotton Mixes or Cotton Poly",
+                    "count": 69,
+                    "value": "2"
+                },
+                {
+                    "id": "rayon",
+                    "name": "Rayon",
+                    "count": 7,
+                    "value": "4"
+                },
+                {
+                    "id": "nylon",
+                    "name": "Nylon",
+                    "count": 6,
+                    "value": "5"
+                },
+                {
+                    "id": "silk",
+                    "name": "Silk",
+                    "count": 1,
+                    "value": "8"
+                },
+                {
+                    "id": "polyester",
+                    "name": "Polyester",
+                    "count": 166,
+                    "value": "9"
+                },
+                {
+                    "id": "denim",
+                    "name": "Denim",
+                    "count": 75,
+                    "value": "12"
+                },
+                {
+                    "id": "velvet",
+                    "name": "Velvet",
+                    "count": 4,
+                    "value": "19"
+                },
+                {
+                    "id": "poly-rayon",
+                    "name": "Poly Rayon",
+                    "count": 7,
+                    "value": "22"
+                }
+            ]
+        }
+    ],
+    "sortOptions": [
+        {
+            "id": "new-arrivals",
+            "name": "New Arrivals",
+            "value": "NewArrivals"
+        },
+        {
+            "id": "best-seller",
+            "name": "Best Seller",
+            "value": "BestSeller"
+        },
+        {
+            "id": "discount",
+            "name": "Discount",
+            "value": "HighestDiscount"
+        },
+        {
+            "id": "price-low-high",
+            "name": "Price: Low To High",
+            "value": "Price"
+        },
+        {
+            "id": "name-a-z",
+            "name": "Name: A to Z",
+            "value": "Name"
+        }
+    ],
+    "products": [
+        {
+            "id": "21093192",
+            "brand": "Babyhug",
+            "name": "Cotton Woven Full Sleeves Cambric Floral Printed Kurta Dhoti Set- Multicolour",
+            "defaultImage": "//cdn.fcglcdn.com/brainbees/images/products/438x531/21093192a.webp",
+            "images": [
+                {
+                    "url": "//cdn.fcglcdn.com/brainbees/images/products/438x531/21093192a.webp"
+                },
+                {
+                    "url": "//cdn.fcglcdn.com/brainbees/images/products/438x531/21093192b.webp"
+                }
+            ],
+            "defaultPrice": 663.17,
+            "defaultMrp": 799,
+            "defaultClubPrice": 647.19,
+            "ageGroup": "New Born",
+            "colors": [
+                {
+                    "name": "Multicolour",
+                    "code": "#EEEEEE",
+                    "imageUrl": "//cdn.fcglcdn.com/brainbees/images/products/438x531/21093192a.webp",
+                    "variants": [
+                        {
+                            "id": "var1",
+                            "size": "New Born",
+                            "price": 663.17,
+                            "available": true
+                        }
+                    ]
+                }
+            ],
+            "url": "/boutique/holi-celebrations/21093192"
+        },
+        {
+            "id": "18240268",
+            "brand": "Babyhug",
+            "name": "Cotton Woven Full Sleeves Kurta Dhoti Set with Jacket & Aztec Design - White",
+            "defaultImage": "//cdn.fcglcdn.com/brainbees/images/products/438x531/18240268a.webp",
+            "images": [
+                {
+                    "url": "//cdn.fcglcdn.com/brainbees/images/products/438x531/18240268a.webp"
+                },
+                {
+                    "url": "//cdn.fcglcdn.com/brainbees/images/products/438x531/18240268b.webp"
+                }
+            ],
+            "defaultPrice": 1055.34,
+            "defaultMrp": 1599,
+            "defaultClubPrice": 1023.36,
+            "ageGroup": "Multiple Sizes Available",
+            "colors": [
+                {
+                    "name": "White",
+                    "code": "#FFFFFF",
+                    "imageUrl": "//cdn.fcglcdn.com/brainbees/images/products/438x531/18240268a.webp",
+                    "variants": [
+                        {
+                            "id": "var1",
+                            "size": "3-6M",
+                            "price": 1055.34,
+                            "available": true
+                        },
+                        {
+                            "id": "var2",
+                            "size": "6-9M",
+                            "price": 1055.34,
+                            "available": true
+                        },
+                        {
+                            "id": "var3",
+                            "size": "9-12M",
+                            "price": 1055.34,
+                            "available": true
+                        }
+                    ]
+                }
+            ],
+            "url": "/boutique/holi-celebrations/18240268"
+        }
+    ]
+}

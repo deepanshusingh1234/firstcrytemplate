@@ -1,0 +1,96 @@
+{
+    "slides": [
+        {
+            "id": "b1",
+            "imageUrl": "https://cdn.fcglcdn.com/brainbees/banners/hp_mktg_p01_prim_flat5045_desktop1771672814692.webp",
+            "linkUrl": "https://www.firstcry.com/topoffers?moid=30228&c=GREEN&ref2=Fashion_Flat_50_45_seq1_combo0_d_25Feb26_t_06:00:00-TO-19:59:59_GREEN_ncl&ban_name_r=Fashion_Flat_50_45&hpos_r=1&ban_seg_id_r=NA&param11=NA",
+            "altText": "Fashion_Flat_50_45",
+            "title": "Fashion_Flat_50_45",
+            "bgImage": "https://cdn.fcglcdn.com/brainbees/banners/hp_mktg_p01_prim_flat5045_bg1771672816491.jpg"
+        },
+        {
+            "id": "b2",
+            "imageUrl": "https://cdn.fcglcdn.com/brainbees/banners/diapers_desktop_all1771944809927.webp",
+            "linkUrl": "https://www.firstcry.com/baby-diapers/1/27?c=DIAPLOVE&ref2=Diapers_2025_Number_2_Non_Club_seq2_combo0_d_25Feb26_t_00:00:00-TO-20:59:59_DIAPLOVE_ncl&ban_name_r=Diapers_2025_Number_2_Non_Club&hpos_r=2&ban_seg_id_r=NA&param11=NA",
+            "altText": "Diapers_2025_Number 2_Non Club",
+            "title": "Diapers_2025_Number 2_Non Club",
+            "bgImage": "https://cdn.fcglcdn.com/brainbees/banners/fff3d41767249332487.jpg"
+        },
+        {
+            "id": "b3",
+            "imageUrl": "https://cdn.fcglcdn.com/brainbees/banners/april_expoko10_dp_mamypoko_carnival_994x3991764010259075.webp",
+            "linkUrl": "https://www.firstcry.com/mamypoko/0/0/159?sort=Popularity&c=EXMPK10&ref2=MamyPoko_Carnival_seq3_combo0_d_25Feb26_t_00:00:00-TO-23:59:59_EXMPK10_ncl&ban_name_r=MamyPoko_Carnival&hpos_r=3&ban_seg_id_r=&param11=NA",
+            "altText": "MamyPoko_Carnival",
+            "title": "MamyPoko_Carnival"
+        },
+        {
+            "id": "b4",
+            "imageUrl": "https://cdn.fcglcdn.com/brainbees/banners/hp_mktg_p04_sec2_flat_60_desktop1771326080338.webp",
+            "linkUrl": "https://www.firstcry.com/topoffers?moid=32265&c=GREEN60&ref2=Fashion_Sec_Flat_60__seq4_combo0_d_25Feb26_t_06:00:00-TO-11:59:59_GREEN60_ncl&ban_name_r=Fashion_Sec_Flat_60_&hpos_r=4&ban_seg_id_r=&param11=NA",
+            "altText": "Fashion_Sec_Flat_60_",
+            "title": "Fashion_Sec_Flat_60_",
+            "bgImage": "https://cdn.fcglcdn.com/brainbees/banners/hp_mktg_p04_sec2_flat_60_bg1771326081566.jpg"
+        },
+        {
+            "id": "b5",
+            "imageUrl": "https://cdn.fcglcdn.com/brainbees/banners/danone_hp_mkt_p11_desk_default_2_wow371764243996577.webp",
+            "linkUrl": "https://www.firstcry.com/topoffers?moid=46269&c=WOW37&ref2=Danone_Entire_Range_Feb_26_seq5_combo0_d_25Feb26_t_00:00:00-TO-23:59:59_WOW37_ncl&ban_name_r=Danone_Entire_Range_Feb_26&hpos_r=5&ban_seg_id_r=&param11=NA",
+            "altText": "Danone Entire Range Feb_26",
+            "title": "Danone Entire Range Feb_26"
+        },
+        {
+            "id": "b6",
+            "imageUrl": "https://cdn.fcglcdn.com/brainbees/banners/mktng_nonapps_base_bgn_hp_25feb261771932158346.webp",
+            "linkUrl": "https://www.firstcry.com/topoffers?moid=45442&c=VALUE&ref2=Baby_Gear_and_Nursery_seq6_combo0_d_25Feb26_t_00:00:00-TO-20:29:59_VALUE_ncl&ban_name_r=Baby_Gear_and_Nursery&hpos_r=6&ban_seg_id_r=NA&param11=NA",
+            "altText": "Baby Gear and Nursery",
+            "title": "Baby Gear and Nursery",
+            "bgImage": "https://cdn.fcglcdn.com/brainbees/banners/bg1771932162342.jpg"
+        },
+        {
+            "id": "b7",
+            "imageUrl": "https://cdn.fcglcdn.com/brainbees/banners/hp-desktop1771952188208.gif",
+            "linkUrl": "https://parenting.firstcry.com/contests/lucky-draw/?ref2=Jackpot_P7_0to4_seq7_combo0_d_25Feb26_t_00:00:00-TO-23:59:59_ncl&ban_name_r=Jackpot_P7_0to4&hpos_r=7&ban_seg_id_r=NA&param11=NA",
+            "altText": "Jackpot_P7_0to4",
+            "title": "Jackpot_P7_0to4",
+            "bgImage": "https://cdn.fcglcdn.com/brainbees/banners/bg1771952190421.jpg"
+        },
+        {
+            "id": "b8",
+            "imageUrl": "https://cdn.fcglcdn.com/brainbees/banners/mktng_nonapps_fn_hp_25feb261771915484273.webp",
+            "linkUrl": "https://www.firstcry.com/searchresult?sale=2&brandid=0&searchstring=brand@~38~37~33~453~133~815~34~452~98@@@1@0@20@@@@@@@@@@@@@@@@@@@@@&rating=&sort=bestseller&c=VALUE&ref2=Feeding_and_Nursing_seq8_combo0_d_25Feb26_t_00:00:00-TO-20:29:59_VALUE_ncl&ban_name_r=Feeding_and_Nursing&hpos_r=8&ban_seg_id_r=&param11=NA",
+            "altText": "Feeding and Nursing",
+            "title": "Feeding and Nursing",
+            "bgImage": "https://cdn.fcglcdn.com/brainbees/banners/bg1771915507861.jpg"
+        },
+        {
+            "id": "b9",
+            "imageUrl": "https://cdn.fcglcdn.com/brainbees/banners/hp_def_new_season_new_styles1770992328293.webp",
+            "linkUrl": "https://www.firstcry.com/topoffers?moid=32571&c=SPH&ref2=MerchF_ROI_Spring_Launch_Feb2025_seq9_combo0_d_25Feb26_t_00:00:00-TO-23:59:59_SPH_ncl&ban_name_r=MerchF_ROI_Spring_Launch_Feb2025&hpos_r=9&ban_seg_id_r=&param11=NA",
+            "altText": "MerchF_ROI_Spring_Launch_Feb2025",
+            "title": "MerchF_ROI_Spring_Launch_Feb2025",
+            "bgImage": "https://cdn.fcglcdn.com/brainbees/banners/hp_def_new_season_new_styles_side1770992332620.jpg"
+        },
+        {
+            "id": "b10",
+            "imageUrl": "https://cdn.fcglcdn.com/brainbees/banners/timios_25feb2026_def_mt1771919349998.webp",
+            "linkUrl": "https://www.firstcry.com/topoffers?moid=44291&c=Timios50&ref2=Timios_25feb_def_seq10_combo0_d_25Feb26_t_00:00:00-TO-23:59:59_Timios50_ncl&ban_name_r=Timios_25feb_def&hpos_r=10&ban_seg_id_r=&param11=NA",
+            "altText": "Timios_25feb_def",
+            "title": "Timios_25feb_def"
+        },
+        {
+            "id": "b11",
+            "imageUrl": "https://cdn.fcglcdn.com/brainbees/banners/hp_mktg_p12_fashacc_flat50_desktop1764745752686.webp",
+            "linkUrl": "https://www.firstcry.com/topoffers?moid=46278&c=TRENDY&ref2=Fashion_Acc_Flat50_7am_seq11_combo0_d_25Feb26_t_00:00:00-TO-23:59:59_TRENDY_ncl&ban_name_r=Fashion_Acc_Flat50_7am&hpos_r=11&ban_seg_id_r=&param11=NA",
+            "altText": "Fashion_Acc_Flat50_7am",
+            "title": "Fashion_Acc_Flat50_7am",
+            "bgImage": "https://cdn.fcglcdn.com/brainbees/banners/hp_mktg_p12_fashacc_flat50_bg1764745754254.jpg"
+        },
+        {
+            "id": "b12",
+            "imageUrl": "https://cdn.fcglcdn.com/brainbees/banners/clearancesale_wpc_hp_d1771663687936.webp",
+            "linkUrl": "https://www.firstcry.com/featuredoffer?cpid=10208&c=GLOWY&ref2=WPC_Clearancesale_12amto6pm_PO12_seq12_combo0_d_25Feb26_t_00:00:00-TO-17:59:59_GLOWY_ncl&ban_name_r=WPC_Clearancesale_12amto6pm_PO12&hpos_r=12&ban_seg_id_r=&param11=NA",
+            "altText": "WPC_Clearancesale_12amto6pm_PO12",
+            "title": "WPC_Clearancesale_12amto6pm_PO12"
+        }
+    ]
+}

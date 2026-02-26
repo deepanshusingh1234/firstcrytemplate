@@ -1,0 +1,454 @@
+{
+    "categories": {
+        "title": "CATEGORIES",
+        "links": [
+            {
+                "label": "Clothing & Fashion",
+                "href": "//www.firstcry.com/clothes-and-shoes/6/0/0?sort=bestseller&ref2=cat_footer"
+            },
+            {
+                "label": "Toys",
+                "href": "//www.firstcry.com/toys-and-gaming/5/0/0?sort=bestseller&ref2=cat_footer"
+            },
+            {
+                "label": "Books & CDs",
+                "href": "//www.firstcry.com/books/11/0/0?sort=bestseller&ref2=cat_footer"
+            },
+            {
+                "label": "School Supplies",
+                "href": "//www.firstcry.com/school-supplies/10/0/0?sort=bestseller&ref2=cat_footer"
+            },
+            {
+                "label": "Birthday Party Supplies",
+                "href": "//www.firstcry.com/searchresult?sale=12,14&brandid=0&searchstring=brand@@@@1@0@20@@@@@@@@@&sort=bestseller&ref2=cat_footer"
+            },
+            {
+                "label": "Baby Diapering",
+                "href": "//www.firstcry.com/diapering/1/0/0?sort=bestseller&ref2=cat_footer"
+            },
+            {
+                "label": "Feeding & Nursing",
+                "href": "//www.firstcry.com/feeding-and-nursing/2/0/0?sort=bestseller&ref2=cat_footer"
+            },
+            {
+                "label": "Bath & Skin Care",
+                "href": "//www.firstcry.com/bath-and-skincare/3/0/0?sort=bestseller&ref2=cat_footer"
+            },
+            {
+                "label": "Health & Safety",
+                "href": "//www.firstcry.com/health-and-safety/4/0/0?sort=bestseller&ref2=cat_footer"
+            },
+            {
+                "label": "Baby Gear",
+                "href": "//www.firstcry.com/baby-gear/7/0/0?sort=bestseller&ref2=cat_footer"
+            },
+            {
+                "label": "Nursery",
+                "href": "//www.firstcry.com/nursery/8/0/0?sort=bestseller&ref2=cat_footer"
+            },
+            {
+                "label": "Moms & Maternity",
+                "href": "//www.firstcry.com/moms-and-maternity/21/0/0?sort=bestseller&ref2=cat_footer"
+            },
+            {
+                "label": "Gifts",
+                "href": "//www.firstcry.com/searchresult?sale=12,14&brandid=0&searchstring=brand@@@@1@0@20@@@@@@@@@&sort=bestseller&ref2=cat_footer"
+            },
+            {
+                "label": "Preschool Admissions",
+                "href": "//www.firstcry.com/intelli/intellitots/admissions?ref2=cat_footer"
+            }
+        ]
+    },
+    "companyInfo": {
+        "title": "COMPANY INFO",
+        "links": [
+            {
+                "label": "Contact Us",
+                "href": "//www.firstcry.com/contactus",
+                "rel": "nofollow"
+            },
+            {
+                "label": "Brands",
+                "href": "//www.firstcry.com/allbrands"
+            },
+            {
+                "label": "F.A.Q.s",
+                "href": "//www.firstcry.com/faq",
+                "rel": "nofollow"
+            },
+            {
+                "label": "FirstCry Stores & Playschool",
+                "href": "//www.firstcry.com/store-locator?ref2=fcdsk_cmpinfo_footer"
+            },
+            {
+                "label": "Investor Relations",
+                "href": "//www.firstcry.com/investor-relations?ref2=fc_d_footer",
+                "target": "_blank"
+            }
+        ]
+    },
+    "firstCryParenting": {
+        "title": "FIRSTCRY PARENTING",
+        "links": [
+            {
+                "label": "Getting Pregnant",
+                "href": "https://parenting.firstcry.com/articles/category/getting-pregnant/?utm_source=firstcry_footer&utm_medium=firstcrysite&utm_campaign=promote_parenting",
+                "target": "_blank"
+            },
+            {
+                "label": "Pregnancy",
+                "href": "https://parenting.firstcry.com/articles/category/pregnancy/?utm_source=firstcry_footer&utm_medium=firstcrysite&utm_campaign=promote_parenting",
+                "target": "_blank"
+            },
+            {
+                "label": "Baby",
+                "href": "https://parenting.firstcry.com/articles/category/baby/?utm_source=firstcry_footer&utm_medium=firstcrysite&utm_campaign=promote_parenting",
+                "target": "_blank"
+            },
+            {
+                "label": "Toddler",
+                "href": "https://parenting.firstcry.com/articles/category/toddler/?utm_source=firstcry_footer&utm_medium=firstcrysite&utm_campaign=promote_parenting",
+                "target": "_blank"
+            },
+            {
+                "label": "Preschooler",
+                "href": "https://parenting.firstcry.com/articles/category/preschooler/?utm_source=firstcry_footer&utm_medium=firstcrysite&utm_campaign=promote_parenting",
+                "target": "_blank"
+            },
+            {
+                "label": "Big Kid",
+                "href": "https://parenting.firstcry.com/articles/category/big-kid/?utm_source=firstcry_footer&utm_medium=firstcrysite&utm_campaign=promote_parenting",
+                "target": "_blank"
+            },
+            {
+                "label": "Vaccination",
+                "href": "https://parenting.firstcry.com/vaccine-immunization-schedule/?utm_source=firstcry_footer&utm_medium=firstcrysite&utm_campaign=promote_parenting",
+                "target": "_blank"
+            },
+            {
+                "label": "Growth Tracker",
+                "href": "https://parenting.firstcry.com/child-growth-chart-tracker/?utm_source=firstcry_footer&utm_medium=firstcrysite&utm_campaign=promote_parenting",
+                "target": "_blank"
+            },
+            {
+                "label": "Baby Names",
+                "href": "https://parenting.firstcry.com/baby-names/?utm_source=firstcry_footer&utm_medium=firstcrysite&utm_campaign=promote_parenting",
+                "target": "_blank"
+            },
+            {
+                "label": "FirstCry Parenting YouTube",
+                "href": "https://www.youtube.com/user/firstcrydotcom",
+                "target": "_blank"
+            },
+            {
+                "label": "Coloring Pages",
+                "href": "https://parenting.firstcry.com/coloring-pages-printables/?utm_source=firstcry_footer&utm_medium=firstcrysite&utm_campaign=promote_parenting",
+                "target": "_blank"
+            }
+        ]
+    },
+    "regionalParenting": {
+        "title": "REGIONAL PARENTING",
+        "links": [
+            {
+                "label": "FirstCry Hindi Parenting",
+                "href": "https://hindiparenting.firstcry.com/?utm_source=firstcry_footer&utm_medium=firstcrysite&utm_campaign=promote_parenting",
+                "target": "_blank"
+            },
+            {
+                "label": "FirstCry Marathi Parenting",
+                "href": "https://marathiparenting.firstcry.com/?utm_source=firstcry_footer&utm_medium=firstcrysite&utm_campaign=promote_parenting",
+                "target": "_blank"
+            },
+            {
+                "label": "FirstCry Bangla Parenting",
+                "href": "https://banglaparenting.firstcry.com/?utm_source=firstcry_footer&utm_medium=firstcrysite&utm_campaign=promote_parenting",
+                "target": "_blank"
+            },
+            {
+                "label": "FirstCry Arabia Parenting",
+                "href": "https://arabiaparenting.firstcry.com/?utm_source=firstcry_footer&utm_medium=firstcrysite&utm_campaign=promote_parenting",
+                "target": "_blank"
+            },
+            {
+                "label": "FirstCry UAE Parenting",
+                "href": "https://parenting.firstcry.ae/?utm_source=firstcry_footer&utm_medium=firstcrysite&utm_campaign=promote_parenting",
+                "target": "_blank"
+            }
+        ]
+    },
+    "otherWebsites": {
+        "title": "OUR OTHER WEBSITES",
+        "links": [
+            {
+                "label": "GlobalBees Shopping",
+                "href": "https://shop.globalbees.com/?utm_source=firstcry_footer&utm_medium=firstcrysite&utm_campaign=promote_globalbees",
+                "target": "_blank"
+            }
+        ]
+    },
+    "shippingPolicies": {
+        "title": "SHIPPING & POLICIES",
+        "links": [
+            {
+                "label": "Payments",
+                "href": "//www.firstcry.com/payments",
+                "rel": "nofollow"
+            },
+            {
+                "label": "Shipping Policy",
+                "href": "//www.firstcry.com/shippingpolicy",
+                "rel": "nofollow"
+            },
+            {
+                "label": "Return & Replacement Policy",
+                "href": "//www.firstcry.com/returnpolicy",
+                "rel": "nofollow"
+            },
+            {
+                "label": "Cancellation Policy",
+                "href": "//www.firstcry.com/cancellation-terms",
+                "rel": "nofollow"
+            },
+            {
+                "label": "Terms of Use",
+                "href": "//www.firstcry.com/termsofuse",
+                "rel": "nofollow"
+            },
+            {
+                "label": "Privacy Policy",
+                "href": "//www.firstcry.com/privacypolicy",
+                "rel": "nofollow"
+            },
+            {
+                "label": "Next day & Same day delivery",
+                "href": "//www.firstcry.com/same-next-day-delivery",
+                "rel": "nofollow"
+            },
+            {
+                "label": "Responsible Disclosure",
+                "href": "//www.firstcry.com/policy/responsible-vulnerability-disclosure",
+                "rel": "nofollow"
+            }
+        ]
+    },
+    "paymentMethods": {
+        "title": "PAYMENT METHOD",
+        "items": [
+            {
+                "label": "Credit Cards"
+            },
+            {
+                "label": "Net Banking"
+            },
+            {
+                "label": "ATM & Debit Cards"
+            },
+            {
+                "label": "COD(Cash on Delivery)"
+            },
+            {
+                "label": "Easy EMI",
+                "tooltip": "EMI available on HDFC, CITI, ICICI, AXIS, HSBC, KOTAK, SBI, CBI & IndusInd Bank Cards with options to pay in 3,6,9 or 12 month plans."
+            }
+        ]
+    },
+    "socialMedia": {
+        "title": "CONNECT WITH US",
+        "links": [
+            {
+                "label": "Facebook",
+                "href": "https://www.facebook.com/FirstCryIndia/",
+                "target": "_blank",
+                "icon": "facebook"
+            },
+            {
+                "label": "Instagram",
+                "href": "https://www.instagram.com/firstcryindia/",
+                "target": "_blank",
+                "icon": "instagram"
+            },
+            {
+                "label": "Twitter",
+                "href": "https://twitter.com/firstcryindia",
+                "target": "_blank",
+                "icon": "twitter"
+            },
+            {
+                "label": "Youtube",
+                "href": "https://www.youtube.com/channel/UCXQjmZLatydSOHhbOA8-kqw",
+                "target": "_blank",
+                "icon": "youtube"
+            },
+            {
+                "label": "Linkedin",
+                "href": "https://www.linkedin.com/company/firstcry/",
+                "target": "_blank",
+                "icon": "linkedin"
+            },
+            {
+                "label": "Testimonials",
+                "href": "//www.firstcry.com/testimonials"
+            },
+            {
+                "label": "SITEMAP",
+                "href": "//www.firstcry.com/sitemap",
+                "className": "sitemap"
+            },
+            {
+                "label": "CLUB CASH",
+                "href": "//www.firstcry.com/useraccount/clubcash",
+                "rel": "nofollow"
+            }
+        ]
+    },
+    "ourApps": {
+        "title": "OUR APPS",
+        "links": [
+            {
+                "label": "FirstCry India: Shopping & Parenting",
+                "href": "https://play.google.com/store/apps/details?id=fc.admin.fcexpressadmin",
+                "target": "_blank"
+            },
+            {
+                "label": "FirstCry India: Shopping & Parenting iOS",
+                "href": "https://apps.apple.com/in/app/firstcry-india/id952114772",
+                "target": "_blank"
+            }
+        ]
+    },
+    "learningEducation": {
+        "title": "Learning & Education",
+        "links": [
+            {
+                "label": "Intelli Education",
+                "href": "https://www.firstcry.com/intelli/intellitots/featuredoffer?cpid=5387&utm_source=firstcry_footer&utm_medium=firstcrysite&utm_campaign=promote_learning_education",
+                "target": "_blank"
+            },
+            {
+                "label": "Intellitots Preschool",
+                "href": "https://www.firstcry.com/intelli/intellitots/?utm_source=firstcry_footer&utm_medium=firstcrysite&utm_campaign=promote_learning_education",
+                "target": "_blank"
+            },
+            {
+                "label": "Baby Brain Toys",
+                "href": "https://www.firstcry.com/topoffers?moid=41442&utm_source=firstcry_footer&utm_medium=firstcrysite&utm_campaign=promote_learning_education",
+                "target": "_blank"
+            },
+            {
+                "label": "Intelliskill Books",
+                "href": "https://www.firstcry.com/topoffers?moid=37918&utm_source=firstcry_footer&utm_medium=firstcrysite&utm_campaign=promote_learning_education",
+                "target": "_blank"
+            },
+            {
+                "label": "Intelliskill Toys",
+                "href": "https://www.firstcry.com/intelliskills/0/0/1006995?utm_source=firstcry_footer&utm_medium=firstcrysite&utm_campaign=promote_learning_education",
+                "target": "_blank"
+            },
+            {
+                "label": "Worksheets",
+                "href": "https://www.firstcry.com/intelli/worksheets/?utm_source=firstcry_footer&utm_medium=firstcrysite&utm_campaign=promote_learning_education",
+                "target": "_blank"
+            },
+            {
+                "label": "EduMAg",
+                "href": "https://www.firstcry.com/intelli/articles/?utm_source=firstcry_footer&utm_medium=firstcrysite&utm_campaign=promote_learning_education",
+                "target": "_blank"
+            }
+        ]
+    },
+    "shopInternational": {
+        "title": "SHOP INTERNATIONAL",
+        "links": [
+            {
+                "label": "FirstCry UAE",
+                "href": "https://www.firstcry.ae/?utm_source=firstcry_footer&utm_medium=firstcrysite&utm_campaign=promote_international_shopping",
+                "target": "_blank"
+            },
+            {
+                "label": "FirstCry KSA",
+                "href": "https://www.firstcry.sa/?utm_source=firstcry_footer&utm_medium=firstcrysite&utm_campaign=promote_international_shopping",
+                "target": "_blank"
+            },
+            {
+                "label": "FirstCry KSA (English)",
+                "href": "https://www.firstcry.sa/en/?utm_source=firstcry_footer&utm_medium=firstcrysite&utm_campaign=promote_international_shopping",
+                "target": "_blank"
+            },
+            {
+                "label": "FirstCry Arabia: Shopping & Parenting",
+                "href": "https://play.google.com/store/apps/details?id=ae.firstcry.shopping.parenting&hl=en&gl=US",
+                "target": "_blank"
+            },
+            {
+                "label": "FirstCry Arabia: Shopping & Parenting iOS",
+                "href": "https://apps.apple.com/ae/app/firstcry-arabia-baby-kids/id1482138817",
+                "target": "_blank"
+            }
+        ]
+    },
+    "kidsLearningApps": {
+        "title": "KIDS LEARNING & EDUCATIONAL APPS",
+        "links": [
+            {
+                "label": "PlayBees: Kids Learning & Education App",
+                "href": "https://play.google.com/store/apps/details?id=com.firstcry.playbees.learn.grow.kids.preschool.toddler.numbers.abc.rhymes.games.stories.books",
+                "target": "_blank"
+            },
+            {
+                "label": "PlayBees: 123 Kids Numbers App",
+                "href": "https://play.google.com/store/apps/details?id=com.firstcry.playbees.learn.grow.kids.numbers123",
+                "target": "_blank"
+            },
+            {
+                "label": "PlayBees: ABC for Kids",
+                "href": "https://play.google.com/store/apps/details?id=com.firstcry.playbees.learn.grow.kids.tracing.phonics.alphabets.words.abc",
+                "target": "_blank"
+            }
+        ]
+    },
+    "careers": {
+        "title": "CAREER AT FIRSTCRY.COM",
+        "links": [
+            {
+                "label": "Current Openings at FirstCry.com",
+                "href": "//www.firstcry.com/careers",
+                "target": "_blank"
+            }
+        ]
+    },
+    "franchise": {
+        "becomeFranchise": {
+            "title": "BECOME OUR FRANCHISE STORE",
+            "buttonText": "KNOW MORE",
+            "href": "//www.firstcry.com/franchisee"
+        },
+        "intellitotsFranchise": {
+            "imageUrl": "//cdn.fcglcdn.com/brainbees/images/fcintellitots_franchise_footer_banner.webp",
+            "alt": "Intellitots",
+            "href": "https://www.firstcry.com/intelli/intellitots/preschool-franchise/?ref2=fcdsk_footer_intfran_corporatemom_31july20"
+        }
+    },
+    "seoContent": {
+        "mainHeading": "FirstCry India ~ Online Store for Baby & Kids Products",
+        "description1": "Explore kids and baby products galore at FirstCry.com, the Big Store for Little Ones. We at FirstCry.com empathize with you as a mother who always aspires to bestow her newborn, infant, baby or kid with the best things even for their smallest needs. That is why, 'Mommy Knows Best'. From breastfeeding to bathing essentials, right furniture to myriad baby care products, a mother needs them all for her lil' one. This inspires us to offer convenient & hassle-free online shopping not just for babies & kids but for moms-to-be & new moms as well.",
+        "description2": "Shop for baby & kids products from top-notch national and international brands like Babyhug, Chicco, Graco, BSA, Johnson & Johnson, Huggies, Pampers, Medela, Pigeon, Mothercare, Fisher-Price, FunSkool, Lego, Disney, Barbie and more you can look forward to an unparalleled shopping experience with us. Shop for baby & kids products online ranging across diapering, feeding & nursing, skin & health care, <a href=\"baby-kids-toys-store\" target=\"_blank\">baby & kids toys,</a> <a href=\"newborn-baby-clothes-dresses\" target=\"_blank\">newborn & infant clothing,</a> baby clothes, <a href=\"kids-clothing-dresses\" target=\"_blank\">kids wear,</a> footwear, fashion accessories, baby gear, nursery, kids furniture, gifts, party supplies, books & CDs, school supplies and more at great discounts.",
+        "description3": "With the <a href=\"appdownload\" target=\"_blank\">FirstCry mobile app,</a> now you can shop on the go! Download the FirstCry Android and the iOS app and Voila!",
+        "newbornHeading": "Newborn & Baby Products Online Shopping in India",
+        "newbornDescription": "Along with all your affection and attention, your little bundle of joy deserves the best when it comes to newborn & baby items. Pamper your lil' one with the widest range of newborn & baby products: right from diapers to potty chairs, onesies to party wear, booties to clogs, carry-cots to baby walkers, rattles to learning toys, FirstCry has it all! FirstCry <a href=\"newborn-baby-shopping-checklist\" target=\"_blank\">newborn baby shopping checklist.</a>",
+        "kidsShoppingHeading": "Online Shopping for Kids at FirstCry.com",
+        "kidsShoppingDescription": "Shopping for your kid is no child's play and thus we help you explore, choose and buy from an exhaustive & finest collection of kids' products. FirstCry buying guides, premium store, boutiques, products checklist, and look-books are all aimed towards an enriching and a fulfilling shopping experience. That's what makes us your go-to online store for kids shopping.",
+        "parentingHeading": "FirstCry Parenting",
+        "parentingDescription1": "With <a href=\"http://parenting.firstcry.com?utm_source=firstcry_footer_text&utm_medium=firstcrysite&utm_campaign=promote_parenting\" target=\"_blank\">FirstCry Parenting</a>, FirstCry isn't just about shopping anymore. No matter if you are a first time parent, or it's you second pregnancy we have you covered. FirstCry Parenting aids you not only as a perplexed parent, but also at each step from <a href=\"http://parenting.firstcry.com/category/getting-pregnant/?utm_source=firstcry_footer_text&utm_medium=firstcrysite&utm_campaign=promote_parenting\" target=\"_blank\">Planning</a> to <a href=\"http://parenting.firstcry.com/category/pregnancy/?utm_source=firstcry_footer_text&utm_medium=firstcrysite&utm_campaign=promote_parenting\" target=\"_blank\">Pregnancy</a>.",
+        "parentingDescription2": "Learn more about the important vaccines for your child from birth to 12 years, the <a href=\"http://parenting.firstcry.com/vaccine-immunization-schedule?utm_source=firstcry_footer_text&utm_medium=firstcrysite&utm_campaign=promote_parenting\" target=\"_blank\">immunization schedule</a> and have it personalized for your child and never miss a vaccine with our timely notifications.",
+        "parentingDescription3": "Worried about your child's growth? Don't be! Track your child's height & weight with our child <a href=\"http://parenting.firstcry.com/child-growth-chart-tracker?utm_source=firstcry_footer_text&utm_medium=firstcrysite&utm_campaign=promote_parenting\" target=\"_blank\">growth tracker</a> and take proactive steps towards your child's healthy growth.",
+        "parentingDescription4": "Benefit from expert advice, researched articles, Q&A's, tools & trackers and tips from fellow parents and simplify your parenting experience with us.",
+        "preschoolHeading": "FirstCry Intellitots Preschool",
+        "preschoolDescription": "From shopping to parenting reads to activity boxes and now schools, FirstCry covers everything from conception to your baby's education! FirstCry Intellitots preschools offer children a unique learning experience through hands-on education that covers life-skills and more. Modeled around the SPARKS ™ curriculum, children are exposed to quality education and given individual attention. Learn more about all the exciting things happening at our preschools <a href=\"https://www.firstcryintellitots.com/?utm_source=firstcry_footer&utm_medium=firstcrysite&utm_campaign=promote_learning_education\" target=\"_blank\">here</a>.",
+        "offersHeading": "FirstCry India Offers",
+        "offersDescription1": "Satisfaction and Savings come guaranteed with irresistible FirstCry offers & deals on a range of high quality products. These are including but not limited to the FirstCry shopping carnivals, loyalty cash program, app offers, bank & wallet offers, Free @ Three, cashback, Guaranteed savings offers & more.",
+        "offersDescription2": "To start with, why not grab some great discounts with the <a href=\"discountcoupons\" target=\"_blank\">FirstCry coupons</a> and buy baby & kids products online from anywhere in India with Free Shipping, Cash On Delivery (COD), Same & Next day delivery & EZ returns options. Happy Shopping!"
+    },
+    "copyright": "© 2010-2026 &nbsp;www.FirstCry.com. All rights reserved. This website can be best viewed in a resolution width of 1024 and above."
+}

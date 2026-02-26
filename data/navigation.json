@@ -1,0 +1,1502 @@
+{
+    "topMenu": {
+        "leftSection": [
+            {
+                "id": "location",
+                "label": "Select location",
+                "type": "dropdown",
+                "icon": "map-pin"
+            },
+            {
+                "id": "stores-preschools",
+                "label": "Stores & Preschools",
+                "type": "dropdown",
+                "href": "#",
+                "children": [
+                    {
+                        "id": "find-stores",
+                        "label": "Find Stores",
+                        "href": "//www.firstcry.com/store-locator?ref2=topstrip"
+                    },
+                    {
+                        "id": "find-preschools",
+                        "label": "Find Preschools",
+                        "href": "https://www.firstcry.com/intelli/intellitots/preschool-near-you/?ref2=topstrip"
+                    },
+                    {
+                        "id": "open-store",
+                        "label": "Open a Store",
+                        "href": "//www.firstcry.com/franchisee?ref2=topstrip"
+                    },
+                    {
+                        "id": "open-preschool",
+                        "label": "Open a Preschool",
+                        "href": "https://www.firstcry.com/intelli/intellitots/preschool-franchise/?ref2=topstrip"
+                    }
+                ]
+            },
+            {
+                "id": "support",
+                "label": "Support",
+                "type": "link",
+                "href": "//www.firstcry.com/contactus?ref=topstrip-Support"
+            },
+            {
+                "id": "track-order",
+                "label": "Track Order",
+                "type": "link",
+                "href": "//www.firstcry.com/alltrackorder"
+            },
+            {
+                "id": "parenting",
+                "label": "FirstCry Parenting",
+                "type": "link",
+                "href": "//parenting.firstcry.com/?ref2=utm_source=firstcry_header&utm_medium=firstcrysite&utm_campaign=promote_parenting"
+            }
+        ],
+        "rightSection": [
+            {
+                "id": "shortlist",
+                "label": "Shortlist",
+                "type": "link",
+                "href": "//www.firstcry.com/myshortlist",
+                "icon": "heart"
+            }
+        ]
+    },
+    "mainCategories": [
+        {
+            "id": "boy-fashion",
+            "label": "BOY FASHION",
+            "href": "//www.firstcry.com/clothes-and-shoes/6/0/0?gender=boy,unisex&sort=bestseller&ref2=menu_dd_catlanding",
+            "columns": [
+                {
+                    "title": "SHOP BY CATEGORY",
+                    "type": "category",
+                    "items": [
+                        {
+                            "id": "sets-suits",
+                            "label": "Sets & Suits",
+                            "href": "https://www.firstcry.com/sets-and--suits/6/166?scat=166&gender=boy,unisex&ref2=menu_dd_boy-fashion_sets-and-suits_V"
+                        },
+                        {
+                            "id": "sweatshirts-hoodies",
+                            "label": "Sweatshirts & Hoodies",
+                            "href": "https://www.firstcry.com/sweat-shirts-and-jackets/6/267?scat=267@~2055~2057@@@@@@@@@1@0@20@@@@@@@@@@@@@@@&gender=boy,unisex&ref2=menu_dd_boy-fashion_sweatshirts-and-hoodies_V"
+                        },
+                        {
+                            "id": "sweaters",
+                            "label": "Sweaters",
+                            "href": "https://www.firstcry.com/sweaters/6/219?scat=219&gender=boy,unisex&ref2=menu_dd_boy-fashion_sweaters_V"
+                        },
+                        {
+                            "id": "jackets",
+                            "label": "Jackets",
+                            "href": "https://www.firstcry.com/sweat-shirts-and-jackets/6/267?scat=267@~2057~2086~10888~2060~2059~10884~10883~10885~10886@@@@@@@@@1@0@20@@@@@@@@@@&gender=boy,unisex&ref2=menu_dd_boy-fashion_jackets_V"
+                        },
+                        {
+                            "id": "thermals",
+                            "label": "Thermals",
+                            "href": "https://www.firstcry.com/thermal-wear/6/812?scat=812&gender=Boy,unisex&ref2=menu_dd_boy-fashion_thermals_V"
+                        },
+                        {
+                            "id": "onesies-rompers",
+                            "label": "Onesies & Rompers",
+                            "href": "https://www.firstcry.com/onesies-and-rompers/6/164?scat=164&gender=boy&sort=bestseller&ref2=menu_dd_boy-fashion_onesies-and-rompers_V"
+                        },
+                        {
+                            "id": "nightwear",
+                            "label": "Nightwear",
+                            "href": "https://www.firstcry.com/nightwear/6/165?scat=165&gender=boy,unisex&ref2=menu_dd_boy-fashion_nightwear_V"
+                        },
+                        {
+                            "id": "party-wear",
+                            "label": "Party Wear",
+                            "href": "https://www.firstcry.com/party-wear/6/243?scat=243&gender=boy&ref2=menu_dd_boy-fashion_party-wear_V"
+                        },
+                        {
+                            "id": "t-shirts",
+                            "label": "T-Shirts",
+                            "href": "https://www.firstcry.com/t-shirts/6/26?scat=26&gender=boy,unisex&sort=bestseller&ref2=menu_dd_boy-fashion_t-shirts_V"
+                        },
+                        {
+                            "id": "shirts",
+                            "label": "Shirts",
+                            "href": "https://www.firstcry.com/shirts/6/220?scat=220&gender=boy,unisex&ref2=menu_dd_boy-fashion_shirts_V"
+                        },
+                        {
+                            "id": "jeans-trousers",
+                            "label": "Jeans & Trousers",
+                            "href": "https://www.firstcry.com/shorts-skirts-and-jeans/6/221?scat=221@~1558~1559@@@@@@@@@1@0@20@@@@@@@@@@&gender=boy,unisex&ref2=menu_dd_boy-fashion_jeans-and-trousers_V"
+                        },
+                        {
+                            "id": "ethnic-wear",
+                            "label": "Ethnic Wear",
+                            "href": "https://www.firstcry.com/ethnic-wear/6/246?scat=246&gender=boy&ref2=menu_dd_boy-fashion_ethnic-wear_V"
+                        },
+                        {
+                            "id": "inner-wear",
+                            "label": "Inner Wear",
+                            "href": "https://www.firstcry.com/innerwear-and-thermals/6/163?scat=163&gender=boy,unisex&ref2=menu_dd_boy-fashion_inner-wear_H"
+                        },
+                        {
+                            "id": "swim-wear",
+                            "label": "Swim Wear",
+                            "href": "https://www.firstcry.com/swim-wear/6/276?scat=276&gender=boy,unisex&ref2=menu_dd_boy-fashion_swim-wear_V"
+                        },
+                        {
+                            "id": "bath-time",
+                            "label": "Bath Time",
+                            "href": "https://www.firstcry.com/bath-time/6/169?gender=boy,unisex&ref2=menu_dd_boy-fashion_bath-time_V"
+                        },
+                        {
+                            "id": "rainwear",
+                            "label": "Rainwear",
+                            "href": "https://www.firstcry.com/rainwear/6/172?gender=boy,unisex&ref2=menu_dd_boy-fashion_rainwear_V"
+                        },
+                        {
+                            "id": "theme-costumes",
+                            "label": "Theme Costumes",
+                            "href": "https://www.firstcry.com/theme-costumes/6/?scat=295&gender=boy,unisex&sort=bestseller&ref2=menu_dd_boy-fashion_theme-costumes_V"
+                        },
+                        {
+                            "id": "view-all",
+                            "label": "View All",
+                            "href": "https://www.firstcry.com/searchresult?sale=6&searchstring=brand@@@@1@0@20@@@@@@@@@@@@@@@@&sort=BestSeller&gender=boy,unisex&ref2=menu_dd_boy-fashion_view-all_V",
+                            "isViewAll": true
+                        }
+                    ]
+                },
+                {
+                    "title": "SHOP BY COLLECTION",
+                    "type": "collection",
+                    "items": [
+                        {
+                            "id": "multi-packs",
+                            "label": "Multi-packs",
+                            "href": "https://www.firstcry.com/topoffers?moid=42818&gender=boy,unisex&sort=newarrivals&ref2=menu_dd_boy-fashion_multi-packs_V"
+                        },
+                        {
+                            "id": "bestsellers",
+                            "label": "Bestsellers",
+                            "href": "https://www.firstcry.com/searchresult?sale=6&searchstring=brand@@@@1@0@20@@@@@@@@@@@@@@@@&sort=bestseller&gender=boy,unisex&ref2=menu_dd_boy-fashion_bestsellers_V"
+                        },
+                        {
+                            "id": "baby-essentials",
+                            "label": "Baby Essentials",
+                            "href": "https://www.firstcry.com/caps-gloves-and-mittens/6/22?scat=22,163,169@@@@@@~15~0~1~2~3~4~5@@@@1@0@20@@@@@@@@@@&gender=boy,unisex&ref2=menu_dd_boy-fashion_baby-essentials_V"
+                        }
+                    ]
+                },
+                {
+                    "title": "FASHION ACCESSORIES",
+                    "type": "accessories",
+                    "items": [
+                        {
+                            "id": "woolen-caps-ear-muffs",
+                            "label": "Woolen Caps & Ear Muffs",
+                            "href": "https://www.firstcry.com/caps-gloves-and-mittens/6/22?scat=22@~3429~7641~12746@@@@@@@@@1@0@20@@@@@@@@@@&gender=boy,unisex&ref2=menu_dd_boy-fashion_woolen-caps-and-ear-muffs_H"
+                        },
+                        {
+                            "id": "caps-mittens-booties",
+                            "label": "Caps, Mittens & Booties",
+                            "href": "https://www.firstcry.com/caps-gloves-and-mittens/6/22?scat=22@~422~1498~1500@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_boy-fashion_caps,-mittens-and-booties_H"
+                        },
+                        {
+                            "id": "gloves",
+                            "label": "Gloves",
+                            "href": "https://www.firstcry.com/caps-gloves-and-mittens/6/22?scat=22@~2091@@@@@@@@@1@0@20@@@@@@@@@@&gender=boy,unisex&ref2=menu_dd_boy-fashion_gloves_H"
+                        },
+                        {
+                            "id": "sunglasses",
+                            "label": "Sunglasses",
+                            "href": "https://www.firstcry.com/fashion-accessories/22/260?scat=260@@~16046@@@@@@@@1@0@20@@@@@@@@@@&gender=boy,unisex&ref2=menu_dd_boy-fashion_sunglasses_H"
+                        },
+                        {
+                            "id": "watches",
+                            "label": "Watches",
+                            "href": "https://www.firstcry.com/fashion-accessories/22/275?gender=boy,unisex&ref2=menu_dd_boy-fashion_watches_H"
+                        },
+                        {
+                            "id": "smart-watches",
+                            "label": "Smart Watches",
+                            "href": "https://www.firstcry.com/Home-and-Living/1700/1707?scat=1707@~17735@@@@@@@@@1@0@20@@@@@@@@@@@@@@@&sort=bestseller&ref2=menu_dd_boy-fashion_smart-watches_H"
+                        },
+                        {
+                            "id": "ties-belts-suspenders",
+                            "label": "Ties, Belts & Suspenders",
+                            "href": "https://www.firstcry.com/ties-belts-and-suspenders/22/245?gender=boy,unisex&ref2=menu_dd_boy-fashion_ties,-belts-and-suspenders_H"
+                        },
+                        {
+                            "id": "bags",
+                            "label": "Bags",
+                            "href": "https://www.firstcry.com/fashion-accessories/22/234?gender=boy,unisex&ref2=menu_dd_boy-fashion_bags_H"
+                        }
+                    ]
+                },
+                {
+                    "title": "FOOTWEAR",
+                    "type": "footwear",
+                    "items": [
+                        {
+                            "id": "winter-boots",
+                            "label": "Winter Boots",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~11383@@@@@@@@@1@0@20@@@@@@@@@@&gender=boy,unisex&ref2=menu_dd_boy-fashion_winter-boots_H"
+                        },
+                        {
+                            "id": "plush-footwear",
+                            "label": "Plush Footwear",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~6464@@@@@@@@@1@0@20@@@@@@@@@@@@@@@&gender=boy,unisex&ref2=menu_dd_boy-fashion_plush-footwear_H"
+                        },
+                        {
+                            "id": "casual-shoes",
+                            "label": "Casual Shoes",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~416@@@@@@@@@1@0@20@@@@@@@@@@&gender=boy,unisex&ref2=menu_dd_boy-fashion_casual-shoes_H"
+                        },
+                        {
+                            "id": "booties",
+                            "label": "Booties",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~2454@@@@@@@@@1@0@20@@@@@@@@@@&gender=boy,unisex&ref2=menu_dd_boy-fashion_booties_H"
+                        },
+                        {
+                            "id": "sock-shoes",
+                            "label": "Sock Shoes",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~2864@@@@@@@@@1@0@20@@@@@@@@@@@@@@@&sort=bestseller&gender=boy,unisex&ref2=menu_dd_boy-fashion_sock-shoes_H"
+                        },
+                        {
+                            "id": "sneakers",
+                            "label": "Sneakers",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~16934@@@@@@@@@1@0@20@@@@@@@@@@&gender=boy,unisex&ref2=menu_dd_boy-fashion_sneakers_H"
+                        },
+                        {
+                            "id": "sports-shoes",
+                            "label": "Sports Shoes",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~6630@@@@@@@@@1@0@20@@@@@@@@@@&gender=boy,unisex&ref2=menu_dd_boy-fashion_sports-shoes_H"
+                        },
+                        {
+                            "id": "sandals",
+                            "label": "Sandals",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~415@@@@@@@@@1@0@20@@@@@@@@@@&gender=boy,unisex&ref2=menu_dd_boy-fashion_sandals_H"
+                        },
+                        {
+                            "id": "school-shoes",
+                            "label": "School Shoes",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~417@@@@@@@@@1@0@20@@@@@@@@@@&gender=boy,unisex&ref2=menu_dd_boy-fashion_school-shoes_H"
+                        }
+                    ]
+                },
+                {
+                    "title": "SHOP BY AGE",
+                    "type": "age",
+                    "items": [
+                        {
+                            "id": "preemie",
+                            "label": "Preemie/Tiny Preemie",
+                            "href": "https://www.firstcry.com/m/clothes-and-shoes/6/0/0?age=15&gender=boy,unisex&sort=bestseller&ref2=menu_dd_boy-fashion_preemie-tiny-preemie_H"
+                        },
+                        {
+                            "id": "new-born",
+                            "label": "New Born",
+                            "href": "https://www.firstcry.com/clothes-and-shoes/6/0/0?age=27&gender=boy,unisex&sort=bestseller&ref2=menu_dd_boy-fashion_new-born_H"
+                        },
+                        {
+                            "id": "0-3-months",
+                            "label": "0-3 Months",
+                            "href": "https://www.firstcry.com/clothes-and-shoes/6/0/0?age=0&gender=boy,unisex&sort=bestseller&ref2=menu_dd_boy-fashion_0-3-months_H"
+                        },
+                        {
+                            "id": "3-6-months",
+                            "label": "3-6 Months",
+                            "href": "https://www.firstcry.com/clothes-and-shoes/6/0/0?age=1&gender=boy,unisex&sort=bestseller&ref2=menu_dd_boy-fashion_3-6-months_H"
+                        },
+                        {
+                            "id": "6-9-months",
+                            "label": "6-9 Months",
+                            "href": "https://www.firstcry.com/clothes-and-shoes/6/0/0?age=2&gender=boy,unisex&sort=bestseller&ref2=menu_dd_boy-fashion_6-9-months_H"
+                        },
+                        {
+                            "id": "9-12-months",
+                            "label": "9-12 Months",
+                            "href": "https://www.firstcry.com/clothes-and-shoes/6/0/0?age=3&gender=boy,unisex&sort=bestseller&ref2=menu_dd_boy-fashion_9-12-months_H"
+                        },
+                        {
+                            "id": "12-18-months",
+                            "label": "12-18 Months",
+                            "href": "https://www.firstcry.com/clothes-and-shoes/6/0/0?age=4&gender=boy,unisex&sort=bestseller&ref2=menu_dd_boy-fashion_12-18-months_H"
+                        },
+                        {
+                            "id": "18-24-months",
+                            "label": "18-24 Months",
+                            "href": "https://www.firstcry.com/clothes-and-shoes/6/0/0?age=5&gender=boy,unisex&sort=bestseller&ref2=menu_dd_boy-fashion_18-24-months_H"
+                        },
+                        {
+                            "id": "2-4-years",
+                            "label": "2 to 4 Years",
+                            "href": "https://www.firstcry.com/clothes-and-shoes/6/0/0?age=6&gender=boy,unisex&sort=bestseller&ref2=menu_dd_boy-fashion_2-to-4-years_H"
+                        },
+                        {
+                            "id": "4-6-years",
+                            "label": "4 to 6 Years",
+                            "href": "https://www.firstcry.com/clothes-and-shoes/6/0/0?age=7&gender=boy,unisex&sort=bestseller&ref2=menu_dd_boy-fashion_4-to-6-years_H"
+                        },
+                        {
+                            "id": "6-8-years",
+                            "label": "6 to 8 Years",
+                            "href": "https://www.firstcry.com/clothes-and-shoes/6/0/0?age=8&gender=boy,unisex&sort=bestseller&ref2=menu_dd_boy-fashion_6-to-8-years_H"
+                        },
+                        {
+                            "id": "8-plus-years",
+                            "label": "8+ Years",
+                            "href": "https://www.firstcry.com/clothes-and-shoes/6/0/0?age=9,10,11&gender=boy,unisex&sort=bestseller&ref2=menu_dd_boy-fashion_8-years_H"
+                        }
+                    ]
+                },
+                {
+                    "title": "SHOP BY BRANDS",
+                    "type": "brands",
+                    "items": [
+                        {
+                            "id": "babyhug",
+                            "label": "Babyhug",
+                            "href": "https://www.firstcry.com/babyhug/6/0/621?sort=bestseller&gender=boy,unisex&ref2=menu_dd_boy-fashion_babyhug_H"
+                        },
+                        {
+                            "id": "babyoye",
+                            "label": "Babyoye",
+                            "href": "https://www.firstcry.com/babyoye/6/0/1004078?gender=boy,unisex&sort=bestseller&ref2=menu_dd_boy-fashion_babyoye_H"
+                        },
+                        {
+                            "id": "ollington-st",
+                            "label": "OLLINGTON ST.",
+                            "href": "https://www.firstcry.com/ollington-st/6/0/1007141?sort=bestseller&gender=boy,unisex&ref2=menu_dd_boy-fashion_ollington-st_H"
+                        },
+                        {
+                            "id": "pine-kids",
+                            "label": "Pine Kids",
+                            "href": "https://www.firstcry.com/pinekids/6/0/1006125?gender=boy,unisex&sort=bestseller&ref2=menu_dd_boy-fashion_pine-kids_H"
+                        },
+                        {
+                            "id": "honeyhap",
+                            "label": "Honeyhap",
+                            "href": "https://www.firstcry.com/honeyhap/6/0/1006524?gender=boy,unisex&sort=bestseller&ref2=menu_dd_boy-fashion_honeyhap_H"
+                        },
+                        {
+                            "id": "mark-mia",
+                            "label": "Mark & Mia",
+                            "href": "https://www.firstcry.com/mark-and-mia/6/0/1005273?sort=bestseller&gender=boy,unisex&ref2=menu_dd_boy-fashion_mark-and-mia_H"
+                        },
+                        {
+                            "id": "carters",
+                            "label": "Carter's",
+                            "href": "https://www.firstcry.com/carters/6/0/52?gender=boy,unisex&sort=newarrivals&ref2=menu_dd_boy-fashion_carters_H"
+                        },
+                        {
+                            "id": "puma",
+                            "label": "Puma",
+                            "href": "https://www.firstcry.com/puma/6/0/720?sort=bestseller&gender=boy,unisex&ref2=menu_dd_boy-fashion_puma_H"
+                        },
+                        {
+                            "id": "ucb",
+                            "label": "UCB",
+                            "href": "https://www.firstcry.com/ucb/6/0/1002532?sort=bestseller&gender=boy,unisex&ref2=menu_dd_boy-fashion_ucb_H"
+                        },
+                        {
+                            "id": "ed-a-mamma",
+                            "label": "Ed-a-mamma",
+                            "href": "https://www.firstcry.com/ed-a-mamma/6/0/1006272?sort=bestseller&gender=boy,unisex&ref2=menu_dd_boy-fashion_ed-a-mamma_H"
+                        }
+                    ]
+                }
+            ],
+            "banner": {
+                "image": "https://cdn.fcglcdn.com/brainbees/images/cattemplate/370_270_rhs_banner_boy_fashion_070226.webp",
+                "alt": "Spring 2026",
+                "href": "https://www.firstcry.com/topoffers?moid=32471&c=SPN35&gender=boy,unisex&ref2=menu_dd_boy-fashion_spring-2026_V",
+                "title": "Spring 2026"
+            }
+        },
+        {
+            "id": "girl-fashion",
+            "label": "GIRL FASHION",
+            "href": "//www.firstcry.com/clothes-and-shoes/6/0/0?gender=girl,unisex&sort=bestseller&ref2=menu_dd_catlanding",
+            "columns": [
+                {
+                    "title": "SHOP BY CATEGORY",
+                    "type": "category",
+                    "items": [
+                        {
+                            "id": "sets-suits-girl",
+                            "label": "Sets & Suits",
+                            "href": "https://www.firstcry.com/sets-and--suits/6/166?scat=166&gender=girl,unisex&ref2=menu_dd_girl-fashion_sets-and-suits_V"
+                        },
+                        {
+                            "id": "sweatshirts-sweatjackets",
+                            "label": "Sweatshirts & SweatJackets",
+                            "href": "https://www.firstcry.com/sweat-shirts-and-jackets/6/267?scat=267@~2055@@@@@@@@@1@0@20@@@@@@@@@@@@@@@&gender=girl,unisex&ref2=menu_dd_girl-fashion_sweatshirts-and-sweatjackets_V"
+                        },
+                        {
+                            "id": "sweaters-girl",
+                            "label": "Sweaters",
+                            "href": "https://www.firstcry.com/sweaters/6/219?scat=219&gender=girl,unisex&ref2=menu_dd_girl-fashion_sweaters_V"
+                        },
+                        {
+                            "id": "jackets-girl",
+                            "label": "Jackets",
+                            "href": "https://www.firstcry.com/sweat-shirts-and-jackets/6/267?scat=267@~2057~2086~10888~2060~2059~10884~10883~10885~10886@@@@@@@@@1@0@20@@@@@@@@@@&gender=girl,unisex&ref2=menu_dd_girl-fashion_jackets_V"
+                        },
+                        {
+                            "id": "thermals-girl",
+                            "label": "Thermals",
+                            "href": "https://www.firstcry.com/thermal-wear/6/812?scat=812&gender=girl,unisex&ref2=menu_dd_girl-fashion_thermals_V"
+                        },
+                        {
+                            "id": "onesies-rompers-girl",
+                            "label": "Onesies & Rompers",
+                            "href": "https://www.firstcry.com/onesies-and-rompers/6/164?scat=164&gender=girl&sort=bestseller&ref2=menu_dd_girl-fashion_onesies-and-rompers_V"
+                        },
+                        {
+                            "id": "nightwear-girl",
+                            "label": "Nightwear",
+                            "href": "https://www.firstcry.com/nightwear/6/165?scat=165&gender=girl,unisex&ref2=menu_dd_girl-fashion_nightwear_V"
+                        },
+                        {
+                            "id": "party-wear-girl",
+                            "label": "Party Wear",
+                            "href": "https://www.firstcry.com/party-wear/6/243?scat=243&gender=girl&ref2=menu_dd_girl-fashion_party-wear_V"
+                        },
+                        {
+                            "id": "frocks-dresses",
+                            "label": "Frocks & Dresses",
+                            "href": "https://www.firstcry.com/frocks-and-dresses/6/168?scat=168&gender=girl&ref2=menu_dd_girl-fashion_frocks-and-dresses_V"
+                        },
+                        {
+                            "id": "tops-t-shirts",
+                            "label": "Tops & T-shirts",
+                            "href": "https://www.firstcry.com/tops/6/515?scat=515,26@@@@@@@@@@1@0@20@@@@@@@@@@@@@@@&gender=girl,unisex&sort=bestseller&ref2=menu_dd_girl-fashion_tops-and-t-shirts_H"
+                        },
+                        {
+                            "id": "jeans-jeggings",
+                            "label": "Jeans & Jeggings",
+                            "href": "https://www.firstcry.com/shorts-skirts-and-jeans/6/221?scat=221@~1558~1559~1561~12510@@@@@@@@@1@0@20@@@@@@@@@@&gender=girl,unisex&ref2=menu_dd_girl-fashion_jeans-and-jeggings_H"
+                        },
+                        {
+                            "id": "pajamas-leggings",
+                            "label": "Pajamas & Leggings",
+                            "href": "https://www.firstcry.com/pajamas-and-leggings/6/269?scat=269&gender=girl,unisex&ref2=menu_dd_girl-fashion_pajamas-and-leggings_H"
+                        },
+                        {
+                            "id": "ethnic-wear-girl",
+                            "label": "Ethnic Wear",
+                            "href": "https://www.firstcry.com/ethnic-wear/6/246?scat=246&gender=girl&ref2=menu_dd_girl-fashion_ethnic-wear_H"
+                        },
+                        {
+                            "id": "inner-wear-girl",
+                            "label": "Inner Wear",
+                            "href": "https://www.firstcry.com/innerwear-and-thermals/6/163?scat=163&gender=girl,unisex&ref2=menu_dd_girl-fashion_inner-wear_H"
+                        },
+                        {
+                            "id": "view-all-girl",
+                            "label": "View all",
+                            "href": "https://www.firstcry.com/searchresult?sale=6&searchstring=brand@@@@1@0@20@@@@@@@@@@@@@@@@&sort=BestSeller&gender=girl,unisex&ref2=menu_dd_girl-fashion_view-all_H",
+                            "isViewAll": true
+                        }
+                    ]
+                },
+                {
+                    "title": "SHOP BY COLLECTION",
+                    "type": "collection",
+                    "items": [
+                        {
+                            "id": "multi-packs-girl",
+                            "label": "Multi-packs",
+                            "href": "https://www.firstcry.com/onesies-and-rompers/6/164?scat=164@~5848@@@@@@@@@1@0@20@@@@@@@@@@&gender=girl,unisex&sort=bestseller&ref2=menu_dd_girl-fashion_multi-packs_H"
+                        },
+                        {
+                            "id": "bestsellers-girl",
+                            "label": "Bestsellers",
+                            "href": "https://www.firstcry.com/searchresult?sale=6&searchstring=brand@@@@1@0@20@@@@@@@@@@@@@@@@&sort=bestseller&gender=girl,unisex&ref2=menu_dd_girl-fashion_bestsellers_H"
+                        },
+                        {
+                            "id": "baby-essentials-girl",
+                            "label": "Baby Essentials",
+                            "href": "https://www.firstcry.com/caps-gloves-and-mittens/6/22?scat=22,163,169@@@@@@~15~0~1~2~3~4~5@@@@1@0@20@@@@@@@@@@&gender=girl,unisex&ref2=menu_dd_girl-fashion_baby-essentials_H"
+                        }
+                    ]
+                },
+                {
+                    "title": "FASHION ACCESSORIES",
+                    "type": "accessories",
+                    "items": [
+                        {
+                            "id": "woolen-caps-gloves-girl",
+                            "label": "Woolen Caps & Gloves",
+                            "href": "https://www.firstcry.com/caps-gloves-and-mittens/6/22?scat=22@~3429~12746~2091@@@@@@@@@1@0@20@@@@@@@@@@@@@@@&sort=bestseller&gender=girl,unisex&ref2=menu_dd_girl-fashion_woolen-caps-and-gloves_H"
+                        },
+                        {
+                            "id": "caps-mittens-booties-girl",
+                            "label": "Caps, Mittens & Booties",
+                            "href": "https://www.firstcry.com/caps-gloves-and-mittens/6/22?scat=22@~422~1498~1500@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_girl-fashion_caps,-mittens-and-booties_H"
+                        },
+                        {
+                            "id": "hair-clips-rubber-bands",
+                            "label": "Hair Clips & Rubber Bands",
+                            "href": "https://www.firstcry.com/fashion-accessories/22/228?ref2=menu_dd_girl-fashion_hair-clips-and-rubber-bands_H"
+                        },
+                        {
+                            "id": "hair-bands",
+                            "label": "Hair Bands",
+                            "href": "https://www.firstcry.com/fashion-accessories/22/224?ref2=menu_dd_girl-fashion_hair-bands_H"
+                        },
+                        {
+                            "id": "jewellery",
+                            "label": "Jewellery",
+                            "href": "https://www.firstcry.com/fashion-accessories/22/226?ref2=menu_dd_girl-fashion_jewellery_H"
+                        },
+                        {
+                            "id": "bags-girl",
+                            "label": "Bags",
+                            "href": "https://www.firstcry.com/fashion-accessories/22/234?gender=girl,unisex&ref2=menu_dd_girl-fashion_bags_H"
+                        },
+                        {
+                            "id": "sunglasses-girl",
+                            "label": "Sunglasses",
+                            "href": "https://www.firstcry.com/fashion-accessories/22/260?scat=260@@~16046@@@@@@@@1@0@20@@@@@@@@@@&gender=girl,unisex&ref2=menu_dd_girl-fashion_sunglasses_H"
+                        },
+                        {
+                            "id": "watches-girl",
+                            "label": "Watches",
+                            "href": "https://www.firstcry.com/fashion-accessories/22/275?gender=girl,unisex&ref2=menu_dd_girl-fashion_watches_H"
+                        },
+                        {
+                            "id": "belts-girl",
+                            "label": "Belts",
+                            "href": "https://www.firstcry.com/ties-belts-and-suspenders/22/245?scat=245@~2644@@@@@@@@@1@0@20@@@@@@@@@@&gender=girl,unisex&ref2=menu_dd_girl-fashion_belts_H"
+                        }
+                    ]
+                },
+                {
+                    "title": "FOOTWEAR",
+                    "type": "footwear",
+                    "items": [
+                        {
+                            "id": "winter-boots-girl",
+                            "label": "Winter Boots",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~11383@@@@@@@@@1@0@20@@@@@@@@@@&gender=girl,unisex&ref2=menu_dd_girl-fashion_winter-boots_H"
+                        },
+                        {
+                            "id": "plush-footwear-girl",
+                            "label": "Plush Footwear",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~6464@@@@@@@@@1@0@20@@@@@@@@@@@@@@@&gender=girl,unisex&ref2=menu_dd_girl-fashion_plush-footwear_H"
+                        },
+                        {
+                            "id": "casual-shoes-girl",
+                            "label": "Casual Shoes",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~416@@@@@@@@@1@0@20@@@@@@@@@@&gender=girl,unisex&ref2=menu_dd_girl-fashion_casual-shoes_H"
+                        },
+                        {
+                            "id": "booties-girl",
+                            "label": "Booties",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~2454@@@@@@@@@1@0@20@@@@@@@@@@&gender=girl,unisex&ref2=menu_dd_girl-fashion_booties_H"
+                        },
+                        {
+                            "id": "sock-shoes-girl",
+                            "label": "Sock Shoes",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~2864@@@@@@@@@1@0@20@@@@@@@@@@@@@@@&sort=bestseller&gender=girl,unisex&ref2=menu_dd_girl-fashion_sock-shoes_H"
+                        },
+                        {
+                            "id": "sneakers-girl",
+                            "label": "Sneakers",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~16934@@@@@@@@@1@0@20@@@@@@@@@@&gender=girl,unisex&ref2=menu_dd_girl-fashion_sneakers_H"
+                        },
+                        {
+                            "id": "sports-shoes-girl",
+                            "label": "Sports Shoes",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~6630@@@@@@@@@1@0@20@@@@@@@@@@&gender=girl,unisex&ref2=menu_dd_girl-fashion_sports-shoes_H"
+                        },
+                        {
+                            "id": "ballerinas",
+                            "label": "Ballerinas",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~6607@@@@@@@@@1@0@20@@@@@@@@@@&gender=girl,unisex&ref2=menu_dd_girl-fashion_ballerinas_H"
+                        },
+                        {
+                            "id": "sandals-girl",
+                            "label": "Sandals",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~415@@@@@@@@@1@0@20@@@@@@@@@@&gender=girl,unisex&ref2=menu_dd_girl-fashion_sandals_H"
+                        },
+                        {
+                            "id": "flip-flops-girl",
+                            "label": "Flip Flops",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~1960@@@@@@@@@1@0@20@@@@@@@@@@&gender=girl,unisex&ref2=menu_dd_girl-fashion_flip-flops_H"
+                        }
+                    ]
+                },
+                {
+                    "title": "SHOP BY AGE",
+                    "type": "age",
+                    "items": [
+                        {
+                            "id": "preemie-girl",
+                            "label": "Preemie/Tiny Preemie",
+                            "href": "https://www.firstcry.com/clothes-and-shoes/6/0/0?age=15&gender=girl,unisex&sort=bestseller&ref2=menu_dd_girl-fashion_preemie-tiny-preemie_H"
+                        },
+                        {
+                            "id": "new-born-girl",
+                            "label": "New Born",
+                            "href": "https://www.firstcry.com/clothes-and-shoes/6/0/0?age=27&gender=girl,unisex&sort=bestseller&ref2=menu_dd_girl-fashion_new-born_H"
+                        },
+                        {
+                            "id": "0-3-months-girl",
+                            "label": "0-3 Months",
+                            "href": "https://www.firstcry.com/clothes-and-shoes/6/0/0?age=0&gender=girl,unisex&sort=bestseller&ref2=menu_dd_girl-fashion_0-3-months_H"
+                        },
+                        {
+                            "id": "3-6-months-girl",
+                            "label": "3-6 Months",
+                            "href": "https://www.firstcry.com/clothes-and-shoes/6/0/0?age=1&gender=girl,unisex&sort=bestseller&ref2=menu_dd_girl-fashion_3-6-months_H"
+                        },
+                        {
+                            "id": "6-9-months-girl",
+                            "label": "6-9 Months",
+                            "href": "https://www.firstcry.com/clothes-and-shoes/6/0/0?age=2&gender=girl,unisex&sort=bestseller&ref2=menu_dd_girl-fashion_6-9-months_H"
+                        },
+                        {
+                            "id": "9-12-months-girl",
+                            "label": "9-12 Months",
+                            "href": "https://www.firstcry.com/clothes-and-shoes/6/0/0?age=3&gender=girl,unisex&sort=bestseller&ref2=menu_dd_girl-fashion_9-12-months_H"
+                        },
+                        {
+                            "id": "12-18-months-girl",
+                            "label": "12-18 Months",
+                            "href": "https://www.firstcry.com/clothes-and-shoes/6/0/0?age=4&gender=girl,unisex&sort=bestseller&ref2=menu_dd_girl-fashion_12-18-months_H"
+                        },
+                        {
+                            "id": "18-24-months-girl",
+                            "label": "18-24 Months",
+                            "href": "https://www.firstcry.com/clothes-and-shoes/6/0/0?age=5&gender=girl,unisex&sort=bestseller&ref2=menu_dd_girl-fashion_18-24-months_H"
+                        },
+                        {
+                            "id": "2-4-years-girl",
+                            "label": "2 to 4 Years",
+                            "href": "https://www.firstcry.com/clothes-and-shoes/6/0/0?age=6&gender=girl,unisex&sort=bestseller&ref2=menu_dd_girl-fashion_2-to-4-years_H"
+                        },
+                        {
+                            "id": "4-6-years-girl",
+                            "label": "4 to 6 Years",
+                            "href": "https://www.firstcry.com/clothes-and-shoes/6/0/0?age=7&gender=girl,unisex&sort=bestseller&ref2=menu_dd_girl-fashion_4-to-6-years_H"
+                        },
+                        {
+                            "id": "6-8-years-girl",
+                            "label": "6 to 8 Years",
+                            "href": "https://www.firstcry.com/clothes-and-shoes/6/0/0?age=8&gender=girl,unisex&sort=bestseller&ref2=menu_dd_girl-fashion_6-to-8-years_H"
+                        },
+                        {
+                            "id": "8-plus-years-girl",
+                            "label": "8+ Years",
+                            "href": "https://www.firstcry.com/clothes-and-shoes/6/0/0?age=9,10,11&gender=girl,unisex&sort=bestseller&ref2=menu_dd_girl-fashion_8-years_H"
+                        }
+                    ]
+                },
+                {
+                    "title": "SHOP BY BRANDS",
+                    "type": "brands",
+                    "items": [
+                        {
+                            "id": "babyhug-girl",
+                            "label": "Babyhug",
+                            "href": "https://www.firstcry.com/babyhug/6/0/621?sort=bestseller&gender=girl,unisex&ref2=menu_dd_girl-fashion_babyhug_H"
+                        },
+                        {
+                            "id": "babyoye-girl",
+                            "label": "Babyoye",
+                            "href": "https://www.firstcry.com/babyoye/6/0/1004078?gender=girl,unisex&sort=bestseller&ref2=menu_dd_girl-fashion_babyoye_H"
+                        },
+                        {
+                            "id": "ollington-st-girl",
+                            "label": "OLLINGTON ST.",
+                            "href": "https://www.firstcry.com/ollington-st/6/0/1007141?sort=bestseller&gender=girl,unisex&ref2=menu_dd_girl-fashion_ollington-st_H"
+                        },
+                        {
+                            "id": "pine-kids-girl",
+                            "label": "Pine Kids",
+                            "href": "https://www.firstcry.com/pinekids/6/0/1006125?gender=girl,unisex&sort=bestseller&ref2=menu_dd_girl-fashion_pine-kids_H"
+                        },
+                        {
+                            "id": "carters-girl",
+                            "label": "Carter's",
+                            "href": "https://www.firstcry.com/carters/6/0/52?gender=girl,unisex&sort=newarrivals&ref2=menu_dd_girl-fashion_carters_H"
+                        },
+                        {
+                            "id": "puma-girl",
+                            "label": "Puma",
+                            "href": "https://www.firstcry.com/puma/6/0/720?gender=girl,unisex&sort=bestseller&ref2=menu_dd_girl-fashion_puma_H"
+                        },
+                        {
+                            "id": "ed-a-mamma-girl",
+                            "label": "Ed-a-Mamma",
+                            "href": "https://www.firstcry.com/ed-a-mamma/6/0/1006272?sort=bestseller&gender=girl,unisex&ref2=menu_dd_girl-fashion_ed-a-mamma_H"
+                        },
+                        {
+                            "id": "hola-bonita",
+                            "label": "Hola Bonita",
+                            "href": "https://www.firstcry.com/holabonita/6/0/1006492?sort=bestseller&gender=girl&ref2=menu_dd_girl-fashion_hola-bonita_H"
+                        }
+                    ]
+                }
+            ],
+            "banner": {
+                "image": "https://cdn.fcglcdn.com/brainbees/images/cattemplate/370_270_rhs_banner_girl_fashion_070226.webp",
+                "alt": "Spring 2026",
+                "href": "https://www.firstcry.com/topoffers?moid=32471&c=SPN35&gender=girl,unisex&ref2=menu_dd_girl-fashion_spring-2026_H",
+                "title": "Spring 2026"
+            }
+        },
+        {
+            "id": "footwear",
+            "label": "FOOTWEAR",
+            "href": "//www.firstcry.com/clothes-and-shoes/6/170/0?sort=bestseller&ref2=menu_dd_catlanding",
+            "columns": [
+                {
+                    "title": "SHOP BY CATEGORY",
+                    "type": "category",
+                    "items": [
+                        {
+                            "id": "winter-boots",
+                            "label": "Winter Boots",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~11383@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_footwear_winter-boots_H"
+                        },
+                        {
+                            "id": "plush-footwear",
+                            "label": "Plush Footwear",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~6464@@@@@@@@@1@0@20@@@@@@@@@@@@@@@&ref2=menu_dd_footwear_plush-footwear_H"
+                        },
+                        {
+                            "id": "casual-shoes",
+                            "label": "Casual Shoes",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~416@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_footwear_casual-shoes_H"
+                        },
+                        {
+                            "id": "booties",
+                            "label": "Booties",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~2454@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_footwear_booties_H"
+                        },
+                        {
+                            "id": "sock-shoes",
+                            "label": "Sock Shoes",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~2864@@@@@@@@@1@0@20@@@@@@@@@@@@@@@&sort=bestseller&ref2=menu_dd_footwear_sock-shoes_H"
+                        },
+                        {
+                            "id": "sneakers",
+                            "label": "Sneakers",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~16934@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_footwear_sneakers_H"
+                        },
+                        {
+                            "id": "sports-shoes",
+                            "label": "Sports Shoes",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~6630@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_footwear_sports-shoes_H"
+                        },
+                        {
+                            "id": "ballerinas",
+                            "label": "Ballerinas",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~6607@@@@@@@@@1@0@20@@@@@@@@@@&gender=girl&ref2=menu_dd_footwear_ballerinas_H"
+                        },
+                        {
+                            "id": "oxfords-loafers",
+                            "label": "Oxfords & Loafers",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~3509@@@@@@@@@1@0@20&ref2=menu_dd_footwear_oxfords-and-loafers_H"
+                        },
+                        {
+                            "id": "ethnic-footwear",
+                            "label": "Ethnic Footwear",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~7476@@@@@@@@@1@0@20&ref2=menu_dd_footwear_ethnic-footwear_H"
+                        },
+                        {
+                            "id": "sandals",
+                            "label": "Sandals",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~415@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_footwear_sandals_H"
+                        },
+                        {
+                            "id": "school-shoes",
+                            "label": "School Shoes",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~417@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_footwear_school-shoes_H"
+                        },
+                        {
+                            "id": "flip-flops",
+                            "label": "Flip Flops",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~1960@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_footwear_flip-flops_H"
+                        }
+                    ]
+                },
+                {
+                    "title": "SHOP BY AGE",
+                    "type": "age",
+                    "items": [
+                        {
+                            "id": "new-born-0-3-m",
+                            "label": "New Born (0-3 M)",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=0&ref2=menu_dd_footwear_new-born-0-3-m_H"
+                        },
+                        {
+                            "id": "3-6-months",
+                            "label": "3-6 Months",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=1&ref2=menu_dd_footwear_3-6-months_H"
+                        },
+                        {
+                            "id": "6-9-months",
+                            "label": "6-9 Months",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=2&ref2=menu_dd_footwear_6-9-months_H"
+                        },
+                        {
+                            "id": "9-12-months",
+                            "label": "9-12 Months",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=3&ref2=menu_dd_footwear_9-12-months_H"
+                        },
+                        {
+                            "id": "12-18-months",
+                            "label": "12-18 Months",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=4&ref2=menu_dd_footwear_12-18-months_H"
+                        },
+                        {
+                            "id": "18-24-months",
+                            "label": "18-24 Months",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=5&ref2=menu_dd_footwear_18-24-months_H"
+                        },
+                        {
+                            "id": "2-4-years",
+                            "label": "2 to 4 Years",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=6&ref2=menu_dd_footwear_2-to-4-years_H"
+                        },
+                        {
+                            "id": "4-6-years",
+                            "label": "4 to 6 Years",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=7&ref2=menu_dd_footwear_4-to-6-years_H"
+                        },
+                        {
+                            "id": "6-8-years",
+                            "label": "6 to 8 Years",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=8,9&ref2=menu_dd_footwear_6-to-8-years_H"
+                        },
+                        {
+                            "id": "8-plus-years",
+                            "label": "8+ Years",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=10,11&ref2=menu_dd_footwear_8-years_H"
+                        }
+                    ]
+                },
+                {
+                    "title": "DON'T MISS",
+                    "type": "featured",
+                    "items": [
+                        {
+                            "id": "sock-shoes-featured",
+                            "label": "Sock Shoes",
+                            "href": "https://www.firstcry.com/socks-and-tights/6/238?scat=238@~9156@@@@@@@@@1@0@20@@@@@@@@@@&sort=bestseller&ref2=menu_dd_footwear_sock-shoes_H"
+                        },
+                        {
+                            "id": "socks",
+                            "label": "Socks",
+                            "href": "https://www.firstcry.com/socks-tights/6/238?scat=238@~1617~1618~3441~9156@@@@@@@@@1@0@20@@@@@@@@@@&sort=Popularity&ref2=menu_dd_footwear_socks_H"
+                        },
+                        {
+                            "id": "stockings-tights",
+                            "label": "Stockings & Tights",
+                            "href": "https://www.firstcry.com/socks-tights/6/238?scat=238@~1621~1970@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_footwear_stockings-and-tights_H"
+                        },
+                        {
+                            "id": "jibbitz",
+                            "label": "Jibbitz",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@@@@@@@@@@1@0@20@@@@@@@@@@@~19562@@@@&ref2=menu_dd_footwear_jibbitz_H"
+                        }
+                    ]
+                },
+                {
+                    "title": "SHOP BY BRAND",
+                    "type": "brands",
+                    "items": [
+                        {
+                            "id": "cutewalk",
+                            "label": "Cutewalk",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@@@@@@@@~376@@1@0@20@@@@@@@@@@&sort=BestSeller&ref2=menu_dd_footwear_cutewalk_H"
+                        },
+                        {
+                            "id": "pinekids",
+                            "label": "Pinekids",
+                            "href": "https://www.firstcry.com/searchresult?sale=6&brandid=1006125&searchstring=brand@~170@@@1@0@20@@@@@@@@@@@@@@@@&sort=bestseller&ref2=menu_dd_footwear_pinekids_H"
+                        },
+                        {
+                            "id": "babyoye",
+                            "label": "Babyoye",
+                            "href": "https://www.firstcry.com/searchresult?sale=6&brandid=1004078&searchstring=brand@~170@@@1@0@20@@@@@@@@@@@@@@@@&sort=bestseller&ref2=menu_dd_footwear_babyoye_H"
+                        },
+                        {
+                            "id": "puma",
+                            "label": "Puma",
+                            "href": "https://www.firstcry.com/searchresult?sale=6&brandid=720&searchstring=brand@~170@@@1@0@20@@@@@@@@@@@@@@@@&sort=bestseller&ref2=menu_dd_footwear_puma_H"
+                        },
+                        {
+                            "id": "adidas-kids",
+                            "label": "ADIDAS KIDS",
+                            "href": "https://www.firstcry.com/searchresult?sale=6&brandid=1008331&searchstring=brand@~170@@@1@0@20@@@@@@@@@@@@@@@@&sort=bestseller&ref2=menu_dd_footwear_adidas-kids_H"
+                        },
+                        {
+                            "id": "skechers",
+                            "label": "Skechers",
+                            "href": "https://www.firstcry.com/skechers/6/0/1005738?sort=bestseller&ref2=menu_dd_footwear_skechers_H"
+                        },
+                        {
+                            "id": "kazarmax",
+                            "label": "Kazarmax",
+                            "href": "https://www.firstcry.com/kazarmax/6/0/1006610?sort=bestseller&ref2=menu_dd_footwear_kazarmax_H"
+                        }
+                    ]
+                }
+            ],
+            "banner": {
+                "image": "https://cdn.fcglcdn.com/brainbees/images/cattemplate/370_270_rhs_banner_footwear_070226.webp",
+                "alt": "Spring 2026",
+                "href": "https://www.firstcry.com/topoffers?moid=50734&sort=newarrivals&ref2=menu_dd_footwear_spring-2026_H",
+                "title": "Spring 2026"
+            }
+        },
+        {
+            "id": "toys",
+            "label": "TOYS",
+            "href": "//www.firstcry.com/clothes-and-shoes/6/170/0?sort=bestseller&ref2=menu_dd_catlanding",
+            "columns": [
+                {
+                    "title": "SHOP BY CATEGORY",
+                    "type": "category",
+                    "items": [
+                        {
+                            "id": "winter-boots",
+                            "label": "Winter Boots",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~11383@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_footwear_winter-boots_H"
+                        },
+                        {
+                            "id": "plush-footwear",
+                            "label": "Plush Footwear",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~6464@@@@@@@@@1@0@20@@@@@@@@@@@@@@@&ref2=menu_dd_footwear_plush-footwear_H"
+                        },
+                        {
+                            "id": "casual-shoes",
+                            "label": "Casual Shoes",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~416@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_footwear_casual-shoes_H"
+                        },
+                        {
+                            "id": "booties",
+                            "label": "Booties",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~2454@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_footwear_booties_H"
+                        },
+                        {
+                            "id": "sock-shoes",
+                            "label": "Sock Shoes",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~2864@@@@@@@@@1@0@20@@@@@@@@@@@@@@@&sort=bestseller&ref2=menu_dd_footwear_sock-shoes_H"
+                        },
+                        {
+                            "id": "sneakers",
+                            "label": "Sneakers",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~16934@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_footwear_sneakers_H"
+                        },
+                        {
+                            "id": "sports-shoes",
+                            "label": "Sports Shoes",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~6630@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_footwear_sports-shoes_H"
+                        },
+                        {
+                            "id": "ballerinas",
+                            "label": "Ballerinas",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~6607@@@@@@@@@1@0@20@@@@@@@@@@&gender=girl&ref2=menu_dd_footwear_ballerinas_H"
+                        },
+                        {
+                            "id": "oxfords-loafers",
+                            "label": "Oxfords & Loafers",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~3509@@@@@@@@@1@0@20&ref2=menu_dd_footwear_oxfords-and-loafers_H"
+                        },
+                        {
+                            "id": "ethnic-footwear",
+                            "label": "Ethnic Footwear",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~7476@@@@@@@@@1@0@20&ref2=menu_dd_footwear_ethnic-footwear_H"
+                        },
+                        {
+                            "id": "sandals",
+                            "label": "Sandals",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~415@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_footwear_sandals_H"
+                        },
+                        {
+                            "id": "school-shoes",
+                            "label": "School Shoes",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~417@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_footwear_school-shoes_H"
+                        },
+                        {
+                            "id": "flip-flops",
+                            "label": "Flip Flops",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~1960@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_footwear_flip-flops_H"
+                        }
+                    ]
+                },
+                {
+                    "title": "SHOP BY AGE",
+                    "type": "age",
+                    "items": [
+                        {
+                            "id": "new-born-0-3-m",
+                            "label": "New Born (0-3 M)",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=0&ref2=menu_dd_footwear_new-born-0-3-m_H"
+                        },
+                        {
+                            "id": "3-6-months",
+                            "label": "3-6 Months",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=1&ref2=menu_dd_footwear_3-6-months_H"
+                        },
+                        {
+                            "id": "6-9-months",
+                            "label": "6-9 Months",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=2&ref2=menu_dd_footwear_6-9-months_H"
+                        },
+                        {
+                            "id": "9-12-months",
+                            "label": "9-12 Months",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=3&ref2=menu_dd_footwear_9-12-months_H"
+                        },
+                        {
+                            "id": "12-18-months",
+                            "label": "12-18 Months",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=4&ref2=menu_dd_footwear_12-18-months_H"
+                        },
+                        {
+                            "id": "18-24-months",
+                            "label": "18-24 Months",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=5&ref2=menu_dd_footwear_18-24-months_H"
+                        },
+                        {
+                            "id": "2-4-years",
+                            "label": "2 to 4 Years",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=6&ref2=menu_dd_footwear_2-to-4-years_H"
+                        },
+                        {
+                            "id": "4-6-years",
+                            "label": "4 to 6 Years",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=7&ref2=menu_dd_footwear_4-to-6-years_H"
+                        },
+                        {
+                            "id": "6-8-years",
+                            "label": "6 to 8 Years",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=8,9&ref2=menu_dd_footwear_6-to-8-years_H"
+                        },
+                        {
+                            "id": "8-plus-years",
+                            "label": "8+ Years",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=10,11&ref2=menu_dd_footwear_8-years_H"
+                        }
+                    ]
+                },
+                {
+                    "title": "DON'T MISS",
+                    "type": "featured",
+                    "items": [
+                        {
+                            "id": "sock-shoes-featured",
+                            "label": "Sock Shoes",
+                            "href": "https://www.firstcry.com/socks-and-tights/6/238?scat=238@~9156@@@@@@@@@1@0@20@@@@@@@@@@&sort=bestseller&ref2=menu_dd_footwear_sock-shoes_H"
+                        },
+                        {
+                            "id": "socks",
+                            "label": "Socks",
+                            "href": "https://www.firstcry.com/socks-tights/6/238?scat=238@~1617~1618~3441~9156@@@@@@@@@1@0@20@@@@@@@@@@&sort=Popularity&ref2=menu_dd_footwear_socks_H"
+                        },
+                        {
+                            "id": "stockings-tights",
+                            "label": "Stockings & Tights",
+                            "href": "https://www.firstcry.com/socks-tights/6/238?scat=238@~1621~1970@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_footwear_stockings-and-tights_H"
+                        },
+                        {
+                            "id": "jibbitz",
+                            "label": "Jibbitz",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@@@@@@@@@@1@0@20@@@@@@@@@@@~19562@@@@&ref2=menu_dd_footwear_jibbitz_H"
+                        }
+                    ]
+                },
+                {
+                    "title": "SHOP BY BRAND",
+                    "type": "brands",
+                    "items": [
+                        {
+                            "id": "cutewalk",
+                            "label": "Cutewalk",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@@@@@@@@~376@@1@0@20@@@@@@@@@@&sort=BestSeller&ref2=menu_dd_footwear_cutewalk_H"
+                        },
+                        {
+                            "id": "pinekids",
+                            "label": "Pinekids",
+                            "href": "https://www.firstcry.com/searchresult?sale=6&brandid=1006125&searchstring=brand@~170@@@1@0@20@@@@@@@@@@@@@@@@&sort=bestseller&ref2=menu_dd_footwear_pinekids_H"
+                        },
+                        {
+                            "id": "babyoye",
+                            "label": "Babyoye",
+                            "href": "https://www.firstcry.com/searchresult?sale=6&brandid=1004078&searchstring=brand@~170@@@1@0@20@@@@@@@@@@@@@@@@&sort=bestseller&ref2=menu_dd_footwear_babyoye_H"
+                        },
+                        {
+                            "id": "puma",
+                            "label": "Puma",
+                            "href": "https://www.firstcry.com/searchresult?sale=6&brandid=720&searchstring=brand@~170@@@1@0@20@@@@@@@@@@@@@@@@&sort=bestseller&ref2=menu_dd_footwear_puma_H"
+                        },
+                        {
+                            "id": "adidas-kids",
+                            "label": "ADIDAS KIDS",
+                            "href": "https://www.firstcry.com/searchresult?sale=6&brandid=1008331&searchstring=brand@~170@@@1@0@20@@@@@@@@@@@@@@@@&sort=bestseller&ref2=menu_dd_footwear_adidas-kids_H"
+                        },
+                        {
+                            "id": "skechers",
+                            "label": "Skechers",
+                            "href": "https://www.firstcry.com/skechers/6/0/1005738?sort=bestseller&ref2=menu_dd_footwear_skechers_H"
+                        },
+                        {
+                            "id": "kazarmax",
+                            "label": "Kazarmax",
+                            "href": "https://www.firstcry.com/kazarmax/6/0/1006610?sort=bestseller&ref2=menu_dd_footwear_kazarmax_H"
+                        }
+                    ]
+                }
+            ],
+            "banner": {
+                "image": "https://cdn.fcglcdn.com/brainbees/images/cattemplate/370_270_rhs_banner_footwear_070226.webp",
+                "alt": "Spring 2026",
+                "href": "https://www.firstcry.com/topoffers?moid=50734&sort=newarrivals&ref2=menu_dd_footwear_spring-2026_H",
+                "title": "Spring 2026"
+            }
+        },
+        {
+            "id": "diapering",
+            "label": "DIAPERING",
+            "href": "//www.firstcry.com/clothes-and-shoes/6/170/0?sort=bestseller&ref2=menu_dd_catlanding",
+            "columns": [
+                {
+                    "title": "SHOP BY CATEGORY",
+                    "type": "category",
+                    "items": [
+                        {
+                            "id": "winter-boots",
+                            "label": "Winter Boots",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~11383@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_footwear_winter-boots_H"
+                        },
+                        {
+                            "id": "plush-footwear",
+                            "label": "Plush Footwear",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~6464@@@@@@@@@1@0@20@@@@@@@@@@@@@@@&ref2=menu_dd_footwear_plush-footwear_H"
+                        },
+                        {
+                            "id": "casual-shoes",
+                            "label": "Casual Shoes",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~416@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_footwear_casual-shoes_H"
+                        },
+                        {
+                            "id": "booties",
+                            "label": "Booties",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~2454@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_footwear_booties_H"
+                        },
+                        {
+                            "id": "sock-shoes",
+                            "label": "Sock Shoes",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~2864@@@@@@@@@1@0@20@@@@@@@@@@@@@@@&sort=bestseller&ref2=menu_dd_footwear_sock-shoes_H"
+                        },
+                        {
+                            "id": "sneakers",
+                            "label": "Sneakers",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~16934@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_footwear_sneakers_H"
+                        },
+                        {
+                            "id": "sports-shoes",
+                            "label": "Sports Shoes",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~6630@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_footwear_sports-shoes_H"
+                        },
+                        {
+                            "id": "ballerinas",
+                            "label": "Ballerinas",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~6607@@@@@@@@@1@0@20@@@@@@@@@@&gender=girl&ref2=menu_dd_footwear_ballerinas_H"
+                        },
+                        {
+                            "id": "oxfords-loafers",
+                            "label": "Oxfords & Loafers",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~3509@@@@@@@@@1@0@20&ref2=menu_dd_footwear_oxfords-and-loafers_H"
+                        },
+                        {
+                            "id": "ethnic-footwear",
+                            "label": "Ethnic Footwear",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~7476@@@@@@@@@1@0@20&ref2=menu_dd_footwear_ethnic-footwear_H"
+                        },
+                        {
+                            "id": "sandals",
+                            "label": "Sandals",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~415@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_footwear_sandals_H"
+                        },
+                        {
+                            "id": "school-shoes",
+                            "label": "School Shoes",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~417@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_footwear_school-shoes_H"
+                        },
+                        {
+                            "id": "flip-flops",
+                            "label": "Flip Flops",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@~1960@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_footwear_flip-flops_H"
+                        }
+                    ]
+                },
+                {
+                    "title": "SHOP BY AGE",
+                    "type": "age",
+                    "items": [
+                        {
+                            "id": "new-born-0-3-m",
+                            "label": "New Born (0-3 M)",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=0&ref2=menu_dd_footwear_new-born-0-3-m_H"
+                        },
+                        {
+                            "id": "3-6-months",
+                            "label": "3-6 Months",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=1&ref2=menu_dd_footwear_3-6-months_H"
+                        },
+                        {
+                            "id": "6-9-months",
+                            "label": "6-9 Months",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=2&ref2=menu_dd_footwear_6-9-months_H"
+                        },
+                        {
+                            "id": "9-12-months",
+                            "label": "9-12 Months",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=3&ref2=menu_dd_footwear_9-12-months_H"
+                        },
+                        {
+                            "id": "12-18-months",
+                            "label": "12-18 Months",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=4&ref2=menu_dd_footwear_12-18-months_H"
+                        },
+                        {
+                            "id": "18-24-months",
+                            "label": "18-24 Months",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=5&ref2=menu_dd_footwear_18-24-months_H"
+                        },
+                        {
+                            "id": "2-4-years",
+                            "label": "2 to 4 Years",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=6&ref2=menu_dd_footwear_2-to-4-years_H"
+                        },
+                        {
+                            "id": "4-6-years",
+                            "label": "4 to 6 Years",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=7&ref2=menu_dd_footwear_4-to-6-years_H"
+                        },
+                        {
+                            "id": "6-8-years",
+                            "label": "6 to 8 Years",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=8,9&ref2=menu_dd_footwear_6-to-8-years_H"
+                        },
+                        {
+                            "id": "8-plus-years",
+                            "label": "8+ Years",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170&age=10,11&ref2=menu_dd_footwear_8-years_H"
+                        }
+                    ]
+                },
+                {
+                    "title": "DON'T MISS",
+                    "type": "featured",
+                    "items": [
+                        {
+                            "id": "sock-shoes-featured",
+                            "label": "Sock Shoes",
+                            "href": "https://www.firstcry.com/socks-and-tights/6/238?scat=238@~9156@@@@@@@@@1@0@20@@@@@@@@@@&sort=bestseller&ref2=menu_dd_footwear_sock-shoes_H"
+                        },
+                        {
+                            "id": "socks",
+                            "label": "Socks",
+                            "href": "https://www.firstcry.com/socks-tights/6/238?scat=238@~1617~1618~3441~9156@@@@@@@@@1@0@20@@@@@@@@@@&sort=Popularity&ref2=menu_dd_footwear_socks_H"
+                        },
+                        {
+                            "id": "stockings-tights",
+                            "label": "Stockings & Tights",
+                            "href": "https://www.firstcry.com/socks-tights/6/238?scat=238@~1621~1970@@@@@@@@@1@0@20@@@@@@@@@@&ref2=menu_dd_footwear_stockings-and-tights_H"
+                        },
+                        {
+                            "id": "jibbitz",
+                            "label": "Jibbitz",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@@@@@@@@@@1@0@20@@@@@@@@@@@~19562@@@@&ref2=menu_dd_footwear_jibbitz_H"
+                        }
+                    ]
+                },
+                {
+                    "title": "SHOP BY BRAND",
+                    "type": "brands",
+                    "items": [
+                        {
+                            "id": "cutewalk",
+                            "label": "Cutewalk",
+                            "href": "https://www.firstcry.com/footwear/6/170?scat=170@@@@@@@@~376@@1@0@20@@@@@@@@@@&sort=BestSeller&ref2=menu_dd_footwear_cutewalk_H"
+                        },
+                        {
+                            "id": "pinekids",
+                            "label": "Pinekids",
+                            "href": "https://www.firstcry.com/searchresult?sale=6&brandid=1006125&searchstring=brand@~170@@@1@0@20@@@@@@@@@@@@@@@@&sort=bestseller&ref2=menu_dd_footwear_pinekids_H"
+                        },
+                        {
+                            "id": "babyoye",
+                            "label": "Babyoye",
+                            "href": "https://www.firstcry.com/searchresult?sale=6&brandid=1004078&searchstring=brand@~170@@@1@0@20@@@@@@@@@@@@@@@@&sort=bestseller&ref2=menu_dd_footwear_babyoye_H"
+                        },
+                        {
+                            "id": "puma",
+                            "label": "Puma",
+                            "href": "https://www.firstcry.com/searchresult?sale=6&brandid=720&searchstring=brand@~170@@@1@0@20@@@@@@@@@@@@@@@@&sort=bestseller&ref2=menu_dd_footwear_puma_H"
+                        },
+                        {
+                            "id": "adidas-kids",
+                            "label": "ADIDAS KIDS",
+                            "href": "https://www.firstcry.com/searchresult?sale=6&brandid=1008331&searchstring=brand@~170@@@1@0@20@@@@@@@@@@@@@@@@&sort=bestseller&ref2=menu_dd_footwear_adidas-kids_H"
+                        },
+                        {
+                            "id": "skechers",
+                            "label": "Skechers",
+                            "href": "https://www.firstcry.com/skechers/6/0/1005738?sort=bestseller&ref2=menu_dd_footwear_skechers_H"
+                        },
+                        {
+                            "id": "kazarmax",
+                            "label": "Kazarmax",
+                            "href": "https://www.firstcry.com/kazarmax/6/0/1006610?sort=bestseller&ref2=menu_dd_footwear_kazarmax_H"
+                        }
+                    ]
+                }
+            ],
+            "banner": {
+                "image": "https://cdn.fcglcdn.com/brainbees/images/cattemplate/370_270_rhs_banner_footwear_070226.webp",
+                "alt": "Spring 2026",
+                "href": "https://www.firstcry.com/topoffers?moid=50734&sort=newarrivals&ref2=menu_dd_footwear_spring-2026_H",
+                "title": "Spring 2026"
+            }
+        }
+    ],
+    "myAccount": {
+        "sections": [
+            {
+                "title": "My Profile",
+                "items": [
+                    {
+                        "id": "my-profile",
+                        "label": "My Profile",
+                        "href": "//www.firstcry.com/accountdetails"
+                    },
+                    {
+                        "id": "order-history",
+                        "label": "Order History",
+                        "href": "//www.firstcry.com/orderhistory"
+                    },
+                    {
+                        "id": "manage-returns",
+                        "label": "Manage Returns",
+                        "href": "//www.firstcry.com/managereturn"
+                    },
+                    {
+                        "id": "quick-reorder",
+                        "label": "Quick Reorder",
+                        "href": "//www.firstcry.com/quickreorder"
+                    },
+                    {
+                        "id": "cash-refund",
+                        "label": "Cash Refund",
+                        "href": "//www.firstcry.com/cashrefund"
+                    },
+                    {
+                        "id": "cashback-codes",
+                        "label": "Cashback Codes",
+                        "href": "//www.firstcry.com/cashback"
+                    },
+                    {
+                        "id": "guaranteed-savings",
+                        "label": "Guaranteed Savings",
+                        "href": "//www.firstcry.com/mygssavingofferdetails"
+                    },
+                    {
+                        "id": "intellikit",
+                        "label": "Intellikit Subscriptions",
+                        "href": "//www.firstcry.com/intellikit-subscriptions"
+                    },
+                    {
+                        "id": "intellibaby",
+                        "label": "Intellibaby Subscriptions",
+                        "href": "//www.firstcry.com/intellibaby-subscriptions"
+                    },
+                    {
+                        "id": "gift-certificates",
+                        "label": "Gift Certificates",
+                        "href": "//www.firstcry.com/firstcry_gift_certificate"
+                    },
+                    {
+                        "id": "invites-credits",
+                        "label": "Invites & Credits",
+                        "href": "//www.firstcry.com/invitefriends"
+                    },
+                    {
+                        "id": "my-reviews",
+                        "label": "My Reviews & Uploads",
+                        "href": "//www.firstcry.com/myratings"
+                    },
+                    {
+                        "id": "notify-me",
+                        "label": "Notify Me",
+                        "href": "//www.firstcry.com/mynotifyme"
+                    },
+                    {
+                        "id": "my-shortlist",
+                        "label": "My Shortlist",
+                        "href": "//www.firstcry.com/myshortlist"
+                    },
+                    {
+                        "id": "chat-with-wiz",
+                        "label": "Chat with our Wiz",
+                        "href": "//www.firstcry.com/contactus?ref2=topstrip-Chat-With-Wiz"
+                    },
+                    {
+                        "id": "sell-with-us",
+                        "label": "Sell With Us",
+                        "href": "//www.firstcry.com/contactus?ref2=topstrip-sell_with_us&btieup=true"
+                    },
+                    {
+                        "id": "logout",
+                        "label": "Logout",
+                        "action": "logout"
+                    }
+                ]
+            }
+        ]
+    },
+    "footerLinks": {
+        "popularCategories": [
+            "Boy Fashion",
+            "Girl Fashion",
+            "Footwear",
+            "Toys",
+            "Diapering",
+            "Baby Gear",
+            "Feeding",
+            "Bath & Skincare",
+            "Nursery",
+            "Moms & Maternity",
+            "Health & Safety",
+            "Books",
+            "School Supplies",
+            "Birthday",
+            "Gifts"
+        ],
+        "popularBrands": [
+            "Babyhug",
+            "Babyoye",
+            "Pine Kids",
+            "Carter's",
+            "Puma",
+            "UCB",
+            "Ed-a-Mamma",
+            "Luv Lap",
+            "R for Rabbit",
+            "Mee Mee",
+            "Chicco",
+            "Pigeon"
+        ]
+    }
+}
