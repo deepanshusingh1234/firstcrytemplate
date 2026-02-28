@@ -15,6 +15,7 @@ import Link from "next/link";
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeMenu, setActiveMenu] = useState<string | null>(null);
+    const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
     const { setIsCartOpen } = useCart();
     const { user, logout, isLoading } = useAuth();
     const router = useRouter();
@@ -29,6 +30,32 @@ const Header = () => {
     const handleLoginClick = () => {
         const currentPath = window.location.pathname;
         router.push(`/login?redirect=${encodeURIComponent(currentPath)}`);
+    };
+
+    const handleMenuEnter = (categoryId: string) => {
+        if (hoverTimeout) {
+            clearTimeout(hoverTimeout);
+            setHoverTimeout(null);
+        }
+        setActiveMenu(categoryId);
+    };
+
+    const handleMenuLeave = () => {
+        const timeout = setTimeout(() => {
+            setActiveMenu(null);
+        }, 100); // Small delay to allow moving to mega menu
+        setHoverTimeout(timeout);
+    };
+
+    const handleMegaMenuEnter = () => {
+        if (hoverTimeout) {
+            clearTimeout(hoverTimeout);
+            setHoverTimeout(null);
+        }
+    };
+
+    const handleMegaMenuLeave = () => {
+        setActiveMenu(null);
     };
 
     return (
@@ -157,16 +184,21 @@ const Header = () => {
                 <nav className="hidden md:block border-t border-gray-200 bg-[#ffd91c] relative">
                     <div className="max-w-[1366px] mx-auto px-4">
                         <ul className="flex items-center space-x-6 py-2 text-sm relative">
-                            <li className="font-bold text-gray-800 flex items-center cursor-pointer group">
+                            <li
+                                className="font-bold text-gray-800 flex items-center cursor-pointer group"
+                                onMouseEnter={() => handleMenuEnter('all-categories')}
+                                onMouseLeave={handleMenuLeave}
+                            >
                                 All Categories <ChevronDown size={16} className="ml-1" />
                             </li>
 
-                            {mainCategories.map((category: MainCategory) => (
+                            {/* Skip the first 'all-categories' when mapping for top menu */}
+                            {mainCategories.slice(1).map((category: MainCategory) => (
                                 <li
                                     key={category.id}
                                     className="relative group cursor-pointer"
-                                    onMouseEnter={() => setActiveMenu(category.id)}
-                                    onMouseLeave={() => setActiveMenu(null)}
+                                    onMouseEnter={() => handleMenuEnter(category.id)}
+                                    onMouseLeave={handleMenuLeave}
                                 >
                                     <a href={category.href} className="py-2 block text-gray-700 hover:text-gray-900 group-hover:text-gray-900 whitespace-nowrap">
                                         {category.label}
@@ -187,22 +219,26 @@ const Header = () => {
                     {/* Full Width Mega Menu */}
                     {activeMenu && (
                         <div
-                            className="absolute left-0 w-full bg-white shadow-lg border-t border-gray-200 z-[100]"
+                            className="absolute left-0 w-full bg-white shadow-lg border-t border-gray-200 z-[100] pt-2"
                             style={{ top: '100%' }}
-                            onMouseEnter={() => setActiveMenu(activeMenu)}
-                            onMouseLeave={() => setActiveMenu(null)}
+                            onMouseEnter={handleMegaMenuEnter}
+                            onMouseLeave={handleMegaMenuLeave}
                         >
                             <div className="max-w-[1366px] mx-auto px-4 py-6">
-                                {mainCategories.map((category: MainCategory) => (
-                                    category.id === activeMenu && (
-                                        <div key={category.id} className="flex">
+                                {/* Find the active category directly instead of mapping all */}
+                                {(() => {
+                                    const activeCategory = mainCategories.find(cat => cat.id === activeMenu);
+                                    if (!activeCategory) return null;
+
+                                    return (
+                                        <div key={activeCategory.id} className="flex">
                                             {/* Render columns dynamically */}
-                                            {category.columns.map((column, idx) => (
-                                                <div key={idx} className="flex-1 px-3">
+                                            {activeCategory.columns.map((column, idx) => (
+                                                <div key={`${activeCategory.id}-col-${idx}`} className="flex-1 px-3">
                                                     <h3 className="font-bold mb-3 text-sm text-gray-900 border-b border-gray-200 pb-2">{column.title}</h3>
                                                     <ul className="space-y-2">
-                                                        {column.items.slice(0, 8).map((item) => (
-                                                            <li key={item.id}>
+                                                        {column.items.slice(0, 8).map((item, itemIdx) => (
+                                                            <li key={`${activeCategory.id}-${idx}-${itemIdx}-${item.id || item.label}`}>
                                                                 <a
                                                                     href={item.href}
                                                                     className="text-xs text-gray-600 hover:text-gray-900 hover:underline block py-1"
@@ -223,20 +259,20 @@ const Header = () => {
                                             ))}
 
                                             {/* Banner if exists */}
-                                            {category.banner && (
+                                            {activeCategory.banner && (
                                                 <div className="w-48 ml-4 flex-shrink-0">
-                                                    <a href={category.banner.href}>
+                                                    <a href={activeCategory.banner.href}>
                                                         <img
-                                                            src={category.banner.image}
-                                                            alt={category.banner.alt}
+                                                            src={activeCategory.banner.image}
+                                                            alt={activeCategory.banner.alt}
                                                             className="w-full h-auto rounded-lg"
                                                         />
                                                     </a>
                                                 </div>
                                             )}
                                         </div>
-                                    )
-                                ))}
+                                    );
+                                })()}
                             </div>
                         </div>
                     )}

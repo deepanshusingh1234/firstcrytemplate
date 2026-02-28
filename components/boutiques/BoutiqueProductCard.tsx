@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Heart } from "lucide-react";
+import Image from "next/image";
 import { Product } from "@/types/boutiques";
 import Link from "next/link";
 import { useCart } from "@/context/CartContext";
@@ -23,6 +24,7 @@ const BoutiqueProductCard: React.FC<Props> = ({ product }) => {
         // Find the selected variant price
         const selectedVariant = selectedColor?.variants.find(v => v.size === selectedSize);
         const price = selectedVariant?.price || product.defaultPrice;
+        // Use the same price for clubPrice if variant doesn't have clubPrice
         const clubPrice = selectedVariant?.price || product.defaultClubPrice;
 
         addToCart({
@@ -37,7 +39,6 @@ const BoutiqueProductCard: React.FC<Props> = ({ product }) => {
             size: selectedSize,
             color: selectedColor?.name,
             colorCode: selectedColor?.code,
-            fabric: product.fabric,
             ageGroup: product.ageGroup,
             inStock: true,
             maxQuantity: 10,
@@ -60,17 +61,20 @@ const BoutiqueProductCard: React.FC<Props> = ({ product }) => {
     const discount = Math.round((1 - product.defaultPrice / product.defaultMrp) * 100);
 
     return (
-        <div className="list_block border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 bg-white mt-6">
+        <div className="list_block border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 bg-white">
             <div className="relative group">
-                <div className="pimg aspect-[4/5] overflow-hidden bg-gray-100">
+                <div className="pimg aspect-4/5 overflow-hidden bg-gray-100">
                     <Link href={product.url} className="block h-full">
-                        <img
+                        <Image
                             src={currentImage}
                             alt={product.name}
                             title={product.name}
+                            width={300}
+                            height={375}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             onMouseEnter={() => product.images.length > 1 && setCurrentImage(product.images[1].url)}
                             onMouseLeave={() => setCurrentImage(product.defaultImage)}
+                            unoptimized
                         />
                     </Link>
                 </div>

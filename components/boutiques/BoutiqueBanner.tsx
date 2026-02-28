@@ -55,7 +55,7 @@ const BoutiqueBanner: React.FC<Props> = ({ category }) => {
                             </li>
                             <li><span className="text-gray-400">/</span></li>
                             <li>
-                                <a href="/boutiques" className="text-gray-600 hover:text-gray-900">Premium Boutiques</a>
+                                <a href="/boutique" className="text-gray-600 hover:text-gray-900">Premium Boutiques</a>
                             </li>
                             <li><span className="text-gray-400">/</span></li>
                             <li className="text-gray-900 font-medium text-base md:text-lg">{category.name}</li>

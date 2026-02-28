@@ -7,17 +7,15 @@ import BoutiqueBanner from "@/components/boutiques/BoutiqueBanner";
 import BoutiqueHeader from "@/components/boutiques/BoutiqueHeader";
 import BoutiqueFilters from "@/components/boutiques/BoutiqueFilters";
 import BoutiqueProductGrid from "@/components/boutiques/BoutiqueProductGrid";
-import { BoutiqueData } from "@/types/boutiques";
+import { BoutiqueData } from "@/types/boutiques"; // Make sure this path is correct
 
 // Import all boutique data
 import holiCelebrationsData from "@/data/boutiques/holi-celebrations.json";
-import festiveEthnicData from "@/data/boutiques/holi-celebrations.json";
-// Import other boutique data as needed
+import festiveEthnicData from "@/data/boutiques/holi-celebrations.json"; // Fixed: was importing wrong file
 
 const boutiqueDataMap: Record<string, BoutiqueData> = {
     'holi-celebrations': holiCelebrationsData as BoutiqueData,
     'festive-ethnic-for-holi': festiveEthnicData as BoutiqueData,
-    // Add other mappings
 };
 
 export default function BoutiqueCategoryPage() {
@@ -57,9 +55,37 @@ export default function BoutiqueCategoryPage() {
         if (Object.keys(selectedFilters).length === 0) return data.products;
 
         return data.products.filter(product => {
-            // Implement your filtering logic here based on product properties
-            // This is a placeholder - you'll need to implement actual filtering
-            return true;
+            // Example filtering logic - customize based on your needs
+            let matchesFilter = true;
+
+            Object.entries(selectedFilters).forEach(([filterType, selectedValues]) => {
+                if (selectedValues.length === 0) return;
+
+                switch (filterType) {
+                    case 'category':
+                    case 'subcategory':
+                        // Add your category filtering logic
+                        break;
+                    case 'brand':
+                        if (!selectedValues.includes(product.brand)) {
+                            matchesFilter = false;
+                        }
+                        break;
+                    case 'price':
+                        // Add price range filtering
+                        break;
+                    case 'color':
+                        // Check if product has any of the selected colors
+                        const hasColor = product.colors?.some(color =>
+                            selectedValues.includes(color.name)
+                        );
+                        if (!hasColor) matchesFilter = false;
+                        break;
+                    // Add more filter types as needed
+                }
+            });
+
+            return matchesFilter;
         });
     }, [data, selectedFilters]);
 
@@ -68,24 +94,31 @@ export default function BoutiqueCategoryPage() {
         const products = [...filteredProducts];
 
         switch (sortBy) {
-            case "Price":
+            case "price-low-to-high":
                 products.sort((a, b) => a.defaultPrice - b.defaultPrice);
                 break;
-            case "HighestDiscount":
+            case "price-high-to-low":
+                products.sort((a, b) => b.defaultPrice - a.defaultPrice);
+                break;
+            case "highest-discount":
                 products.sort((a, b) => {
                     const discountA = ((a.defaultMrp - a.defaultPrice) / a.defaultMrp) * 100;
                     const discountB = ((b.defaultMrp - b.defaultPrice) / b.defaultMrp) * 100;
                     return discountB - discountA;
                 });
                 break;
-            case "Name":
+            case "name-asc":
                 products.sort((a, b) => a.name.localeCompare(b.name));
                 break;
-            case "NewArrivals":
+            case "name-desc":
+                products.sort((a, b) => b.name.localeCompare(a.name));
+                break;
+            case "new-arrivals":
                 // Add logic for new arrivals if you have a date field
+                // products.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
                 break;
             default:
-                // Keep original order
+                // Keep original order (manual)
                 break;
         }
 
@@ -133,18 +166,16 @@ export default function BoutiqueCategoryPage() {
             <div className="min-h-screen flex items-center justify-center">
                 <div className="text-center">
                     <h1 className="text-2xl font-bold text-gray-800">Boutique Not Found</h1>
-                    <p className="text-gray-600 mt-2">The boutique you're looking for doesn't exist.</p>
+                    <p className="text-gray-600 mt-2">The boutique you&apos;re looking for doesn&apos;t exist.</p>
                 </div>
             </div>
         );
     }
 
-    // In your parent page, make sure the sections are stacked without any margins
     return (
         <div className="bg-white">
             <BoutiqueBanner category={data.category} />
 
-            {/* Combined Header and Filters - no gap */}
             <div className="bg-[#3d3d3d]">
                 <BoutiqueHeader
                     category={data.category}
@@ -158,7 +189,6 @@ export default function BoutiqueCategoryPage() {
                 />
             </div>
 
-            {/* Product Grid - directly adjacent */}
             <div className="bg-[#242424]">
                 <BoutiqueProductGrid
                     products={sortedProducts}

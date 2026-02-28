@@ -9,7 +9,7 @@ export interface FilterOption {
 export interface FilterCategory {
     id: string;
     name: string;
-    type: string;
+    type: 'subcategory' | 'brand' | 'discount' | 'price' | 'age' | 'gender' | 'color' | 'material';
     options: FilterOption[];
 }
 

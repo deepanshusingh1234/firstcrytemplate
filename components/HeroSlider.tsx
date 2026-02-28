@@ -52,9 +52,76 @@ const HeroSlider = () => {
         return null;
     }
 
+    // Responsive heights
+    const getSliderHeight = () => {
+        if (typeof window === 'undefined') return '550px';
+        if (window.innerWidth < 640) return '250px';      // mobile
+        if (window.innerWidth < 768) return '300px';      // sm
+        if (window.innerWidth < 1024) return '400px';     // md
+        if (window.innerWidth < 1280) return '500px';     // lg
+        return '550px';                                    // xl
+    };
+
+    const [sliderHeight, setSliderHeight] = useState('550px');
+
+    useEffect(() => {
+        const handleResize = () => {
+            setSliderHeight(getSliderHeight());
+        };
+
+        handleResize(); // Set initial height
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    // Responsive arrow sizes
+    const getArrowSize = () => {
+        if (typeof window === 'undefined') return 28;
+        if (window.innerWidth < 640) return 16;
+        if (window.innerWidth < 768) return 18;
+        if (window.innerWidth < 1024) return 20;
+        return 28;
+    };
+
+    const [arrowSize, setArrowSize] = useState(28);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setArrowSize(getArrowSize());
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    // Responsive dot sizes
+    const getDotSize = () => {
+        if (typeof window === 'undefined') return { active: 'w-8', inactive: 'w-3', height: 'h-3' };
+        if (window.innerWidth < 640) {
+            return { active: 'w-6', inactive: 'w-2', height: 'h-2' };
+        }
+        if (window.innerWidth < 768) {
+            return { active: 'w-7', inactive: 'w-2.5', height: 'h-2.5' };
+        }
+        return { active: 'w-8', inactive: 'w-3', height: 'h-3' };
+    };
+
+    const [dotSizes, setDotSizes] = useState({ active: 'w-8', inactive: 'w-3', height: 'h-3' });
+
+    useEffect(() => {
+        const handleResize = () => {
+            setDotSizes(getDotSize());
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     return (
         <div
-            className="full-width-slider mb-0 relative w-full"
+            className="full-width-slider mb-0 relative w-full overflow-hidden"
             style={{
                 backgroundImage: `url(${sideBackgroundUrl})`,
                 backgroundRepeat: 'repeat',
@@ -63,24 +130,24 @@ const HeroSlider = () => {
         >
             <div
                 className="slider-container relative w-full mx-auto"
-                style={{ height: '550px' }}
+                style={{ height: sliderHeight }}
                 ref={sliderRef}
                 onMouseEnter={() => setIsAutoPlaying(false)}
                 onMouseLeave={() => setIsAutoPlaying(true)}
             >
-                {/* Slides Container - Centered with 15% spacing */}
+                {/* Slides Container - Centered with responsive spacing */}
                 <div className="relative w-full h-full flex items-center justify-center">
-                    {/* Left Space (15%) - Transparent, shows background */}
-                    <div className="w-[15%] h-full" />
+                    {/* Left Space - Hidden on mobile, visible on larger screens */}
+                    <div className="hidden md:block md:w-[10%] lg:w-[12%] xl:w-[15%] h-full" />
 
-                    {/* Central Image Container (70%) */}
-                    <div className="w-[70%] max-w-[1366px] h-full relative overflow-hidden rounded-lg">
+                    {/* Central Image Container - Full width on mobile, reduced on larger screens */}
+                    <div className="w-full md:w-[80%] lg:w-[76%] xl:w-[70%] max-w-[1366px] h-full relative overflow-hidden">
                         {slides.map((slide, index) => (
                             <div
                                 key={slide.id}
                                 className={`absolute top-0 left-0 w-full h-full transition-all duration-500 ease-in-out ${index === currentSlide
-                                        ? 'opacity-100 z-10'
-                                        : 'opacity-0 z-0 pointer-events-none'
+                                    ? 'opacity-100 z-10'
+                                    : 'opacity-0 z-0 pointer-events-none'
                                     }`}
                             >
                                 <a
@@ -94,7 +161,7 @@ const HeroSlider = () => {
                                         src={slide.imageUrl}
                                         alt={slide.altText}
                                         title={slide.title}
-                                        className="w-full h-full object-cover"
+                                        className="w-full h-full object-cover object-center"
                                         loading={index === 0 ? "eager" : "lazy"}
                                     />
                                 </a>
@@ -102,45 +169,59 @@ const HeroSlider = () => {
                         ))}
                     </div>
 
-                    {/* Right Space (15%) - Transparent, shows background */}
-                    <div className="w-[15%] h-full" />
+                    {/* Right Space - Hidden on mobile, visible on larger screens */}
+                    <div className="hidden md:block md:w-[10%] lg:w-[12%] xl:w-[15%] h-full" />
                 </div>
 
-                {/* Navigation Arrows - Positioned OUTSIDE the central image, on the side spaces */}
+                {/* Navigation Arrows - Hidden on mobile, visible on larger screens */}
                 {totalSlides > 1 && (
                     <>
-                        {/* Left Arrow - Positioned in the left 15% space */}
+                        {/* Left Arrow - Visible on tablet and above */}
                         <button
                             onClick={prevSlide}
-                            className="absolute left-[7.5%] top-1/2 transform -translate-y-1/2 -translate-x-1/2 z-20 w-12 h-12 bg-black bg-opacity-30 hover:bg-opacity-50 rounded-full flex items-center justify-center text-white transition-all duration-300"
-                            style={{ left: '7.5%' }}
+                            className="hidden md:flex absolute left-[5%] md:left-[5%] lg:left-[6%] xl:left-[7.5%] top-1/2 transform -translate-y-1/2 -translate-x-1/2 z-20 w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-black bg-opacity-30 hover:bg-opacity-50 rounded-full items-center justify-center text-white transition-all duration-300"
                             aria-label="Previous slide"
                         >
-                            <ChevronLeft size={28} />
+                            <ChevronLeft size={arrowSize} />
                         </button>
 
-                        {/* Right Arrow - Positioned in the right 15% space */}
+                        {/* Right Arrow - Visible on tablet and above */}
                         <button
                             onClick={nextSlide}
-                            className="absolute right-[7.5%] top-1/2 transform -translate-y-1/2 translate-x-1/2 z-20 w-12 h-12 bg-black bg-opacity-30 hover:bg-opacity-50 rounded-full flex items-center justify-center text-white transition-all duration-300"
-                            style={{ right: '7.5%' }}
+                            className="hidden md:flex absolute right-[5%] md:right-[5%] lg:right-[6%] xl:right-[7.5%] top-1/2 transform -translate-y-1/2 translate-x-1/2 z-20 w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-black bg-opacity-30 hover:bg-opacity-50 rounded-full items-center justify-center text-white transition-all duration-300"
                             aria-label="Next slide"
                         >
-                            <ChevronRight size={28} />
+                            <ChevronRight size={arrowSize} />
                         </button>
                     </>
                 )}
 
-                {/* Slide Indicators/Dots - Centered below the central image */}
+                {/* Mobile Touch Navigation Areas - Only visible on mobile */}
                 {totalSlides > 1 && (
-                    <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
+                    <div className="md:hidden absolute inset-0 z-15 flex">
+                        <div
+                            className="w-1/2 h-full"
+                            onClick={prevSlide}
+                            aria-label="Previous slide"
+                        />
+                        <div
+                            className="w-1/2 h-full"
+                            onClick={nextSlide}
+                            aria-label="Next slide"
+                        />
+                    </div>
+                )}
+
+                {/* Slide Indicators/Dots - Responsive positioning and sizing */}
+                {totalSlides > 1 && (
+                    <div className="absolute bottom-2 sm:bottom-3 md:bottom-4 lg:bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex space-x-1.5 sm:space-x-2 md:space-x-2.5 lg:space-x-3">
                         {slides.map((_, index) => (
                             <button
                                 key={index}
                                 onClick={() => handleDotClick(index)}
-                                className={`h-3 rounded-full transition-all duration-300 ${index === currentSlide
-                                        ? 'bg-white w-8'
-                                        : 'bg-white bg-opacity-50 hover:bg-opacity-75 w-3'
+                                className={`${dotSizes.height} rounded-full transition-all duration-300 ${index === currentSlide
+                                    ? `bg-white ${dotSizes.active}`
+                                    : 'bg-white bg-opacity-50 hover:bg-opacity-75 ' + dotSizes.inactive
                                     }`}
                                 aria-label={`Go to slide ${index + 1}`}
                             />

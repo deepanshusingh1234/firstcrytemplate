@@ -3,7 +3,8 @@
 import { useState, useEffect, useRef } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
-import { Heart, Share2, ChevronDown, ChevronUp, Copy, Check, Info, X } from "lucide-react";
+import { Heart, ChevronDown, ChevronUp, Copy, Check, Info, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { useCart } from "@/context/CartContext";
 
 import holiCelebrationsData from "@/data/boutiques/holi-celebrations.json";
 
@@ -22,18 +23,21 @@ export default function ProductDetailPage() {
     const [selectedSize, setSelectedSize] = useState<string | null>(null);
     const [showZoom, setShowZoom] = useState(false);
     const [zoomPosition, setZoomPosition] = useState({ x: 0, y: 0 });
-    const [showPincodeCheck, setShowPincodeCheck] = useState(false);
     const [pincode, setPincode] = useState('');
     const [pincodeValid, setPincodeValid] = useState<boolean | null>(null);
     const [showSizeChart, setShowSizeChart] = useState(false);
-    const [showMoreFilters, setShowMoreFilters] = useState(false);
     const [copiedCoupon, setCopiedCoupon] = useState<string | null>(null);
     const [showProductInfo, setShowProductInfo] = useState(false);
     const [showBrandInfo, setShowBrandInfo] = useState(false);
     const [showSizeInfo, setShowSizeInfo] = useState(false);
     const [showAddToCartMsg, setShowAddToCartMsg] = useState(false);
+    const [isAdding, setIsAdding] = useState(false);
     const [activeCouponTab, setActiveCouponTab] = useState('offers');
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [touchStart, setTouchStart] = useState(0);
+    const [touchEnd, setTouchEnd] = useState(0);
 
+    const { addToCart } = useCart();
     const imageRef = useRef<HTMLDivElement>(null);
 
     // Mock product images (in real app, these would come from product data)
@@ -60,8 +64,41 @@ export default function ProductDetailPage() {
         setLoading(false);
     }, [categorySlug, productId]);
 
+    // Handle touch gestures for mobile image slider
+    const handleTouchStart = (e: React.TouchEvent) => {
+        setTouchStart(e.targetTouches[0].clientX);
+    };
+
+    const handleTouchMove = (e: React.TouchEvent) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+    };
+
+    const handleTouchEnd = () => {
+        if (touchStart - touchEnd > 150) {
+            // Swipe left
+            nextImage();
+        }
+
+        if (touchStart - touchEnd < -150) {
+            // Swipe right
+            prevImage();
+        }
+    };
+
+    const nextImage = () => {
+        setCurrentImageIndex((prev) =>
+            prev === productImages.length - 1 ? 0 : prev + 1
+        );
+    };
+
+    const prevImage = () => {
+        setCurrentImageIndex((prev) =>
+            prev === 0 ? productImages.length - 1 : prev - 1
+        );
+    };
+
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-        if (!imageRef.current) return;
+        if (!imageRef.current || window.innerWidth < 1024) return; // Disable zoom on mobile
 
         const { left, top, width, height } = imageRef.current.getBoundingClientRect();
         const x = ((e.clientX - left) / width) * 100;
@@ -72,7 +109,6 @@ export default function ProductDetailPage() {
 
     const handlePincodeCheck = () => {
         if (pincode.length === 6) {
-            // Mock validation - in real app, check against API
             setPincodeValid(Math.random() > 0.3);
         }
     };
@@ -84,16 +120,48 @@ export default function ProductDetailPage() {
     };
 
     const handleAddToCart = () => {
+        if (!selectedSize) {
+            alert('Please select a size');
+            return;
+        }
+
+        setIsAdding(true);
+
+        const price = product?.defaultPrice || 0;
+        const mrp = product?.defaultMrp || 0;
+        const clubPrice = product?.defaultClubPrice || 0;
+
+        addToCart({
+            productId: product.id,
+            name: product.name,
+            brand: product.brand,
+            image: productImages[selectedImage] || product.defaultImage,
+            price: price,
+            mrp: mrp,
+            clubPrice: clubPrice,
+            quantity: 1,
+            size: selectedSize || undefined,
+            inStock: true,
+            maxQuantity: 10,
+            minQuantity: 1
+        });
+
         setShowAddToCartMsg(true);
-        setTimeout(() => setShowAddToCartMsg(false), 3000);
+
+        setTimeout(() => {
+            setIsAdding(false);
+            setShowAddToCartMsg(false);
+        }, 3000);
     };
 
     const sizes = [
-        { id: 'nb', name: 'New Born', available: true, stock: 5 },
-        { id: '0-3m', name: '0 - 3 M', available: false },
-        { id: '6-9m', name: '6 - 9 M', available: true, stock: 2 },
-        { id: '9-12m', name: '9 - 12 M', available: false },
-        { id: '18-24m', name: '18 - 24 M', available: false },
+        { id: 'nb', name: 'NB', available: true, stock: 5 },
+        { id: '0-3m', name: '0-3M', available: false },
+        { id: '3-6m', name: '3-6M', available: true, stock: 2 },
+        { id: '6-9m', name: '6-9M', available: true, stock: 8 },
+        { id: '9-12m', name: '9-12M', available: false },
+        { id: '12-18m', name: '12-18M', available: true },
+        { id: '18-24m', name: '18-24M', available: false },
     ];
 
     const coupons = [
@@ -147,13 +215,6 @@ export default function ProductDetailPage() {
         { id: '20840660', name: 'Babyhug Cambric Full Sleeves Floral Printed Kurta Dhoti Set - Purple', price: 703.12, mrp: 799, image: '//cdn.fcglcdn.com/brainbees/images/products/280x338/20840660a.webp' },
     ];
 
-    const frequentlyBought = [
-        { id: '21558034', name: 'Doodle Poodle 100% Cotton Interlock Knit Full Sleeves Tiger Printed T-Shirt & Lounge Pant Set With Cap & Mittens - Light Yellow', price: 337.31, mrp: 379, image: '//cdn.fcglcdn.com/brainbees/images/products/280x338/21558034a.webp' },
-        { id: '21549954', name: 'Babyhug 100% Cotton Interlock Knit Full Sleeves Vehicle Printed Onesies With Leggings Cap & Booties - Navy Blue', price: 606.69, mrp: 749, image: '//cdn.fcglcdn.com/brainbees/images/products/280x338/21549954a.webp' },
-        { id: '18347121', name: 'Babyhug 100% Cotton Knit Full Sleeves Onesies Bear Print Pack of 3- Multicolour', price: 368.59, mrp: 899, image: '//cdn.fcglcdn.com/brainbees/images/products/280x338/18347121a.webp' },
-        { id: '15361457', name: 'Babyhug 100% Cotton Knit Half Sleeves Rompers with Crocodile Print Pack of 2 - Yellow & Green', price: 692.23, mrp: 899, image: '//cdn.fcglcdn.com/brainbees/images/products/280x338/15361457a.webp' },
-    ];
-
     if (loading) {
         return (
             <div className="min-h-screen flex items-center justify-center">
@@ -164,10 +225,10 @@ export default function ProductDetailPage() {
 
     if (!product) {
         return (
-            <div className="min-h-screen flex items-center justify-center">
+            <div className="min-h-screen flex items-center justify-center px-4">
                 <div className="text-center">
-                    <h1 className="text-2xl font-bold text-gray-800">Product Not Found</h1>
-                    <p className="text-gray-600 mt-2">The product you're looking for doesn't exist.</p>
+                    <h1 className="text-xl font-bold text-gray-800">Product Not Found</h1>
+                    <p className="text-sm text-gray-600 mt-2">The product you're looking for doesn't exist.</p>
                     <Link href={`/boutique/${categorySlug}`} className="inline-block mt-4 text-orange-500 hover:underline">
                         Back to Boutique
                     </Link>
@@ -176,43 +237,103 @@ export default function ProductDetailPage() {
         );
     }
 
+    const discount = Math.round((1 - product.defaultPrice / product.defaultMrp) * 100);
+
     return (
-        <div className="bg-white">
+        <div className="bg-white min-h-screen">
             {/* Add to Cart Success Message */}
             {showAddToCartMsg && (
-                <div className="fixed top-20 left-1/2 transform -translate-x-1/2 z-50 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg flex items-center space-x-2">
+                <div className="fixed top-16 left-1/2 transform -translate-x-1/2 z-50 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg flex items-center space-x-2 animate-bounce text-sm">
                     <Check size={16} />
-                    <span>Item has been added to your cart</span>
+                    <span className="font-medium">Item added to cart!</span>
                 </div>
             )}
 
-            {/* Breadcrumb */}
-            <div className="max-w-7xl mx-auto px-4 py-4 text-sm border-b">
-                <nav className="flex items-center space-x-2">
-                    <Link href="/" className="text-gray-600 hover:text-gray-900">Home</Link>
-                    <span className="text-gray-400">/</span>
-                    <Link href="/boutiques" className="text-gray-600 hover:text-gray-900">Boutiques</Link>
-                    <span className="text-gray-400">/</span>
-                    <Link href={`/boutique/${categorySlug}`} className="text-gray-600 hover:text-gray-900 capitalize">{categorySlug}</Link>
-                    <span className="text-gray-400">/</span>
-                    <span className="text-gray-900 line-clamp-1">{product.name}</span>
+            {/* Breadcrumb - Fixed */}
+            <div className="max-w-7xl mx-auto px-3 py-2 text-xs border-b">
+                <nav className="flex items-center flex-wrap gap-y-1">
+                    <Link href="/" className="text-gray-600 hover:text-gray-900 whitespace-nowrap">Home</Link>
+                    <span className="text-gray-400 mx-1">/</span>
+                    <Link href="/boutiques" className="text-gray-600 hover:text-gray-900 whitespace-nowrap">Boutiques</Link>
+                    <span className="text-gray-400 mx-1">/</span>
+                    <Link href={`/boutique/${categorySlug}`} className="text-gray-600 hover:text-gray-900 capitalize whitespace-nowrap">{categorySlug}</Link>
+                    <span className="text-gray-400 mx-1">/</span>
+                    <span className="text-gray-900 truncate max-w-[200px] sm:max-w-xs">{product.name}</span>
                 </nav>
             </div>
 
             {/* Main Product Section */}
-            {/* Main Product Section */}
-            <section className="pinfosection max-w-7xl mx-auto px-4 py-8">
-                <div className="grid lg:grid-cols-2 gap-8">
-                    {/* Left Column - Images - fixed height */}
-                    <section id="prodImgInfo" className="sticky top-24 self-start">
-                        <div className="flex gap-4">
+            <section className="max-w-7xl mx-auto px-3 py-4">
+                <div className="lg:grid lg:grid-cols-2 lg:gap-8">
+                    {/* Left Column - Images */}
+                    <div className="mb-6 lg:mb-0 lg:sticky lg:top-24 lg:self-start">
+                        {/* Mobile Image Slider */}
+                        <div className="lg:hidden">
+                            <div
+                                className="relative"
+                                onTouchStart={handleTouchStart}
+                                onTouchMove={handleTouchMove}
+                                onTouchEnd={handleTouchEnd}
+                            >
+                                <img
+                                    src={productImages[currentImageIndex]}
+                                    alt={product.name}
+                                    className="w-full h-auto rounded-lg"
+                                />
+
+                                {/* Navigation Arrows */}
+                                <button
+                                    onClick={prevImage}
+                                    className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-2 shadow-md hover:bg-white"
+                                >
+                                    <ChevronLeft size={20} />
+                                </button>
+                                <button
+                                    onClick={nextImage}
+                                    className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 rounded-full p-2 shadow-md hover:bg-white"
+                                >
+                                    <ChevronRight size={20} />
+                                </button>
+
+                                {/* Image Counter */}
+                                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-black/60 text-white text-xs px-2 py-1 rounded-full">
+                                    {currentImageIndex + 1} / {productImages.length}
+                                </div>
+
+                                {/* Wishlist Button */}
+                                <button className="absolute top-2 right-2 z-10 p-2 bg-white rounded-full shadow-md hover:bg-gray-100">
+                                    <Heart size={18} className="text-gray-600" />
+                                </button>
+                            </div>
+
+                            {/* Thumbnail Strip */}
+                            <div className="flex gap-2 mt-3 overflow-x-auto pb-2 scrollbar-hide">
+                                {thumbnailImages.map((img, index) => (
+                                    <div
+                                        key={index}
+                                        className={`flex-shrink-0 w-16 border-2 rounded cursor-pointer transition-all ${currentImageIndex === index ? 'border-orange-500' : 'border-gray-200'
+                                            }`}
+                                        onClick={() => {
+                                            setCurrentImageIndex(index);
+                                            setSelectedImage(index);
+                                        }}
+                                    >
+                                        <img src={img} alt={`Thumbnail ${index + 1}`} className="w-full h-auto" />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Desktop Image Section */}
+                        <div className="hidden lg:flex lg:gap-4">
                             {/* Thumbnail Slider */}
                             <div className="w-20 flex-shrink-0">
-                                <div className="space-y-2 max-h-[500px] overflow-y-auto">
+                                <div className="space-y-2 max-h-[500px] overflow-y-auto scrollbar-hide">
                                     {thumbnailImages.map((img, index) => (
                                         <div
                                             key={index}
-                                            className={`border-2 rounded cursor-pointer ${selectedImage === index ? 'border-orange-500' : 'border-gray-200'}`}
+                                            className={`border-2 rounded cursor-pointer ${selectedImage === index ? 'border-orange-500' : 'border-gray-200'
+                                                }`}
                                             onClick={() => setSelectedImage(index)}
                                         >
                                             <img src={img} alt={`Thumbnail ${index + 1}`} className="w-full h-auto" />
@@ -223,7 +344,7 @@ export default function ProductDetailPage() {
 
                             {/* Main Image with Zoom */}
                             <div className="flex-1 relative">
-                                <button className="absolute top-2 right-2 z-10 p-2 bg-white rounded-full shadow-md">
+                                <button className="absolute top-2 right-2 z-10 p-2 bg-white rounded-full shadow-md hover:bg-gray-100">
                                     <Heart size={20} className="text-gray-600" />
                                 </button>
 
@@ -239,31 +360,11 @@ export default function ProductDetailPage() {
                                         alt={product.name}
                                         className="w-full h-auto"
                                     />
-
-                                    {/* View Similar */}
-                                    <div className="absolute bottom-4 right-4 bg-white px-3 py-1 rounded-full shadow-md flex items-center space-x-1 cursor-pointer">
-                                        <span className="text-sm">View Similar</span>
-                                        <img src="//cdn.fcglcdn.com/brainbees/images/ng/m/similar-icon.svg" alt="" className="w-4 h-4" />
-                                    </div>
                                 </div>
-
-                                {/* Zoom Lens */}
-                                {showZoom && (
-                                    <div
-                                        className="absolute border-2 border-orange-500 bg-white bg-opacity-30 pointer-events-none"
-                                        style={{
-                                            left: `${zoomPosition.x}%`,
-                                            top: `${zoomPosition.y}%`,
-                                            width: '200px',
-                                            height: '200px',
-                                            transform: 'translate(-50%, -50%)',
-                                        }}
-                                    />
-                                )}
                             </div>
                         </div>
 
-                        {/* Zoom Container (separate for full zoom view) */}
+                        {/* Desktop Zoom Container */}
                         {showZoom && (
                             <div className="fixed top-20 right-10 w-[400px] h-[500px] border shadow-2xl bg-white z-50 overflow-hidden hidden lg:block">
                                 <div
@@ -276,109 +377,100 @@ export default function ProductDetailPage() {
                                 />
                             </div>
                         )}
-                    </section>
+                    </div>
 
-                    {/* Right Column - Product Info - Scrollable Container */}
-                    {/* Right Column - Product Info - Scrollable Container with Hidden Scrollbar */}
-                    <section
-                        th-description=""
-                        className="h-[calc(100vh-200px)] overflow-y-auto pr-4 scrollbar-hide"
-                        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-                    >
-                        <div className="space-y-6 pb-8">
-                            <h1 className="text-xl font-medium text-gray-900 mb-2">
-                                <span className="font-bold">{product.brand}</span> {product.name}
-                            </h1>
+                    {/* Right Column - Product Info */}
+                    <div className="lg:max-w-2xl">
+                        <div className="space-y-4">
+                            {/* Product Title */}
+                            <div>
+                                <span className="font-bold text-gray-900">{product.brand}</span>
+                                <h1 className="text-sm text-gray-700 mt-1">{product.name}</h1>
+                            </div>
 
-                            {/* Price */}
-                            <p className="mb-4">
-                                <span className="text-2xl font-bold text-gray-900">₹{product.defaultPrice.toFixed(2)}</span>
-                                <span className="ml-2 text-sm text-gray-500 line-through">MRP: ₹{product.defaultMrp}</span>
-                                <span className="ml-2 text-sm text-green-600">
-                                    {Math.round((1 - product.defaultPrice / product.defaultMrp) * 100)}% OFF
-                                </span>
-                            </p>
-
-                            {/* GST Info */}
-                            <div className="mb-4 text-xs text-gray-500 flex items-center">
-                                Sale price inclusive of all taxes (with applicable GST benefits)
-                                <Info size={14} className="ml-1 text-gray-400 cursor-help" />
+                            {/* Price Section */}
+                            <div>
+                                <div className="flex items-center gap-2">
+                                    <span className="text-xl font-bold text-gray-900">₹{product.defaultPrice.toFixed(2)}</span>
+                                    <span className="text-xs text-gray-500 line-through">MRP: ₹{product.defaultMrp}</span>
+                                    <span className="text-xs text-green-600 font-medium px-2 py-0.5 bg-green-50 rounded">
+                                        {discount}% OFF
+                                    </span>
+                                </div>
+                                <p className="text-xs text-gray-500 mt-1">Sale price inclusive of all taxes</p>
                             </div>
 
                             {/* Best Price Section */}
-                            <div className="mb-4 bg-orange-50 border border-orange-200 rounded-lg p-3">
-                                <div className="flex items-center justify-between">
-                                    <div className="flex items-center space-x-2">
-                                        <img src="//cdn.fcglcdn.com/brainbees/images/m/best_price_tag.png" alt="" className="h-8" />
-                                        <div>
-                                            <span className="text-xs text-gray-600">Get it as low as:</span>
-                                            <span className="text-lg font-bold text-gray-900 ml-2">₹{product.defaultClubPrice.toFixed(2)}</span>
-                                        </div>
-                                    </div>
-                                    <button className="text-xs text-blue-600">View details</button>
+                            <div className="flex items-center justify-between bg-orange-50 border border-orange-200 rounded-lg p-3">
+                                <div className="flex items-center gap-2">
+                                    <span className="text-xs text-gray-600">Best Price:</span>
+                                    <span className="text-base font-bold text-gray-900">₹{product.defaultClubPrice.toFixed(2)}</span>
                                 </div>
-                                <p className="text-xs text-gray-500 mt-1">Including coupons and Offers</p>
+                                <button className="text-xs text-blue-600 hover:underline">Details</button>
                             </div>
 
                             {/* Club Section */}
-                            <div className="mb-4 bg-blue-50 rounded-lg p-3">
+                            <div className="bg-blue-50 rounded-lg p-3">
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center space-x-2">
                                         <img src="//cdn.fcglcdn.com/brainbees/images/m/newclub.png" alt="Club" className="h-5" />
-                                        <span className="text-sm font-medium">Price: ₹{(product.defaultClubPrice - 15).toFixed(2)}</span>
+                                        <span className="text-xs font-medium">Club: ₹{(product.defaultClubPrice - 15).toFixed(2)}</span>
                                     </div>
-                                    <button className="text-xs text-blue-600">Join Now →</button>
+                                    <button className="text-xs text-blue-600 hover:underline">Join →</button>
                                 </div>
-                                <div className="flex items-center space-x-2 mt-1">
-                                    <span className="text-xs text-green-600">Add'l saving of ₹15.98</span>
+                                <div className="flex items-center gap-2 mt-1">
+                                    <span className="text-xs text-green-600">Save ₹15.98</span>
                                     <span className="text-xs text-gray-400">|</span>
                                     <span className="text-xs flex items-center">
                                         <img src="//cdn.fcglcdn.com/brainbees/images/ng/m/club-cash-1.svg" alt="" className="w-3 h-3 mr-1" />
-                                        Earn club cash ₹14*
+                                        Earn ₹14 cash
                                     </span>
                                 </div>
                             </div>
 
                             {/* Size Selection */}
-                            <section className="mb-6">
-                                <div className="flex items-center justify-between mb-3">
-                                    <label className="font-bold">Size</label>
+                            <div>
+                                <div className="flex items-center justify-between mb-2">
+                                    <label className="font-medium text-sm">Size <span className="text-red-500">*</span></label>
                                     <button
                                         onClick={() => setShowSizeChart(true)}
-                                        className="text-xs text-blue-600"
+                                        className="text-xs text-blue-600 hover:underline"
                                     >
                                         SIZE CHART
                                     </button>
                                 </div>
 
-                                <div className="flex flex-wrap gap-3">
+                                <div className="flex flex-wrap gap-2">
                                     {sizes.map((size) => (
                                         <div key={size.id} className="relative">
                                             <button
                                                 onClick={() => size.available && setSelectedSize(size.id)}
                                                 disabled={!size.available}
                                                 className={`
-                                min-w-[60px] px-4 py-2 text-sm border rounded
-                                ${selectedSize === size.id ? 'border-orange-500 bg-orange-50' : 'border-gray-300'}
-                                ${!size.available ? 'bg-gray-100 text-gray-400 cursor-not-allowed' : 'hover:border-orange-300'}
-                            `}
+                                                    min-w-[50px] px-3 py-1.5 text-xs border rounded transition-all
+                                                    ${selectedSize === size.id ? 'border-orange-500 bg-orange-50 text-orange-700 font-medium' : 'border-gray-300'}
+                                                    ${!size.available ? 'bg-gray-100 text-gray-400 cursor-not-allowed line-through' : 'hover:border-orange-300'}
+                                                `}
                                             >
                                                 {size.name}
                                             </button>
                                             {size.available && size.stock && size.stock <= 2 && (
-                                                <span className="absolute -top-2 -right-2 text-xs text-orange-500 bg-white px-1 rounded">
+                                                <span className="absolute -top-2 -right-2 text-[10px] text-orange-500 bg-white px-1 rounded border border-orange-200">
                                                     {size.stock} left
                                                 </span>
                                             )}
                                         </div>
                                     ))}
                                 </div>
-                            </section>
+                                {!selectedSize && (
+                                    <p className="text-xs text-red-500 mt-2">Please select a size</p>
+                                )}
+                            </div>
 
                             {/* Delivery Pincode */}
-                            <section className="mb-6">
-                                <p className="font-bold mb-2">Delivery To</p>
-                                <div className="flex items-center space-x-2">
+                            <div>
+                                <p className="font-medium text-sm mb-2">Delivery To</p>
+                                <div className="flex items-center gap-2">
                                     <input
                                         type="text"
                                         maxLength={6}
@@ -388,47 +480,47 @@ export default function ProductDetailPage() {
                                             setPincodeValid(null);
                                         }}
                                         placeholder="Enter Pincode"
-                                        className="flex-1 px-3 py-2 border rounded-lg focus:outline-none focus:ring-1 focus:ring-orange-500"
+                                        className="flex-1 px-3 py-2 text-sm border rounded-lg focus:outline-none focus:ring-1 focus:ring-orange-500"
                                     />
                                     <button
                                         onClick={handlePincodeCheck}
-                                        className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600"
+                                        className="px-4 py-2 bg-orange-500 text-white text-sm rounded-lg hover:bg-orange-600 transition-colors whitespace-nowrap"
                                     >
                                         Check
                                     </button>
                                 </div>
                                 {pincodeValid === true && (
-                                    <p className="text-sm text-green-600 mt-1">Delivery available in your area</p>
+                                    <p className="text-xs text-green-600 mt-1">✓ Delivery available</p>
                                 )}
                                 {pincodeValid === false && (
-                                    <p className="text-sm text-red-600 mt-1">Delivery not available in your area</p>
+                                    <p className="text-xs text-red-600 mt-1">✗ Not available</p>
                                 )}
 
                                 {/* Policy Icons */}
-                                <div className="flex space-x-4 mt-4">
+                                <div className="flex flex-wrap gap-4 mt-3">
                                     <div className="flex items-center space-x-1">
                                         <img src="//cdn.fcglcdn.com/brainbees/images/ng/m/gift-item.svg" alt="" className="w-4 h-4" />
                                         <span className="text-xs text-gray-600">Gift Wrap</span>
                                     </div>
                                     <div className="flex items-center space-x-1">
                                         <img src="//cdn.fcglcdn.com/brainbees/images/ng/m/replacement-time-1.svg" alt="" className="w-4 h-4" />
-                                        <span className="text-xs text-gray-600">7 days Return/Exchange</span>
+                                        <span className="text-xs text-gray-600">7 days Return</span>
                                     </div>
                                 </div>
-                            </section>
+                            </div>
 
                             {/* Coupons Section */}
-                            <section className="mb-6 border rounded-lg overflow-hidden">
+                            <section className="border rounded-lg overflow-hidden">
                                 <div className="border-b">
                                     <div className="flex">
                                         <button
-                                            className={`flex-1 px-4 py-3 text-sm font-medium ${activeCouponTab === 'offers' ? 'bg-orange-500 text-white' : 'bg-gray-100'}`}
+                                            className={`flex-1 px-4 py-3 text-xs font-medium transition-colors ${activeCouponTab === 'offers' ? 'bg-orange-500 text-white' : 'bg-gray-100 hover:bg-gray-200'}`}
                                             onClick={() => setActiveCouponTab('offers')}
                                         >
-                                            Offers and Discounts
+                                            Offers
                                         </button>
                                         <button
-                                            className={`flex-1 px-4 py-3 text-sm font-medium ${activeCouponTab === 'bank' ? 'bg-orange-500 text-white' : 'bg-gray-100'}`}
+                                            className={`flex-1 px-4 py-3 text-xs font-medium transition-colors ${activeCouponTab === 'bank' ? 'bg-orange-500 text-white' : 'bg-gray-100 hover:bg-gray-200'}`}
                                             onClick={() => setActiveCouponTab('bank')}
                                         >
                                             Bank Offers
@@ -436,37 +528,37 @@ export default function ProductDetailPage() {
                                     </div>
                                 </div>
 
-                                <div className="p-4 space-y-4">
+                                <div className="p-4 space-y-4 max-h-64 overflow-y-auto">
                                     {activeCouponTab === 'offers' ? (
                                         coupons.map((coupon, idx) => (
                                             <div key={idx} className="border-b last:border-0 pb-4 last:pb-0">
                                                 <div className="flex justify-between items-start">
-                                                    <div className="flex-1">
+                                                    <div className="flex-1 pr-2">
                                                         {coupon.club && (
                                                             <div className="flex items-center space-x-1 mb-1">
-                                                                <img src="//cdn.fcglcdn.com/brainbees/images/club_membership.svg" alt="" className="w-4 h-4" />
-                                                                <span className="text-xs font-medium">{coupon.description.split('|')[0]}</span>
+                                                                <img src="//cdn.fcglcdn.com/brainbees/images/club_membership.svg" alt="" className="w-3 h-3" />
+                                                                <span className="text-xs font-medium text-blue-600">Club</span>
                                                             </div>
                                                         )}
-                                                        <p className="text-sm">{coupon.club ? coupon.description.split('|')[1] || coupon.description : coupon.description}</p>
+                                                        <p className="text-xs">{coupon.description}</p>
                                                     </div>
-                                                    <button className="text-xs text-blue-600">T&C</button>
+                                                    <button className="text-xs text-blue-600 hover:underline">T&C</button>
                                                 </div>
 
                                                 <div className="flex items-center space-x-2 mt-2">
                                                     <div className="flex-1 flex items-center">
-                                                        <div className="bg-gray-900 text-white px-3 py-1 rounded-l text-sm font-mono">
+                                                        <div className="bg-gray-900 text-white px-2 py-1 rounded-l text-xs font-mono">
                                                             {coupon.code}
                                                         </div>
                                                         <button
                                                             onClick={() => handleCopyCoupon(coupon.code)}
-                                                            className="bg-gray-200 px-3 py-1 rounded-r hover:bg-gray-300"
+                                                            className="bg-gray-200 px-2 py-1 rounded-r hover:bg-gray-300 transition-colors"
                                                         >
-                                                            {copiedCoupon === coupon.code ? <Check size={14} /> : <Copy size={14} />}
+                                                            {copiedCoupon === coupon.code ? <Check size={12} className="text-green-600" /> : <Copy size={12} />}
                                                         </button>
                                                     </div>
                                                     <button className="text-xs text-blue-600 hover:underline">
-                                                        View Products
+                                                        View
                                                     </button>
                                                 </div>
                                             </div>
@@ -477,8 +569,8 @@ export default function ProductDetailPage() {
                                                 <div className="flex items-start space-x-3">
                                                     <img src="//cdn.fcglcdn.com/brainbees/images/bank_logo.svg" alt="" className="w-8 h-8" />
                                                     <div className="flex-1">
-                                                        <p className="text-sm">{offer.offer}</p>
-                                                        <button className="text-xs text-blue-600 mt-1">View T&C</button>
+                                                        <p className="text-xs">{offer.offer}</p>
+                                                        <button className="text-xs text-blue-600 mt-1 hover:underline">T&C</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -488,19 +580,19 @@ export default function ProductDetailPage() {
                             </section>
 
                             {/* Product Information Accordion */}
-                            <section className="mb-6 border rounded-lg overflow-hidden">
+                            <section className="border rounded-lg overflow-hidden">
                                 <button
                                     onClick={() => setShowProductInfo(!showProductInfo)}
-                                    className="w-full px-4 py-3 flex items-center justify-between bg-gray-50 hover:bg-gray-100"
+                                    className="w-full px-4 py-3 flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
                                 >
                                     <div className="flex items-center space-x-2">
-                                        <img src="//cdn.fcglcdn.com/brainbees/images/ng/m/product-1.svg" alt="" className="w-5 h-5" />
-                                        <span className="font-medium">Product Information</span>
+                                        <img src="//cdn.fcglcdn.com/brainbees/images/ng/m/product-1.svg" alt="" className="w-4 h-4" />
+                                        <span className="text-xs font-medium">Product Information</span>
                                     </div>
-                                    {showProductInfo ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+                                    {showProductInfo ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
                                 </button>
                                 {showProductInfo && (
-                                    <div className="p-4 text-sm space-y-2">
+                                    <div className="p-4 text-xs space-y-2 max-h-60 overflow-y-auto">
                                         {productInfo.map((info, idx) => (
                                             <div key={idx} className="grid grid-cols-3 gap-2">
                                                 <span className="text-gray-600">{info.label}:</span>
@@ -515,19 +607,19 @@ export default function ProductDetailPage() {
                             </section>
 
                             {/* Size Information Accordion */}
-                            <section className="mb-6 border rounded-lg overflow-hidden">
+                            <section className="border rounded-lg overflow-hidden">
                                 <button
                                     onClick={() => setShowSizeInfo(!showSizeInfo)}
-                                    className="w-full px-4 py-3 flex items-center justify-between bg-gray-50 hover:bg-gray-100"
+                                    className="w-full px-4 py-3 flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
                                 >
                                     <div className="flex items-center space-x-2">
-                                        <img src="//cdn.fcglcdn.com/brainbees/images/ng/m/info-1.svg" alt="" className="w-5 h-5" />
-                                        <span className="font-medium">Size Information & Material Care</span>
+                                        <img src="//cdn.fcglcdn.com/brainbees/images/ng/m/info-1.svg" alt="" className="w-4 h-4" />
+                                        <span className="text-xs font-medium">Size Information & Material Care</span>
                                     </div>
-                                    {showSizeInfo ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+                                    {showSizeInfo ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
                                 </button>
                                 {showSizeInfo && (
-                                    <div className="p-4 text-sm space-y-2">
+                                    <div className="p-4 text-xs space-y-2 max-h-60 overflow-y-auto">
                                         {sizeInfo.map((info, idx) => (
                                             <div key={idx} className="grid grid-cols-3 gap-2">
                                                 <span className="text-gray-600">{info.label}:</span>
@@ -539,110 +631,75 @@ export default function ProductDetailPage() {
                             </section>
 
                             {/* Brand Information Accordion */}
-                            <section className="mb-6 border rounded-lg overflow-hidden">
+                            <section className="border rounded-lg overflow-hidden">
                                 <button
                                     onClick={() => setShowBrandInfo(!showBrandInfo)}
-                                    className="w-full px-4 py-3 flex items-center justify-between bg-gray-50 hover:bg-gray-100"
+                                    className="w-full px-4 py-3 flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
                                 >
                                     <div className="flex items-center space-x-2">
-                                        <img src="//cdn.fcglcdn.com/brainbees/images/ng/m/brand-info.svg" alt="" className="w-5 h-5" />
-                                        <span className="font-medium">Brand Information</span>
-                                        <span className="text-xs text-gray-500">Babyhug</span>
+                                        <img src="//cdn.fcglcdn.com/brainbees/images/ng/m/brand-info.svg" alt="" className="w-4 h-4" />
+                                        <span className="text-xs font-medium">Brand Information</span>
                                     </div>
-                                    {showBrandInfo ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+                                    {showBrandInfo ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
                                 </button>
                                 {showBrandInfo && (
                                     <div className="p-4">
-                                        <img src="//cdn.fcglcdn.com/brainbees/images/brands/621.webp" alt="Babyhug" className="h-12 mb-3" />
-                                        <p className="text-sm text-gray-700 leading-relaxed">
-                                            Babyhug is India's largest and most trusted baby care brand. When it comes to the needs of their little ones, countless mums can vouch for the convenience, safety, and quality that is synonymous with Babyhug. We put our hearts and souls into enhancing the parenting experience; a whole lot of care goes into each of our products.
-                                        </p>
-                                        <p className="text-sm text-gray-700 leading-relaxed mt-2">
-                                            Our team is always on the lookout for innovations that help us cater to what parents are looking for. We keep communication channels open so that our customers can give us honest feedback so that our products keep evolving along the way. Babyhug India conforms to global quality standards, ensuring that our offerings are second to only a mother's hug.
+                                        <img src="//cdn.fcglcdn.com/brainbees/images/brands/621.webp" alt="Babyhug" className="h-8 mb-3" />
+                                        <p className="text-xs text-gray-700 leading-relaxed">
+                                            Babyhug is India's largest and most trusted baby care brand...
                                         </p>
                                     </div>
                                 )}
                             </section>
 
-                            {/* Ratings & Reviews */}
-                            <section className="mb-6 border rounded-lg p-4">
-                                <h3 className="font-bold mb-3">Ratings & Reviews</h3>
+                            {/* Ratings */}
+                            <section className="border rounded-lg p-4">
+                                <h3 className="font-medium text-sm mb-2">Ratings & Reviews</h3>
                                 <div className="flex items-center space-x-1">
                                     {[1, 2, 3, 4, 5].map((star) => (
-                                        <span key={star} className="text-2xl text-gray-300">★</span>
+                                        <span key={star} className="text-xl text-gray-300">★</span>
                                     ))}
                                 </div>
                                 <p className="text-xs text-gray-600 mt-2">
                                     Tap on the stars to Rate & Review this product
-                                    <a href="/termsofuse" className="text-blue-600 ml-1">T&C</a>
                                 </p>
                             </section>
 
-                            {/* Follow Us */}
-                            <section className="mb-6 border rounded-lg p-4">
-                                <h3 className="font-bold mb-3">Follow Us to Get Featured</h3>
-                                <div className="flex space-x-6">
-                                    <a href="https://www.facebook.com/babyhug/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
-                                        <img src="//cdn.fcglcdn.com/brainbees/images/ng/m/facebook _mobile_icon.png" alt="" className="w-6 h-6" />
-                                        <span className="text-sm">@Babyhug</span>
-                                    </a>
-                                    <a href="https://www.instagram.com/babyhug/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
-                                        <img src="//cdn.fcglcdn.com/brainbees/images/ng/m/instagram_mobile_icon.png" alt="" className="w-6 h-6" />
-                                        <span className="text-sm">@Babyhug</span>
-                                    </a>
-                                </div>
-                            </section>
-
-                            {/* Add to Cart Button */}
+                            {/* ADD TO CART Button - Visible on all devices, NOT sticky */}
                             <button
                                 onClick={handleAddToCart}
-                                className="w-full bg-orange-500 text-white py-4 rounded-lg font-bold text-lg hover:bg-orange-600 transition-colors"
+                                disabled={isAdding}
+                                className={`
+                                    w-full py-3 rounded-lg font-bold text-base transition-all mt-4
+                                    ${isAdding
+                                        ? 'bg-green-500 text-white cursor-not-allowed'
+                                        : 'bg-orange-500 text-white hover:bg-orange-600'
+                                    }
+                                `}
                             >
-                                ADD TO CART
+                                {isAdding ? 'ADDED ✓' : 'ADD TO CART'}
                             </button>
                         </div>
-                    </section>
+                    </div>
                 </div>
             </section>
 
             {/* You May Also Like */}
-            <section className="max-w-7xl mx-auto px-4 py-8 border-t">
-                <h2 className="text-xl font-bold mb-6">You May Also Like</h2>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <section className="max-w-7xl mx-auto px-3 py-6 border-t mt-4">
+                <h2 className="text-base font-bold mb-4">You May Also Like</h2>
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
                     {youMayAlsoLike.map((item) => (
                         <Link key={item.id} href={`/boutique/${categorySlug}/${item.id}`} className="group">
-                            <div className="relative">
-                                <img src={item.image} alt={item.name} className="w-full rounded-lg" />
-                                <div className="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded">
+                            <div className="relative overflow-hidden rounded-lg">
+                                <img src={item.image} alt={item.name} className="w-full transition-transform duration-300 group-hover:scale-105" />
+                                <div className="absolute top-1 left-1 bg-red-600 text-white text-[10px] px-1 py-0.5 rounded">
                                     {Math.round((1 - item.price / item.mrp) * 100)}% OFF
                                 </div>
                             </div>
-                            <div className="mt-2">
-                                <p className="text-sm line-clamp-2 group-hover:text-orange-600">{item.name}</p>
-                                <p className="font-bold mt-1">₹{item.price.toFixed(2)}</p>
-                                <p className="text-xs text-gray-500 line-through">₹{item.mrp}</p>
-                            </div>
-                        </Link>
-                    ))}
-                </div>
-            </section>
-
-            {/* Frequently Bought Together */}
-            <section className="max-w-7xl mx-auto px-4 py-8 border-t">
-                <h2 className="text-xl font-bold mb-6">Frequently Bought Together</h2>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {frequentlyBought.map((item) => (
-                        <Link key={item.id} href={`/boutique/${categorySlug}/${item.id}`} className="group">
-                            <div className="relative">
-                                <img src={item.image} alt={item.name} className="w-full rounded-lg" />
-                                <div className="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded">
-                                    {Math.round((1 - item.price / item.mrp) * 100)}% OFF
-                                </div>
-                            </div>
-                            <div className="mt-2">
-                                <p className="text-sm line-clamp-2 group-hover:text-orange-600">{item.name}</p>
-                                <p className="font-bold mt-1">₹{item.price.toFixed(2)}</p>
-                                <p className="text-xs text-gray-500 line-through">₹{item.mrp}</p>
+                            <div className="mt-1">
+                                <p className="text-xs line-clamp-2 group-hover:text-orange-600">{item.name}</p>
+                                <p className="font-bold text-xs mt-1">₹{item.price.toFixed(2)}</p>
+                                <p className="text-[10px] text-gray-500 line-through">₹{item.mrp}</p>
                             </div>
                         </Link>
                     ))}
@@ -651,22 +708,22 @@ export default function ProductDetailPage() {
 
             {/* Size Chart Modal */}
             {showSizeChart && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center">
+                <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center">
                     <div className="absolute inset-0 bg-black bg-opacity-50" onClick={() => setShowSizeChart(false)} />
-                    <div className="relative bg-white rounded-lg w-full max-w-2xl max-h-[80vh] overflow-y-auto">
-                        <div className="sticky top-0 bg-white border-b p-4 flex justify-between items-center">
-                            <h3 className="font-bold">Size Chart</h3>
-                            <button onClick={() => setShowSizeChart(false)}>
-                                <X size={20} />
+                    <div className="relative bg-white rounded-t-lg sm:rounded-lg w-full sm:max-w-2xl max-h-[80vh] overflow-y-auto">
+                        <div className="sticky top-0 bg-white border-b p-3 flex justify-between items-center">
+                            <h3 className="font-bold text-sm">Size Chart</h3>
+                            <button onClick={() => setShowSizeChart(false)} className="hover:bg-gray-100 p-1 rounded-full">
+                                <X size={16} />
                             </button>
                         </div>
-                        <div className="p-6">
-                            <table className="w-full text-sm">
+                        <div className="p-4">
+                            <table className="w-full text-xs">
                                 <tbody>
                                     {sizeInfo.slice(0, 8).map((info, idx) => (
                                         <tr key={idx} className="border-b">
-                                            <td className="py-2 text-gray-600">{info.label}</td>
-                                            <td className="py-2 font-medium">{info.value}</td>
+                                            <td className="py-2 text-gray-600 font-medium pr-2">{info.label}</td>
+                                            <td className="py-2 text-gray-900">{info.value}</td>
                                         </tr>
                                     ))}
                                 </tbody>

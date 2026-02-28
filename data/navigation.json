@@ -66,6 +66,113 @@
     },
     "mainCategories": [
         {
+            "id": "all-categories",
+            "label": "ALL CATEGORIES",
+            "href": "https://www.firstcry.com?ref2=menu_dd_catlanding",
+            "columns": [
+                {
+                    "title": "ALL CATEGORIES",
+                    "items": [
+                        {
+                            "id": "all-boy-fashion",
+                            "label": "BOY FASHION",
+                            "href": "https://www.firstcry.com/clothes-and-shoes/6/0/0?gender=boy,unisex&sort=bestseller&ref2=menu_dd_catlanding"
+                        },
+                        {
+                            "id": "all-girl-fashion",
+                            "label": "GIRL FASHION",
+                            "href": "https://www.firstcry.com/clothes-and-shoes/6/0/0?gender=girl,unisex&sort=bestseller&ref2=menu_dd_catlanding"
+                        },
+                        {
+                            "id": "all-footwear",
+                            "label": "FOOTWEAR",
+                            "href": "https://www.firstcry.com/clothes-and-shoes/6/170/0?sort=bestseller&ref2=menu_dd_catlanding"
+                        },
+                        {
+                            "id": "all-toys",
+                            "label": "TOYS",
+                            "href": "https://www.firstcry.com/toys-and-gaming/5/0/0?sort=bestseller&ref2=menu_dd_catlanding"
+                        },
+                        {
+                            "id": "all-diapering",
+                            "label": "DIAPERING",
+                            "href": "https://www.firstcry.com/diapering/1/0/0?sort=bestseller&ref2=menu_dd_catlanding"
+                        },
+                        {
+                            "id": "all-gear",
+                            "label": "GEAR",
+                            "href": "https://www.firstcry.com/baby-gear/7/0/0?sort=bestseller&ref2=menu_dd_catlanding"
+                        },
+                        {
+                            "id": "all-feeding",
+                            "label": "FEEDING",
+                            "href": "https://www.firstcry.com/feeding-and-nursing/2/0/0?sort=bestseller&ref2=menu_dd_catlanding"
+                        },
+                        {
+                            "id": "all-bath",
+                            "label": "BATH",
+                            "href": "https://www.firstcry.com/bath-and-skincare/3/0/0?sort=Popularity&ref2=menu_dd_catlanding"
+                        },
+                        {
+                            "id": "all-nursery",
+                            "label": "NURSERY",
+                            "href": "https://www.firstcry.com/nursery/8/0/0?sort=bestseller&ref2=menu_dd_catlanding"
+                        },
+                        {
+                            "id": "all-moms",
+                            "label": "MOMS",
+                            "href": "https://www.firstcry.com/moms-and-maternity/21/0/0?sort=bestseller&ref2=menu_dd_catlanding"
+                        },
+                        {
+                            "id": "all-health-safety",
+                            "label": "HEALTH & SAFETY",
+                            "href": "https://www.firstcry.com/health-and-safety/4/0/0?sort=bestseller&ref2=menu_dd_catlanding"
+                        },
+                        {
+                            "id": "all-boutiques",
+                            "label": "BOUTIQUES",
+                            "href": "https://www.firstcry.com/boutiques?ref2=menu_dd_catlanding"
+                        },
+                        {
+                            "id": "all-womens-beauty",
+                            "label": "WOMEN'S BEAUTY & CARE",
+                            "href": "https://www.firstcry.com/womens-personal-care/78/0/0?sort=bestseller&ref2=menu_dd_catlanding"
+                        },
+                        {
+                            "id": "all-birthday",
+                            "label": "BIRTHDAY",
+                            "href": "https://www.firstcry.com/searchresult?sale=14&brandid=0&searchstring=brand@~174~149~157~154~167~151~153~152~155@@@1@0@20@@@@@@@@@@@@@@@@@@@@@&sort=bestseller&ref2=menu_dd_catlanding"
+                        },
+                        {
+                            "id": "all-gifts",
+                            "label": "GIFTS",
+                            "href": "https://www.firstcry.com/searchresult?sale=12&brandid=0&searchstring=brand@~108~1240~160~161@@@1@0@20@@@@@@@@@@@@@@@@@@@@@&sort=bestseller&ref2=menu_dd_catlanding"
+                        },
+                        {
+                            "id": "all-books",
+                            "label": "BOOKS",
+                            "href": "https://www.firstcry.com/books/11/0/0?sort=bestseller&ref2=menu_dd_catlanding"
+                        },
+                        {
+                            "id": "all-school-supplies",
+                            "label": "SCHOOL SUPPLIES",
+                            "href": "https://www.firstcry.com/school-supplies/10/0/0?sort=bestseller&ref2=menu_dd_catlanding"
+                        },
+                        {
+                            "id": "all-home-living",
+                            "label": "HOME & LIVING",
+                            "href": "https://www.firstcry.com/home-and-living/1700/0/0?sort=bestseller&ref2=menu_dd_catlanding"
+                        },
+                        {
+                            "id": "all-stores-preschools",
+                            "label": "STORES & PRESCHOOLS",
+                            "href": "https://www.firstcry.com/store-locator?ref2=menu_dd_catlanding"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "id": "boy-fashion",
             "label": "BOY FASHION",
             "href": "//www.firstcry.com/clothes-and-shoes/6/0/0?gender=boy,unisex&sort=bestseller&ref2=menu_dd_catlanding",

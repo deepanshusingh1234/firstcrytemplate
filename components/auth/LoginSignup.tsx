@@ -6,11 +6,21 @@ import { Eye, EyeOff, X, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
+import { UserData } from '@/context/AuthContext';
 
 interface LoginSignupProps {
     isOpen?: boolean;
     onClose?: () => void;
     redirectUrl?: string;
+}
+
+interface StoredUser {
+    fullName: string;
+    emailOrMobile: string;
+    password: string;
+    countryCode: string;
+    isLoggedIn: boolean;
+    loginTime: string;
 }
 
 const LoginSignup: React.FC<LoginSignupProps> = ({
@@ -21,63 +31,54 @@ const LoginSignup: React.FC<LoginSignupProps> = ({
     const router = useRouter();
     const { login } = useAuth();
 
-    // Default test credentials
+    // Form state
     const [fullName, setFullName] = useState('');
-    const [emailOrMobile, setEmailOrMobile] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
     const [isLoginMode, setIsLoginMode] = useState(true);
-    const [countryCode, setCountryCode] = useState('91');
-    const [showCountryDropdown, setShowCountryDropdown] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [agreedToTerms, setAgreedToTerms] = useState(false);
 
-    // Set default values for testing
+    // Set default values for testing when component mounts
     useEffect(() => {
         if (isLoginMode) {
-            setEmailOrMobile('test@example.com');
+            setEmail('test@example.com');
             setPassword('Test@123');
         } else {
             setFullName('John Doe');
-            setEmailOrMobile('john.doe@example.com');
+            setEmail('john.doe@example.com');
+            setPassword('Test@123');
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []); // Run only once on mount
+
+    // Update fields when mode changes - using a ref to prevent infinite loop
+    const isInitialMount = useRef(true);
+
+    useEffect(() => {
+        // Skip the first run when component mounts
+        if (isInitialMount.current) {
+            isInitialMount.current = false;
+            return;
+        }
+
+        if (isLoginMode) {
+            setEmail('test@example.com');
+            setPassword('Test@123');
+            setFullName('');
+        } else {
+            setFullName('John Doe');
+            setEmail('john.doe@example.com');
             setPassword('Test@123');
         }
     }, [isLoginMode]);
 
-    const countryDropdownRef = useRef<HTMLDivElement>(null);
-
-    const countries = [
-        { code: '91', name: 'India (भारत)', flag: 'in' },
-        { code: '1', name: 'United States', flag: 'us' },
-        { code: '971', name: 'UAE', flag: 'ae' },
-        { code: '44', name: 'United Kingdom', flag: 'gb' },
-        { code: '61', name: 'Australia', flag: 'au' },
-        { code: '966', name: 'Saudi Arabia', flag: 'sa' },
-        { code: '974', name: 'Qatar', flag: 'qa' },
-        { code: '65', name: 'Singapore', flag: 'sg' },
-        { code: '64', name: 'New Zealand', flag: 'nz' },
-        { code: '353', name: 'Ireland', flag: 'ie' },
-        { code: '965', name: 'Kuwait', flag: 'kw' },
-        { code: '968', name: 'Oman', flag: 'om' },
-        { code: '977', name: 'Nepal', flag: 'np' },
-        { code: '973', name: 'Bahrain', flag: 'bh' },
-        { code: '31', name: 'Netherlands', flag: 'nl' },
-        { code: '41', name: 'Switzerland', flag: 'ch' },
-        { code: '254', name: 'Kenya', flag: 'ke' },
-        { code: '94', name: 'Sri Lanka', flag: 'lk' },
-    ];
-
-    useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
-            if (countryDropdownRef.current && !countryDropdownRef.current.contains(event.target as Node)) {
-                setShowCountryDropdown(false);
-            }
-        };
-
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside);
-    }, []);
+    const validateEmail = (email: string): boolean => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    };
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -88,13 +89,23 @@ const LoginSignup: React.FC<LoginSignupProps> = ({
             return;
         }
 
-        if (!emailOrMobile.trim()) {
-            setErrorMessage('Please enter your valid Email-id or Mobile No.');
+        if (!email.trim()) {
+            setErrorMessage('Please enter your email address');
+            return;
+        }
+
+        if (!validateEmail(email)) {
+            setErrorMessage('Please enter a valid email address');
             return;
         }
 
         if (!password.trim()) {
             setErrorMessage('Please enter your password');
+            return;
+        }
+
+        if (password.length < 6) {
+            setErrorMessage('Password must be at least 6 characters');
             return;
         }
 
@@ -110,33 +121,33 @@ const LoginSignup: React.FC<LoginSignupProps> = ({
             if (isLoginMode) {
                 // Login Logic
                 const storedUsers = localStorage.getItem('firstCryUsers');
-                const users = storedUsers ? JSON.parse(storedUsers) : [];
+                const users: StoredUser[] = storedUsers ? JSON.parse(storedUsers) : [];
 
                 // For demo purposes, also accept the test credentials
                 const isValidUser = users.some(
-                    (u: any) => u.emailOrMobile === emailOrMobile && u.password === password
-                ) || (emailOrMobile === 'test@example.com' && password === 'Test@123');
+                    (u: StoredUser) => u.emailOrMobile === email && u.password === password
+                ) || (email === 'test@example.com' && password === 'Test@123');
 
                 if (isValidUser) {
                     // Find user data
-                    const user = users.find((u: any) => u.emailOrMobile === emailOrMobile) || {
+                    const user = users.find((u: StoredUser) => u.emailOrMobile === email) || {
                         fullName: 'Test User',
-                        emailOrMobile: 'test@example.com',
-                        countryCode
+                        emailOrMobile: email,
+                        countryCode: '91'
                     };
 
                     // Store logged in user
-                    const userData = {
+                    const userData: UserData = {
                         fullName: user.fullName || 'Test User',
                         emailOrMobile: user.emailOrMobile,
-                        countryCode: user.countryCode || countryCode,
+                        countryCode: '91',
                         isLoggedIn: true,
                         loginTime: new Date().toISOString()
                     };
 
                     localStorage.setItem('firstCryUser', JSON.stringify(userData));
 
-                    console.log('Login successful', { emailOrMobile, countryCode });
+                    console.log('Login successful', { email });
 
                     // Update context
                     login(userData);
@@ -149,27 +160,27 @@ const LoginSignup: React.FC<LoginSignupProps> = ({
 
                     setIsLoading(false);
                 } else {
-                    setErrorMessage('Invalid email/mobile or password');
+                    setErrorMessage('Invalid email or password');
                     setIsLoading(false);
                 }
             } else {
                 // Registration Logic
                 const storedUsers = localStorage.getItem('firstCryUsers');
-                const users = storedUsers ? JSON.parse(storedUsers) : [];
+                const users: StoredUser[] = storedUsers ? JSON.parse(storedUsers) : [];
 
                 // Check if user already exists
-                const userExists = users.some((u: any) => u.emailOrMobile === emailOrMobile);
+                const userExists = users.some((u: StoredUser) => u.emailOrMobile === email);
 
                 if (userExists) {
-                    setErrorMessage('User with this email/mobile already exists');
+                    setErrorMessage('User with this email already exists');
                     setIsLoading(false);
                 } else {
                     // Create new user
-                    const newUser = {
+                    const newUser: StoredUser = {
                         fullName,
-                        emailOrMobile,
+                        emailOrMobile: email,
                         password,
-                        countryCode,
+                        countryCode: '91',
                         isLoggedIn: false,
                         loginTime: ''
                     };
@@ -178,17 +189,17 @@ const LoginSignup: React.FC<LoginSignupProps> = ({
                     localStorage.setItem('firstCryUsers', JSON.stringify(users));
 
                     // Auto login after registration
-                    const userData = {
+                    const userData: UserData = {
                         fullName,
-                        emailOrMobile,
-                        countryCode,
+                        emailOrMobile: email,
+                        countryCode: '91',
                         isLoggedIn: true,
                         loginTime: new Date().toISOString()
                     };
 
                     localStorage.setItem('firstCryUser', JSON.stringify(userData));
 
-                    console.log('Registration successful', { fullName, emailOrMobile, countryCode });
+                    console.log('Registration successful', { fullName, email });
 
                     // Update context
                     login(userData);
@@ -211,7 +222,7 @@ const LoginSignup: React.FC<LoginSignupProps> = ({
 
         setTimeout(() => {
             // Create a demo user for Google login
-            const userData = {
+            const userData: UserData = {
                 fullName: 'Google User',
                 emailOrMobile: 'google.user@gmail.com',
                 countryCode: '91',
@@ -223,9 +234,9 @@ const LoginSignup: React.FC<LoginSignupProps> = ({
 
             // Also add to users list if not exists
             const storedUsers = localStorage.getItem('firstCryUsers');
-            const users = storedUsers ? JSON.parse(storedUsers) : [];
+            const users: StoredUser[] = storedUsers ? JSON.parse(storedUsers) : [];
 
-            const userExists = users.some((u: any) => u.emailOrMobile === 'google.user@gmail.com');
+            const userExists = users.some((u: StoredUser) => u.emailOrMobile === 'google.user@gmail.com');
 
             if (!userExists) {
                 users.push({
@@ -252,7 +263,7 @@ const LoginSignup: React.FC<LoginSignupProps> = ({
 
     return (
         <>
-            {/* Overlay */}
+            {/* Overlay Loader */}
             {isLoading && (
                 <div className="fixed inset-0 bg-transparent bg-opacity-50 z-[60] flex items-center justify-center">
                     <div className="bg-white p-8 rounded-lg shadow-xl">
@@ -271,21 +282,23 @@ const LoginSignup: React.FC<LoginSignupProps> = ({
             {/* Main Container */}
             <div className="fixed inset-0 z-50 overflow-y-auto bg-gray-50">
                 <div className="min-h-screen flex items-center justify-center p-4">
-                    <div className="w-full max-w-2xl bg-white rounded-2xl shadow-2xl overflow-hidden">
+                    <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl overflow-hidden">
                         {/* Banner Image */}
-                        <div className="w-full h-48 overflow-hidden">
-                            <img
+                        <div className="w-full h-40 overflow-hidden">
+                            <Image
                                 src="//cdn.fcglcdn.com/brainbees/images/m/login_revamp_banner_mobile.jpg"
                                 alt="Extra 5% OFF* Join us to grab more discounts + Free Shipping on First orders COUPON: NEW5CT"
+                                width={448}
+                                height={160}
                                 className="w-full h-full object-cover"
-                                tabIndex={0}
+                                unoptimized
                             />
                         </div>
 
                         {/* Login/Signup Content */}
-                        <div className="p-8">
+                        <div className="p-6">
                             {/* Header with Close Button */}
-                            <div className="flex items-center justify-between mb-6">
+                            <div className="flex items-center justify-between mb-4">
                                 <h2 className="text-2xl font-bold text-gray-900">
                                     {isLoginMode ? 'Log In' : 'Create Account'}
                                 </h2>
@@ -334,62 +347,19 @@ const LoginSignup: React.FC<LoginSignupProps> = ({
                                     </div>
                                 )}
 
-                                {/* Email/Mobile Input with Country Code */}
+                                {/* Email Input */}
                                 <div className="space-y-1">
                                     <label className="text-sm font-medium text-gray-700">
-                                        {isLoginMode ? 'Email or Mobile No.' : 'Email or Mobile No.'}<span className="text-red-500">*</span>
+                                        Email Address<span className="text-red-500">*</span>
                                     </label>
-                                    <div className="relative">
-                                        <div className="flex items-center border rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-yellow-400 focus-within:border-transparent">
-                                            {/* Country Code Dropdown */}
-                                            <div className="relative" ref={countryDropdownRef}>
-                                                <button
-                                                    type="button"
-                                                    onClick={() => setShowCountryDropdown(!showCountryDropdown)}
-                                                    className="flex items-center space-x-1 px-4 py-3 bg-gray-50 border-r hover:bg-gray-100 transition-colors"
-                                                >
-                                                    <span className={`iti__flag iti__${countries.find(c => c.code === countryCode)?.flag || 'in'} w-4 h-3 bg-cover`}
-                                                        style={{ backgroundImage: 'url(https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/img/flags.png)' }}>
-                                                    </span>
-                                                    <span className="text-sm">+{countryCode}</span>
-                                                    <ChevronDown size={14} className="text-gray-500" />
-                                                </button>
-
-                                                {showCountryDropdown && (
-                                                    <div className="absolute top-full left-0 mt-1 w-72 bg-white border rounded-lg shadow-lg max-h-60 overflow-y-auto z-10">
-                                                        {countries.map((country) => (
-                                                            <button
-                                                                key={country.code}
-                                                                type="button"
-                                                                onClick={() => {
-                                                                    setCountryCode(country.code);
-                                                                    setShowCountryDropdown(false);
-                                                                }}
-                                                                className={`w-full flex items-center space-x-3 px-4 py-2.5 hover:bg-gray-50 transition-colors ${country.code === countryCode ? 'bg-yellow-50' : ''
-                                                                    }`}
-                                                            >
-                                                                <span className={`iti__flag iti__${country.flag} w-4 h-3 bg-cover`}
-                                                                    style={{ backgroundImage: 'url(https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/img/flags.png)' }}>
-                                                                </span>
-                                                                <span className="text-sm flex-1 text-left">{country.name}</span>
-                                                                <span className="text-sm text-gray-500">+{country.code}</span>
-                                                            </button>
-                                                        ))}
-                                                    </div>
-                                                )}
-                                            </div>
-
-                                            {/* Input Field */}
-                                            <input
-                                                type="text"
-                                                value={emailOrMobile}
-                                                onChange={(e) => setEmailOrMobile(e.target.value)}
-                                                placeholder={isLoginMode ? "Enter your Email or Mobile No." : "Enter your Email or Mobile No."}
-                                                className="flex-1 px-4 py-3 outline-none text-base"
-                                                autoComplete="username"
-                                            />
-                                        </div>
-                                    </div>
+                                    <input
+                                        type="email"
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                        placeholder="Enter your email address"
+                                        className="w-full px-4 py-3 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-400 text-base"
+                                        autoComplete="email"
+                                    />
                                 </div>
 
                                 {/* Password Field */}
@@ -462,7 +432,7 @@ const LoginSignup: React.FC<LoginSignupProps> = ({
                             </form>
 
                             {/* Toggle between Login/Register */}
-                            <div className="mt-6 text-center">
+                            <div className="mt-4 text-center">
                                 <p className="text-base text-gray-600">
                                     {isLoginMode ? "New to FirstCry?" : "Already have an account?"}{' '}
                                     <button
@@ -478,30 +448,8 @@ const LoginSignup: React.FC<LoginSignupProps> = ({
                                 </p>
                             </div>
 
-                            {/* OR Divider */}
-                            <div className="mt-6 flex items-center">
-                                <div className="flex-1 h-px bg-gray-200"></div>
-                                <p className="px-4 text-sm text-gray-500">Or log-In with</p>
-                                <div className="flex-1 h-px bg-gray-200"></div>
-                            </div>
-
-                            {/* Social Login */}
-                            <div className="mt-6">
-                                <button
-                                    onClick={handleGoogleLogin}
-                                    className="w-full flex items-center justify-center space-x-3 py-3 border rounded-lg hover:bg-gray-50 transition-colors"
-                                >
-                                    <img
-                                        src="//cdn.fcglcdn.com/brainbees/images/m/loginrev_google.jpg"
-                                        alt="Google"
-                                        className="w-6 h-6"
-                                    />
-                                    <span className="text-base font-medium text-gray-700">Continue with Google</span>
-                                </button>
-                            </div>
-
                             {/* Terms and Privacy Footer */}
-                            <div className="mt-6 text-center">
+                            <div className="mt-4 text-center">
                                 <p className="text-sm text-gray-500">
                                     By continuing, you agree to FirstCry&apos;s{' '}
                                     <a href="#" className="text-gray-700 font-medium hover:underline">
