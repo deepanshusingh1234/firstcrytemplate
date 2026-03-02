@@ -82,7 +82,7 @@ const BoutiquesPage = () => {
             image: "//cdn.fcglcdn.com/brainbees/images/boutique/300x300/38842.webp",
             endDate: "3/5/2026 9:30:00 AM",
             description: "Casual Wear Winter Wear & More",
-            isNewToday: true
+
         },
         {
             id: "38480",
@@ -104,7 +104,7 @@ const BoutiquesPage = () => {
             image: "//cdn.fcglcdn.com/brainbees/images/boutique/300x300/38839.webp",
             endDate: "3/5/2026 9:30:00 AM",
             description: "Shop Tees, Sets & More",
-            isNewToday: true
+
         },
         {
             id: "38840",
@@ -112,7 +112,7 @@ const BoutiquesPage = () => {
             image: "//cdn.fcglcdn.com/brainbees/images/boutique/300x300/38840.webp",
             endDate: "3/5/2026 9:30:00 AM",
             description: "Explore Multipacks for Daily Use",
-            isNewToday: true
+
         },
         {
             id: "38841",
@@ -120,7 +120,7 @@ const BoutiquesPage = () => {
             image: "//cdn.fcglcdn.com/brainbees/images/boutique/300x300/38841.webp",
             endDate: "3/5/2026 9:30:00 AM",
             description: "Shop Shorts, skirts & more",
-            isNewToday: true
+
         },
         {
             id: "38843",
@@ -128,7 +128,7 @@ const BoutiquesPage = () => {
             image: "//cdn.fcglcdn.com/brainbees/images/boutique/300x300/38843.webp",
             endDate: "3/5/2026 9:30:00 AM",
             description: "Shop Onesies, Tops & more",
-            isNewToday: true
+
         },
         {
             id: "38844",
@@ -136,7 +136,7 @@ const BoutiquesPage = () => {
             image: "//cdn.fcglcdn.com/brainbees/images/boutique/300x300/38844.webp",
             endDate: "3/5/2026 9:30:00 AM",
             description: "Shop Now",
-            isNewToday: true
+
         },
         {
             id: "38845",
@@ -144,7 +144,7 @@ const BoutiquesPage = () => {
             image: "//cdn.fcglcdn.com/brainbees/images/boutique/300x300/38845.webp",
             endDate: "3/5/2026 9:30:00 AM",
             description: "Shop must-have innerwear for your little stars!",
-            isNewToday: true
+
         },
         {
             id: "38846",
@@ -152,7 +152,7 @@ const BoutiquesPage = () => {
             image: "//cdn.fcglcdn.com/brainbees/images/boutique/300x300/38846.webp",
             endDate: "3/5/2026 9:30:00 AM",
             description: "Up to 50%",
-            isNewToday: true
+
         }
     ]);
 
@@ -431,7 +431,7 @@ const BoutiquesPage = () => {
                 <div className="max-w-[1366px] mx-auto">
                     <ul className="flex items-center space-x-8 py-3 px-4 text-sm">
                         <li className="active font-bold text-orange-500 border-b-2 border-orange-500 pb-2">
-                            <button className="cursor-pointer">TODAY'S BOUTIQUES</button>
+                            <button className="cursor-pointer">TODAY&apos;S BOUTIQUES</button>
                         </li>
                         <li>
                             <Link href="/boutiques/popular?ref2=best_sellers" className="text-gray-700 hover:text-gray-900">
@@ -651,11 +651,7 @@ const BoutiquesPage = () => {
                                     <div className="footer-sticky absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white text-xs py-1 px-2">
                                         {getTimerDisplayValue(boutique.endDate)}
                                     </div>
-                                    {boutique.isNewToday && (
-                                        <div className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
-                                            NEW TODAY
-                                        </div>
-                                    )}
+
                                 </div>
                                 <div className="text-ctr p-4">
                                     <div className="head-text">

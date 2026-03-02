@@ -228,7 +228,7 @@ export default function ProductDetailPage() {
             <div className="min-h-screen flex items-center justify-center px-4">
                 <div className="text-center">
                     <h1 className="text-xl font-bold text-gray-800">Product Not Found</h1>
-                    <p className="text-sm text-gray-600 mt-2">The product you're looking for doesn't exist.</p>
+                    <p className="text-sm text-gray-600 mt-2">The product you&apos;re looking for doesn&apos;t exist.</p>
                     <Link href={`/boutique/${categorySlug}`} className="inline-block mt-4 text-orange-500 hover:underline">
                         Back to Boutique
                     </Link>
@@ -646,7 +646,7 @@ export default function ProductDetailPage() {
                                     <div className="p-4">
                                         <img src="//cdn.fcglcdn.com/brainbees/images/brands/621.webp" alt="Babyhug" className="h-8 mb-3" />
                                         <p className="text-xs text-gray-700 leading-relaxed">
-                                            Babyhug is India's largest and most trusted baby care brand...
+                                            Babyhug is India&apos;s largest and most trusted baby care brand...
                                         </p>
                                     </div>
                                 )}

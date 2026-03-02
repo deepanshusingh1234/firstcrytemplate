@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { UserData } from '@/context/AuthContext';
+import Loader from '../loader/Loader';
 
 interface LoginSignupProps {
     isOpen?: boolean;
@@ -265,18 +266,19 @@ const LoginSignup: React.FC<LoginSignupProps> = ({
         <>
             {/* Overlay Loader */}
             {isLoading && (
-                <div className="fixed inset-0 bg-transparent bg-opacity-50 z-[60] flex items-center justify-center">
-                    <div className="bg-white p-8 rounded-lg shadow-xl">
-                        <Image
-                            src="//cdn.fcglcdn.com/brainbees/images/n/login-signup-loader.gif"
-                            alt="Loading..."
-                            width={50}
-                            height={50}
-                            className="mx-auto"
-                            unoptimized
-                        />
-                    </div>
-                </div>
+                // <div className="fixed inset-0 bg-transparent bg-opacity-50 z-[60] flex items-center justify-center">
+                //     <div className="bg-white p-8 rounded-lg shadow-xl">
+                //         <Image
+                //             src="//cdn.fcglcdn.com/brainbees/images/n/login-signup-loader.gif"
+                //             alt="Loading..."
+                //             width={50}
+                //             height={50}
+                //             className="mx-auto"
+                //             unoptimized
+                //         />
+                //     </div>
+                // </div>
+                <Loader />
             )}
 
             {/* Main Container */}
