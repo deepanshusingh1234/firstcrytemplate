@@ -350,6 +350,7 @@ const BoutiquesPage = () => {
         setPopupOptions(options);
         setTempSelectedFilters({ ...selectedFilters });
         setShowPopup(true);
+        // eslint-disable-next-line react-hooks/immutability
         document.body.style.overflow = 'hidden';
     };
 

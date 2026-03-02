@@ -5,9 +5,14 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { getHeroSlides, getTotalSlides } from "../utils/heroSlider";
 import { Slide } from "../types/heroSlider";
 
+
 const HeroSlider = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+    const [sliderHeight, setSliderHeight] = useState('550px');
+    const [arrowSize, setArrowSize] = useState(28);
+    const [dotSizes, setDotSizes] = useState({ active: 'w-8', inactive: 'w-3', height: 'h-3' });
+
     const sliderRef = useRef<HTMLDivElement>(null);
     const autoPlayRef = useRef<NodeJS.Timeout>();
 
@@ -17,6 +22,7 @@ const HeroSlider = () => {
     // Background image for the side spaces
     const sideBackgroundUrl = "https://cdn.fcglcdn.com/brainbees/banners/hp_def_new_season_new_styles_side1770992332620.jpg";
 
+    // Auto-play functionality
     useEffect(() => {
         if (isAutoPlaying && totalSlides > 0) {
             autoPlayRef.current = setInterval(() => {
@@ -29,6 +35,67 @@ const HeroSlider = () => {
             }
         };
     }, [isAutoPlaying, totalSlides]);
+
+    // Responsive heights
+    useEffect(() => {
+        const getSliderHeight = () => {
+            if (typeof window === 'undefined') return '550px';
+            if (window.innerWidth < 640) return '250px';      // mobile
+            if (window.innerWidth < 768) return '300px';      // sm
+            if (window.innerWidth < 1024) return '400px';     // md
+            if (window.innerWidth < 1280) return '500px';     // lg
+            return '550px';                                    // xl
+        };
+
+        const handleResize = () => {
+            setSliderHeight(getSliderHeight());
+        };
+
+        handleResize(); // Set initial height
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    // Responsive arrow sizes
+    useEffect(() => {
+        const getArrowSize = () => {
+            if (typeof window === 'undefined') return 28;
+            if (window.innerWidth < 640) return 16;
+            if (window.innerWidth < 768) return 18;
+            if (window.innerWidth < 1024) return 20;
+            return 28;
+        };
+
+        const handleResize = () => {
+            setArrowSize(getArrowSize());
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    // Responsive dot sizes
+    useEffect(() => {
+        const getDotSize = () => {
+            if (typeof window === 'undefined') return { active: 'w-8', inactive: 'w-3', height: 'h-3' };
+            if (window.innerWidth < 640) {
+                return { active: 'w-6', inactive: 'w-2', height: 'h-2' };
+            }
+            if (window.innerWidth < 768) {
+                return { active: 'w-7', inactive: 'w-2.5', height: 'h-2.5' };
+            }
+            return { active: 'w-8', inactive: 'w-3', height: 'h-3' };
+        };
+
+        const handleResize = () => {
+            setDotSizes(getDotSize());
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const goToSlide = (index: number) => {
         setCurrentSlide(index);
@@ -51,73 +118,6 @@ const HeroSlider = () => {
     if (totalSlides === 0) {
         return null;
     }
-
-    // Responsive heights
-    const getSliderHeight = () => {
-        if (typeof window === 'undefined') return '550px';
-        if (window.innerWidth < 640) return '250px';      // mobile
-        if (window.innerWidth < 768) return '300px';      // sm
-        if (window.innerWidth < 1024) return '400px';     // md
-        if (window.innerWidth < 1280) return '500px';     // lg
-        return '550px';                                    // xl
-    };
-
-    const [sliderHeight, setSliderHeight] = useState('550px');
-
-    useEffect(() => {
-        const handleResize = () => {
-            setSliderHeight(getSliderHeight());
-        };
-
-        handleResize(); // Set initial height
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
-    // Responsive arrow sizes
-    const getArrowSize = () => {
-        if (typeof window === 'undefined') return 28;
-        if (window.innerWidth < 640) return 16;
-        if (window.innerWidth < 768) return 18;
-        if (window.innerWidth < 1024) return 20;
-        return 28;
-    };
-
-    const [arrowSize, setArrowSize] = useState(28);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setArrowSize(getArrowSize());
-        };
-
-        handleResize();
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
-    // Responsive dot sizes
-    const getDotSize = () => {
-        if (typeof window === 'undefined') return { active: 'w-8', inactive: 'w-3', height: 'h-3' };
-        if (window.innerWidth < 640) {
-            return { active: 'w-6', inactive: 'w-2', height: 'h-2' };
-        }
-        if (window.innerWidth < 768) {
-            return { active: 'w-7', inactive: 'w-2.5', height: 'h-2.5' };
-        }
-        return { active: 'w-8', inactive: 'w-3', height: 'h-3' };
-    };
-
-    const [dotSizes, setDotSizes] = useState({ active: 'w-8', inactive: 'w-3', height: 'h-3' });
-
-    useEffect(() => {
-        const handleResize = () => {
-            setDotSizes(getDotSize());
-        };
-
-        handleResize();
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
 
     return (
         <div
@@ -162,6 +162,9 @@ const HeroSlider = () => {
                                         alt={slide.altText}
                                         title={slide.title}
                                         className="w-full h-full object-cover object-center"
+                                        width={1366}
+                                        height={550}
+                                        priority={index === 0}
                                         loading={index === 0 ? "eager" : "lazy"}
                                     />
                                 </a>

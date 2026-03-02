@@ -1,7 +1,7 @@
 // components/Header.tsx
 'use client';
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Search, MapPin, ChevronDown, Heart, Menu, X, User, LogOut, ChevronRight } from "lucide-react";
 import { getMainCategories, getTopMenuItems } from "@/utils/navigation";
 import { MainCategory } from "@/types/navigation";
@@ -16,12 +16,54 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeMenu, setActiveMenu] = useState<string | null>(null);
     const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
+    const [isVisible, setIsVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
+
     const { setIsCartOpen } = useCart();
     const { user, logout, isLoading } = useAuth();
     const router = useRouter();
 
     const navigationData = getTopMenuItems();
     const mainCategories = getMainCategories();
+
+    // Handle scroll visibility
+    useEffect(() => {
+        const controlHeader = () => {
+            const currentScrollY = window.scrollY;
+            const scrollThreshold = 10;
+
+            if (currentScrollY < scrollThreshold) {
+                // At the top of the page - always show header
+                setIsVisible(true);
+            } else if (currentScrollY > lastScrollY) {
+                // Scrolling down - hide header
+                setIsVisible(false);
+            } else if (currentScrollY < lastScrollY) {
+                // Scrolling up - show header
+                setIsVisible(true);
+            }
+
+            setLastScrollY(currentScrollY);
+        };
+
+        let ticking = false;
+
+        const scrollListener = () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    controlHeader();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        };
+
+        window.addEventListener('scroll', scrollListener, { passive: true });
+
+        return () => {
+            window.removeEventListener('scroll', scrollListener);
+        };
+    }, [lastScrollY]);
 
     const handleLogout = () => {
         logout();
@@ -43,7 +85,7 @@ const Header = () => {
     const handleMenuLeave = () => {
         const timeout = setTimeout(() => {
             setActiveMenu(null);
-        }, 100); // Small delay to allow moving to mega menu
+        }, 100);
         setHoverTimeout(timeout);
     };
 
@@ -60,7 +102,13 @@ const Header = () => {
 
     return (
         <>
-            <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+            <header
+                className={`
+                    bg-white border-b border-gray-200 sticky top-0 z-50
+                    transition-transform duration-300 ease-in-out will-change-transform
+                    ${isVisible ? 'translate-y-0' : '-translate-y-full'}
+                `}
+            >
                 {/* Top Bar */}
                 <div className="bg-[#f5f5f5] py-2 px-4 border-b border-gray-200 hidden md:block">
                     <div className="max-w-[1366px] mx-auto flex justify-between items-center">

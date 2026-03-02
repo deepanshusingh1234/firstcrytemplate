@@ -12,10 +12,12 @@ import { BoutiqueData } from "@/types/boutiques"; // Make sure this path is corr
 // Import all boutique data
 import holiCelebrationsData from "@/data/boutiques/holi-celebrations.json";
 import festiveEthnicData from "@/data/boutiques/holi-celebrations.json"; // Fixed: was importing wrong file
+import setAndSuitData from "@/data/boutiques/set-and-suit.json";
 
 const boutiqueDataMap: Record<string, BoutiqueData> = {
     'holi-celebrations': holiCelebrationsData as BoutiqueData,
     'festive-ethnic-for-holi': festiveEthnicData as BoutiqueData,
+    'set-and-suit': setAndSuitData as BoutiqueData,
 };
 
 export default function BoutiqueCategoryPage() {
