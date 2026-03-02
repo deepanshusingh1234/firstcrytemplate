@@ -1,0 +1,1479 @@
+{
+    "category": {
+        "id": "set-and-suit",
+        "name": "Sets & Suits",
+        "slug": "set-and-suit",
+        "description": "Complete outfit solutions for your little one - from casual wear to party wear sets.",
+        "itemCount": 15641,
+        "bannerImage": "https://cdn.fcglcdn.com/brainbees/images/cattemplate/370_270_rhs_banner_boy_fashion_070226.webp",
+        "tileImage": "https://cdn.fcglcdn.com/brainbees/images/boutiques/sets-and-suits-tile.webp",
+        "endDate": "2026-03-15",
+        "endDateText": "Ends in 13 days"
+    },
+    "filters": [
+        {
+            "id": "category",
+            "name": "CATEGORIES",
+            "type": "subcategory",
+            "options": [
+                {
+                    "id": "sets-suits",
+                    "name": "Sets & Suits",
+                    "count": 15641,
+                    "value": "166"
+                },
+                {
+                    "id": "tshirts-bottoms",
+                    "name": "T-Shirts & Bottoms",
+                    "count": 10802,
+                    "value": "8925"
+                },
+                {
+                    "id": "shirts-bottoms",
+                    "name": "Shirts & Bottoms",
+                    "count": 3420,
+                    "value": "8927"
+                },
+                {
+                    "id": "winter-suits",
+                    "name": "Winter Wear Suits",
+                    "count": 2673,
+                    "value": "2096"
+                },
+                {
+                    "id": "multi-packs",
+                    "name": "Multi pack/Value packs",
+                    "count": 1058,
+                    "value": "5843"
+                },
+                {
+                    "id": "tops-bottoms",
+                    "name": "Tops & Bottoms",
+                    "count": 156,
+                    "value": "8926"
+                }
+            ]
+        },
+        {
+            "id": "brand",
+            "name": "BRANDS",
+            "type": "brand",
+            "options": [
+                {
+                    "id": "babyhug",
+                    "name": "Babyhug",
+                    "count": 2516,
+                    "value": "621"
+                },
+                {
+                    "id": "babyhug-disney",
+                    "name": "Babyhug Disney",
+                    "count": 191,
+                    "value": "1009182"
+                },
+                {
+                    "id": "babyoye",
+                    "name": "Babyoye",
+                    "count": 236,
+                    "value": "1004078"
+                },
+                {
+                    "id": "cucumber",
+                    "name": "CUCUMBER",
+                    "count": 653,
+                    "value": "2175"
+                },
+                {
+                    "id": "googo-gaaga",
+                    "name": "Googo Gaaga",
+                    "count": 151,
+                    "value": "1010028"
+                },
+                {
+                    "id": "mark-mia",
+                    "name": "Mark & Mia",
+                    "count": 427,
+                    "value": "1005273"
+                },
+                {
+                    "id": "ollington-st",
+                    "name": "OLLINGTON ST.",
+                    "count": 966,
+                    "value": "1007141"
+                },
+                {
+                    "id": "toffyhouse",
+                    "name": "ToffyHouse",
+                    "count": 1146,
+                    "value": "361"
+                },
+                {
+                    "id": "little-ninja",
+                    "name": "Little Ninja",
+                    "count": 127,
+                    "value": "1010072"
+                },
+                {
+                    "id": "ruff",
+                    "name": "Ruff",
+                    "count": 22,
+                    "value": "236"
+                },
+                {
+                    "id": "bonfino",
+                    "name": "Bonfino",
+                    "count": 38,
+                    "value": "1007256"
+                }
+            ]
+        },
+        {
+            "id": "price",
+            "name": "PRICE",
+            "type": "price",
+            "options": [
+                {
+                    "id": "p0",
+                    "name": "0 to 250",
+                    "count": 457,
+                    "value": "p0"
+                },
+                {
+                    "id": "p1",
+                    "name": "250 to 500",
+                    "count": 3718,
+                    "value": "p1"
+                },
+                {
+                    "id": "p2",
+                    "name": "500 to 1000",
+                    "count": 8714,
+                    "value": "p2"
+                },
+                {
+                    "id": "p3",
+                    "name": "1000 to 2000",
+                    "count": 2844,
+                    "value": "p3"
+                },
+                {
+                    "id": "p4",
+                    "name": "2000 to 3000",
+                    "count": 231,
+                    "value": "p4"
+                },
+                {
+                    "id": "p5",
+                    "name": "3000 to 4000",
+                    "count": 40,
+                    "value": "p5"
+                },
+                {
+                    "id": "p6",
+                    "name": "4000 to 5000",
+                    "count": 22,
+                    "value": "p6"
+                },
+                {
+                    "id": "p7",
+                    "name": "5000 and above",
+                    "count": 7,
+                    "value": "p7"
+                }
+            ]
+        },
+        {
+            "id": "discount",
+            "name": "DISCOUNT",
+            "type": "discount",
+            "options": [
+                {
+                    "id": "d0",
+                    "name": "Upto 10%",
+                    "count": 1382,
+                    "value": "d0"
+                },
+                {
+                    "id": "d1",
+                    "name": "10% - 20%",
+                    "count": 3464,
+                    "value": "d1"
+                },
+                {
+                    "id": "d2",
+                    "name": "20% - 30%",
+                    "count": 3356,
+                    "value": "d2"
+                },
+                {
+                    "id": "d3",
+                    "name": "30% - 40%",
+                    "count": 2793,
+                    "value": "d3"
+                },
+                {
+                    "id": "d4",
+                    "name": "More than 40%",
+                    "count": 4705,
+                    "value": "d4"
+                }
+            ]
+        },
+        {
+            "id": "age",
+            "name": "AGE",
+            "type": "age",
+            "options": [
+                {
+                    "id": "preemie",
+                    "name": "Preemie",
+                    "count": 87,
+                    "value": "15"
+                },
+                {
+                    "id": "newborn",
+                    "name": "New Born",
+                    "count": 348,
+                    "value": "27"
+                },
+                {
+                    "id": "0-3m",
+                    "name": "0-3 Months",
+                    "count": 2339,
+                    "value": "0"
+                },
+                {
+                    "id": "3-6m",
+                    "name": "3-6 Months",
+                    "count": 3496,
+                    "value": "1"
+                },
+                {
+                    "id": "6-9m",
+                    "name": "6-9 Months",
+                    "count": 4501,
+                    "value": "2"
+                },
+                {
+                    "id": "9-12m",
+                    "name": "9-12 Months",
+                    "count": 6220,
+                    "value": "3"
+                },
+                {
+                    "id": "12-18m",
+                    "name": "12-18 Months",
+                    "count": 6948,
+                    "value": "4"
+                },
+                {
+                    "id": "18-24m",
+                    "name": "18-24 Months",
+                    "count": 6225,
+                    "value": "5"
+                },
+                {
+                    "id": "2-4y",
+                    "name": "2-4 Years",
+                    "count": 7474,
+                    "value": "6"
+                },
+                {
+                    "id": "4-6y",
+                    "name": "4-6 Years",
+                    "count": 5961,
+                    "value": "7"
+                },
+                {
+                    "id": "6-8y",
+                    "name": "6-8 Years",
+                    "count": 2618,
+                    "value": "8"
+                },
+                {
+                    "id": "8-10y",
+                    "name": "8-10 Years",
+                    "count": 2020,
+                    "value": "9"
+                },
+                {
+                    "id": "10-12y",
+                    "name": "10-12 Years",
+                    "count": 950,
+                    "value": "10"
+                },
+                {
+                    "id": "12+y",
+                    "name": "12+ Years",
+                    "count": 775,
+                    "value": "11"
+                }
+            ]
+        },
+        {
+            "id": "gender",
+            "name": "GENDER",
+            "type": "gender",
+            "options": [
+                {
+                    "id": "unisex",
+                    "name": "Unisex",
+                    "count": 2198,
+                    "value": "both"
+                },
+                {
+                    "id": "girl",
+                    "name": "Girl",
+                    "count": 11348,
+                    "value": "female"
+                },
+                {
+                    "id": "boy",
+                    "name": "Boy",
+                    "count": 15641,
+                    "value": "male"
+                }
+            ]
+        },
+        {
+            "id": "color",
+            "name": "COLORS",
+            "type": "color",
+            "options": [
+                {
+                    "id": "blue",
+                    "name": "Blue",
+                    "count": 1950,
+                    "value": "3",
+                    "colorCode": "#0000FF"
+                },
+                {
+                    "id": "white",
+                    "name": "White",
+                    "count": 1467,
+                    "value": "21",
+                    "colorCode": "#FFFFFF"
+                },
+                {
+                    "id": "navy",
+                    "name": "Navy Blue",
+                    "count": 1376,
+                    "value": "28",
+                    "colorCode": "#000080"
+                },
+                {
+                    "id": "red",
+                    "name": "Red",
+                    "count": 1132,
+                    "value": "19",
+                    "colorCode": "#FF0000"
+                },
+                {
+                    "id": "sky-blue",
+                    "name": "Light/Sky Blue",
+                    "count": 1070,
+                    "value": "26",
+                    "colorCode": "#87CEFA"
+                },
+                {
+                    "id": "multi",
+                    "name": "Multi Color",
+                    "count": 984,
+                    "value": "10",
+                    "colorCode": "multi"
+                },
+                {
+                    "id": "green",
+                    "name": "Green",
+                    "count": 760,
+                    "value": "7",
+                    "colorCode": "#00FF00"
+                },
+                {
+                    "id": "yellow",
+                    "name": "Yellow",
+                    "count": 698,
+                    "value": "22",
+                    "colorCode": "#FFFF00"
+                },
+                {
+                    "id": "black",
+                    "name": "Black",
+                    "count": 661,
+                    "value": "2",
+                    "colorCode": "#000000"
+                },
+                {
+                    "id": "pink",
+                    "name": "Pink",
+                    "count": 521,
+                    "value": "16",
+                    "colorCode": "#FFC0CB"
+                },
+                {
+                    "id": "grey",
+                    "name": "Grey",
+                    "count": 485,
+                    "value": "8",
+                    "colorCode": "#808080"
+                },
+                {
+                    "id": "brown",
+                    "name": "Brown",
+                    "count": 439,
+                    "value": "4",
+                    "colorCode": "#964B00"
+                },
+                {
+                    "id": "cream",
+                    "name": "Cream",
+                    "count": 312,
+                    "value": "5",
+                    "colorCode": "#FFFDD0"
+                }
+            ]
+        },
+        {
+            "id": "sleeve",
+            "name": "SLEEVE LENGTH",
+            "type": "material",
+            "options": [
+                {
+                    "id": "half",
+                    "name": "Half Sleeves",
+                    "count": 7721,
+                    "value": "10245"
+                },
+                {
+                    "id": "full",
+                    "name": "Full Sleeves",
+                    "count": 6970,
+                    "value": "10244"
+                },
+                {
+                    "id": "sleeveless",
+                    "name": "Sleeveless",
+                    "count": 654,
+                    "value": "8931"
+                }
+            ]
+        },
+        {
+            "id": "length",
+            "name": "LENGTH",
+            "type": "material",
+            "options": [
+                {
+                    "id": "full",
+                    "name": "Full",
+                    "count": 7592,
+                    "value": "9972"
+                },
+                {
+                    "id": "knee",
+                    "name": "Knee length",
+                    "count": 5648,
+                    "value": "14640"
+                },
+                {
+                    "id": "short",
+                    "name": "Short",
+                    "count": 1874,
+                    "value": "9974"
+                },
+                {
+                    "id": "mid-thigh",
+                    "name": "Mid Thigh",
+                    "count": 119,
+                    "value": "14639"
+                },
+                {
+                    "id": "ankle",
+                    "name": "Ankle Length",
+                    "count": 29,
+                    "value": "14641"
+                }
+            ]
+        },
+        {
+            "id": "material",
+            "name": "MATERIAL",
+            "type": "material",
+            "options": [
+                {
+                    "id": "cotton",
+                    "name": "Cotton",
+                    "count": 3725,
+                    "value": "1"
+                },
+                {
+                    "id": "single-jersey",
+                    "name": "Single Jersey",
+                    "count": 2056,
+                    "value": "100"
+                },
+                {
+                    "id": "sinker",
+                    "name": "Sinker",
+                    "count": 1074,
+                    "value": "83"
+                },
+                {
+                    "id": "knitted",
+                    "name": "Knitted",
+                    "count": 973,
+                    "value": "40"
+                },
+                {
+                    "id": "interlock",
+                    "name": "Interlock",
+                    "count": 791,
+                    "value": "122"
+                },
+                {
+                    "id": "acrylic",
+                    "name": "Acrylic",
+                    "count": 536,
+                    "value": "27"
+                }
+            ]
+        }
+    ],
+    "sortOptions": [
+        {
+            "id": "manual",
+            "name": "Popularity",
+            "value": "manual"
+        },
+        {
+            "id": "new-arrivals",
+            "name": "New Arrivals",
+            "value": "new-arrivals"
+        },
+        {
+            "id": "bestseller",
+            "name": "Best Seller",
+            "value": "bestseller"
+        },
+        {
+            "id": "discount",
+            "name": "Discount",
+            "value": "highest-discount"
+        },
+        {
+            "id": "price-low-high",
+            "name": "Price: Low to High",
+            "value": "price-low-to-high"
+        },
+        {
+            "id": "price-high-low",
+            "name": "Price: High to Low",
+            "value": "price-high-to-low"
+        },
+        {
+            "id": "name-asc",
+            "name": "Name: A to Z",
+            "value": "name-asc"
+        },
+        {
+            "id": "name-desc",
+            "name": "Name: Z to A",
+            "value": "name-desc"
+        }
+    ],
+    "products": [
+        {
+            "id": "22023333",
+            "brand": "OLLINGTON ST.",
+            "name": "OLLINGTON ST. Cotton Knit Half Sleeves Printed T-Shirt & Joggers Set - Multicolor & Grey",
+            "shortDescription": "A comfortable and stylish t-shirt and joggers set for your little one.",
+            "description": "Dress your little boy in style with this comfortable and trendy t-shirt and joggers set from OLLINGTON ST. Made from high-quality cotton knit fabric, this set features a printed t-shirt with half sleeves and matching joggers, perfect for casual wear or playdates.",
+            "defaultImage": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22023333a.webp",
+            "images": [
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22023333a.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22023333b.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22023333c.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22023333d.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22023333e.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22023333f.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22023333g.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22023333h.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22023333i.webp"
+                }
+            ],
+            "defaultPrice": 789.21,
+            "defaultMrp": 999,
+            "defaultClubPrice": 769.23,
+            "ageGroup": "2-10 Years",
+            "inStock": true,
+            "url": "/ollington-st/ollington-st-cotton-knit-half-sleeves-printed-t-shirt-and-joggers-set-multicolor-and-grey/22023333/product-detail",
+            "colors": [
+                {
+                    "name": "Multicolor & Grey",
+                    "code": "#EEEEEE",
+                    "imageUrl": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22023333a.webp",
+                    "variants": [
+                        {
+                            "id": "22023331",
+                            "size": "2-3Y",
+                            "price": 789.21,
+                            "mrp": 999,
+                            "clubPrice": 769.23,
+                            "inStock": true
+                        },
+                        {
+                            "id": "22023332",
+                            "size": "3-4Y",
+                            "price": 789.21,
+                            "mrp": 999,
+                            "clubPrice": 769.23,
+                            "inStock": true
+                        },
+                        {
+                            "id": "22023333",
+                            "size": "4-5Y",
+                            "price": 789.21,
+                            "mrp": 999,
+                            "clubPrice": 769.23,
+                            "inStock": true
+                        },
+                        {
+                            "id": "22023334",
+                            "size": "5-6Y",
+                            "price": 789.21,
+                            "mrp": 999,
+                            "clubPrice": 769.23,
+                            "inStock": true
+                        },
+                        {
+                            "id": "22023335",
+                            "size": "6-7Y",
+                            "price": 789.21,
+                            "mrp": 999,
+                            "clubPrice": 769.23,
+                            "inStock": true
+                        },
+                        {
+                            "id": "22023336",
+                            "size": "7-8Y",
+                            "price": 789.21,
+                            "mrp": 999,
+                            "clubPrice": 769.23,
+                            "inStock": true
+                        },
+                        {
+                            "id": "22023337",
+                            "size": "8-9Y",
+                            "price": 789.21,
+                            "mrp": 999,
+                            "clubPrice": 769.23,
+                            "inStock": true
+                        },
+                        {
+                            "id": "22023338",
+                            "size": "9-10Y",
+                            "price": 789.21,
+                            "mrp": 999,
+                            "clubPrice": 769.23,
+                            "inStock": true
+                        }
+                    ]
+                }
+            ],
+            "availableSizes": [
+                "2-3Y",
+                "3-4Y",
+                "4-5Y",
+                "5-6Y",
+                "6-7Y",
+                "7-8Y",
+                "8-9Y",
+                "9-10Y"
+            ]
+        },
+        {
+            "id": "21808227",
+            "brand": "Googo Gaaga",
+            "name": "Googo Gaaga Cotton Loop Knit Pack Of 2 Full Sleeves Checked & T Rex Text Dinosaur Patch Detailed Sweatshirts With Joggers Set - Cream",
+            "shortDescription": "Pack of 2 winter-ready sweatshirt and joggers sets with dinosaur theme.",
+            "description": "Keep your little one warm and stylish this winter with this pack of 2 sweatshirt and joggers sets from Googo Gaaga. Made from comfortable cotton loop knit fabric, these sets feature checked and T-Rex text designs with dinosaur patch detailing, perfect for the little dinosaur lover.",
+            "defaultImage": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21808227a.webp",
+            "images": [
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21808227a.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21808227sz.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21808227b.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21808227c.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21808227d.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21808227e.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21808227f.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21808227g.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21808227h.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21808227i.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21808227j.webp"
+                }
+            ],
+            "defaultPrice": 1260,
+            "defaultMrp": 2800,
+            "defaultClubPrice": 1204,
+            "ageGroup": "18 Months - 7 Years",
+            "inStock": true,
+            "url": "/googo-gaaga/googo-gaaga-cotton-loop-knit-pack-of-2-full-sleeves-checked-and-t-rex-text-dinosaur-patch-detailed-sweatshirts-with-joggers-set-cream/21808227/product-detail",
+            "colors": [
+                {
+                    "name": "Cream",
+                    "code": "#FFFDD0",
+                    "imageUrl": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21808227a.webp",
+                    "variants": [
+                        {
+                            "id": "21808224",
+                            "size": "18-24M",
+                            "price": 1260,
+                            "mrp": 2800,
+                            "clubPrice": 1204,
+                            "inStock": true
+                        },
+                        {
+                            "id": "21808225",
+                            "size": "2-3Y",
+                            "price": 1260,
+                            "mrp": 2800,
+                            "clubPrice": 1204,
+                            "inStock": true
+                        },
+                        {
+                            "id": "21808226",
+                            "size": "3-4Y",
+                            "price": 1260,
+                            "mrp": 2800,
+                            "clubPrice": 1204,
+                            "inStock": true
+                        },
+                        {
+                            "id": "21808227",
+                            "size": "4-5Y",
+                            "price": 1260,
+                            "mrp": 2800,
+                            "clubPrice": 1204,
+                            "inStock": true
+                        },
+                        {
+                            "id": "21808228",
+                            "size": "5-6Y",
+                            "price": 1260,
+                            "mrp": 2800,
+                            "clubPrice": 1204,
+                            "inStock": true
+                        },
+                        {
+                            "id": "21808229",
+                            "size": "6-7Y",
+                            "price": 1260,
+                            "mrp": 2800,
+                            "clubPrice": 1204,
+                            "inStock": true
+                        }
+                    ]
+                }
+            ],
+            "availableSizes": [
+                "18-24M",
+                "2-3Y",
+                "3-4Y",
+                "4-5Y",
+                "5-6Y",
+                "6-7Y"
+            ]
+        },
+        {
+            "id": "19399815",
+            "brand": "Googo Gaaga",
+            "name": "Googo Gaaga Cotton Single Jersey Knit Half Sleeves Rocket Printed Tee With Shorts Set - Blue",
+            "shortDescription": "Rocket printed t-shirt and shorts set for your little astronaut.",
+            "description": "Let your little one's imagination soar with this rocket-printed t-shirt and shorts set from Googo Gaaga. Made from comfortable cotton single jersey knit fabric, this set features a fun rocket print and is perfect for summer days.",
+            "defaultImage": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/19399815a.webp",
+            "images": [
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/19399815a.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/19399815sz.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/19399815b.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/19399815c.webp"
+                }
+            ],
+            "defaultPrice": 588,
+            "defaultMrp": 1400,
+            "defaultClubPrice": 588,
+            "ageGroup": "18 Months - 6 Years",
+            "inStock": true,
+            "url": "/googo-gaaga/googo-gaaga-cotton-single-jersey-knit-half-sleeves-rocket-printed-tee-with-shorts-set-blue/19399815/product-detail",
+            "colors": [
+                {
+                    "name": "Blue",
+                    "code": "#4169E1",
+                    "imageUrl": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/19399815a.webp",
+                    "variants": [
+                        {
+                            "id": "19399815",
+                            "size": "18-24M",
+                            "price": 588,
+                            "mrp": 1400,
+                            "clubPrice": 588,
+                            "inStock": true
+                        },
+                        {
+                            "id": "19399819",
+                            "size": "5-6Y",
+                            "price": 588,
+                            "mrp": 1400,
+                            "clubPrice": 588,
+                            "inStock": true
+                        }
+                    ]
+                }
+            ],
+            "availableSizes": [
+                "18-24M",
+                "5-6Y"
+            ]
+        },
+        {
+            "id": "20149915",
+            "brand": "Mark & Mia",
+            "name": "Mark & Mia Cotton Knit Half Sleeves Oversized T-Shirt & Shorts Set With Pocket & Graphics Detailing - White & Blue",
+            "shortDescription": "Trendy oversized t-shirt and shorts set with pocket detailing.",
+            "defaultImage": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/20149915a.webp",
+            "images": [
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/20149915a.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/20149915b.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/20149915c.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/20149915d.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/20149915e.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/20149915f.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/20149915g.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/20149915h.webp"
+                }
+            ],
+            "defaultPrice": 509.32,
+            "defaultMrp": 749,
+            "defaultClubPrice": 494.34,
+            "ageGroup": "12 Months - 6 Years",
+            "inStock": true,
+            "url": "/mark-and-mia/mark-and-mia-cotton-knit-half-sleeves-oversized-t-shirt-and-shorts-set-with-pocket-and-graphics-detailing-white-and-blue/20149915/product-detail",
+            "colors": [
+                {
+                    "name": "White & Blue",
+                    "code": "#FFFFFF",
+                    "imageUrl": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/20149915a.webp",
+                    "variants": [
+                        {
+                            "id": "20149915",
+                            "size": "12-18M",
+                            "price": 509.32,
+                            "mrp": 749,
+                            "clubPrice": 494.34,
+                            "inStock": true
+                        },
+                        {
+                            "id": "20149916",
+                            "size": "18-24M",
+                            "price": 509.32,
+                            "mrp": 749,
+                            "clubPrice": 494.34,
+                            "inStock": true
+                        },
+                        {
+                            "id": "20149917",
+                            "size": "2-3Y",
+                            "price": 509.32,
+                            "mrp": 749,
+                            "clubPrice": 494.34,
+                            "inStock": true
+                        },
+                        {
+                            "id": "20149918",
+                            "size": "3-4Y",
+                            "price": 509.32,
+                            "mrp": 749,
+                            "clubPrice": 494.34,
+                            "inStock": true
+                        },
+                        {
+                            "id": "20149919",
+                            "size": "4-5Y",
+                            "price": 509.32,
+                            "mrp": 749,
+                            "clubPrice": 494.34,
+                            "inStock": true
+                        },
+                        {
+                            "id": "20149920",
+                            "size": "5-6Y",
+                            "price": 509.32,
+                            "mrp": 749,
+                            "clubPrice": 494.34,
+                            "inStock": true
+                        }
+                    ]
+                }
+            ],
+            "availableSizes": [
+                "12-18M",
+                "18-24M",
+                "2-3Y",
+                "3-4Y",
+                "4-5Y",
+                "5-6Y"
+            ]
+        },
+        {
+            "id": "21920972",
+            "brand": "Mark & Mia",
+            "name": "Mark & Mia Cotton Knit Half Sleeves Polo T-Shirt & Shorts With Tie Applique & Teddy Bear Embroidery - Multicolor",
+            "shortDescription": "Adorable polo t-shirt and shorts set with tie applique and teddy bear embroidery.",
+            "defaultImage": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21920972a.webp",
+            "images": [
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21920972a.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21920972b.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21920972c.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21920972d.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21920972e.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21920972f.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21920972g.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21920972h.webp"
+                }
+            ],
+            "defaultPrice": 688.07,
+            "defaultMrp": 829,
+            "defaultClubPrice": 671.49,
+            "ageGroup": "9 Months - 6 Years",
+            "inStock": true,
+            "url": "/mark-and-mia/mark-and-mia-cotton-knit-half-sleeves-polo-t-shirt-and-shorts-with-tie-applique-and-teddy-bear-embroidery-multicolor/21920972/product-detail",
+            "colors": [
+                {
+                    "name": "Multicolor",
+                    "code": "#EEEEEE",
+                    "imageUrl": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21920972a.webp",
+                    "variants": [
+                        {
+                            "id": "21920967",
+                            "size": "9-12M",
+                            "price": 688.07,
+                            "mrp": 829,
+                            "clubPrice": 671.49,
+                            "inStock": true
+                        },
+                        {
+                            "id": "21920968",
+                            "size": "12-18M",
+                            "price": 688.07,
+                            "mrp": 829,
+                            "clubPrice": 671.49,
+                            "inStock": true
+                        },
+                        {
+                            "id": "21920969",
+                            "size": "18-24M",
+                            "price": 688.07,
+                            "mrp": 829,
+                            "clubPrice": 671.49,
+                            "inStock": true
+                        },
+                        {
+                            "id": "21920970",
+                            "size": "2-3Y",
+                            "price": 688.07,
+                            "mrp": 829,
+                            "clubPrice": 671.49,
+                            "inStock": true
+                        },
+                        {
+                            "id": "21920971",
+                            "size": "3-4Y",
+                            "price": 688.07,
+                            "mrp": 829,
+                            "clubPrice": 671.49,
+                            "inStock": true
+                        },
+                        {
+                            "id": "21920972",
+                            "size": "4-5Y",
+                            "price": 688.07,
+                            "mrp": 829,
+                            "clubPrice": 671.49,
+                            "inStock": true
+                        },
+                        {
+                            "id": "21920973",
+                            "size": "5-6Y",
+                            "price": 688.07,
+                            "mrp": 829,
+                            "clubPrice": 671.49,
+                            "inStock": true
+                        }
+                    ]
+                }
+            ],
+            "availableSizes": [
+                "9-12M",
+                "12-18M",
+                "18-24M",
+                "2-3Y",
+                "3-4Y",
+                "4-5Y",
+                "5-6Y"
+            ]
+        },
+        {
+            "id": "19862279",
+            "brand": "Babyhug",
+            "name": "Babyhug Cotton Woven Half Sleeves Shirts and Shorts Set With Abstract Print - Tan & Black",
+            "shortDescription": "Stylish shirt and shorts set with abstract print for your little gentleman.",
+            "defaultImage": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/19862279a.webp",
+            "images": [
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/19862279a.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/19862279b.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/19862279c.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/19862279d.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/19862279e.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/19862279f.webp"
+                }
+            ],
+            "defaultPrice": 669.33,
+            "defaultMrp": 999,
+            "defaultClubPrice": 649.35,
+            "ageGroup": "9-18 Months",
+            "inStock": true,
+            "url": "/babyhug/babyhug-cotton-woven-half-sleeves-shirts-and-shorts-set-with-abstract-print-tan-and-black/19862279/product-detail",
+            "colors": [
+                {
+                    "name": "Tan & Black",
+                    "code": "#D2B48C",
+                    "imageUrl": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/19862279a.webp",
+                    "variants": [
+                        {
+                            "id": "19862279",
+                            "size": "9-12M",
+                            "price": 669.33,
+                            "mrp": 999,
+                            "clubPrice": 649.35,
+                            "inStock": true
+                        },
+                        {
+                            "id": "19862280",
+                            "size": "12-18M",
+                            "price": 669.33,
+                            "mrp": 999,
+                            "clubPrice": 649.35,
+                            "inStock": true
+                        }
+                    ]
+                }
+            ],
+            "availableSizes": [
+                "9-12M",
+                "12-18M"
+            ]
+        },
+        {
+            "id": "20002813",
+            "brand": "Babyhug",
+            "name": "Babyhug Single Jersey Knit Half Sleeves Polo T-Shirt & Short with Suspender & Nautical Theme Print - White & Light Blue",
+            "shortDescription": "Nautical-themed polo set with suspenders for a charming look.",
+            "defaultImage": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/20002813a.webp",
+            "images": [
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/20002813a.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/20002813b.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/20002813c.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/20002813d.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/20002813e.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/20002813f.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/20002813g.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/20002813h.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/20002813i.webp"
+                }
+            ],
+            "defaultPrice": 759.24,
+            "defaultMrp": 999,
+            "defaultClubPrice": 739.26,
+            "ageGroup": "9 Months - 6 Years",
+            "inStock": true,
+            "url": "/babyhug/babyhug-single-jersey-knit-half-sleeves-polo-t-shirt-and-short-with-suspender-and-nautical-theme-print-white-and-light-blue/20002813/product-detail",
+            "colors": [
+                {
+                    "name": "White & Light Blue",
+                    "code": "#FFFFFF",
+                    "imageUrl": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/20002813a.webp",
+                    "variants": [
+                        {
+                            "id": "20002808",
+                            "size": "9-12M",
+                            "price": 759.24,
+                            "mrp": 999,
+                            "clubPrice": 739.26,
+                            "inStock": true
+                        },
+                        {
+                            "id": "20002813",
+                            "size": "4-5Y",
+                            "price": 759.24,
+                            "mrp": 999,
+                            "clubPrice": 739.26,
+                            "inStock": true
+                        },
+                        {
+                            "id": "20002814",
+                            "size": "5-6Y",
+                            "price": 759.24,
+                            "mrp": 999,
+                            "clubPrice": 739.26,
+                            "inStock": true
+                        }
+                    ]
+                }
+            ],
+            "availableSizes": [
+                "9-12M",
+                "4-5Y",
+                "5-6Y"
+            ]
+        },
+        {
+            "id": "22282110",
+            "brand": "Little Ninja",
+            "name": "Little Ninja Cotton Knit Half Sleeves Tie Dye Tee & Shorts Set - Blue",
+            "shortDescription": "Cool tie-dye t-shirt and shorts set for a trendy look.",
+            "defaultImage": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22282110a.webp",
+            "images": [
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22282110a.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22282110sz.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22282110b.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22282110c.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22282110d.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22282110e.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22282110f.webp"
+                }
+            ],
+            "defaultPrice": 321.08,
+            "defaultMrp": 349,
+            "defaultClubPrice": 314.1,
+            "ageGroup": "18 Months - 7 Years",
+            "inStock": true,
+            "url": "/little-ninja/little-ninja-cotton-knit-half-sleeves-tie-dye-tee-and-shorts-set-blue/22282110/product-detail",
+            "colors": [
+                {
+                    "name": "Blue",
+                    "code": "#87CEFA",
+                    "imageUrl": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22282110a.webp",
+                    "variants": [
+                        {
+                            "id": "22282107",
+                            "size": "18-24M",
+                            "price": 321.08,
+                            "mrp": 349,
+                            "clubPrice": 314.1,
+                            "inStock": true
+                        },
+                        {
+                            "id": "22282108",
+                            "size": "2-3Y",
+                            "price": 321.08,
+                            "mrp": 349,
+                            "clubPrice": 314.1,
+                            "inStock": true
+                        },
+                        {
+                            "id": "22282109",
+                            "size": "3-4Y",
+                            "price": 321.08,
+                            "mrp": 349,
+                            "clubPrice": 314.1,
+                            "inStock": true
+                        },
+                        {
+                            "id": "22282110",
+                            "size": "4-5Y",
+                            "price": 321.08,
+                            "mrp": 349,
+                            "clubPrice": 314.1,
+                            "inStock": true
+                        },
+                        {
+                            "id": "22282111",
+                            "size": "5-6Y",
+                            "price": 321.08,
+                            "mrp": 349,
+                            "clubPrice": 314.1,
+                            "inStock": true
+                        },
+                        {
+                            "id": "22282112",
+                            "size": "6-7Y",
+                            "price": 321.08,
+                            "mrp": 349,
+                            "clubPrice": 314.1,
+                            "inStock": true
+                        }
+                    ]
+                }
+            ],
+            "availableSizes": [
+                "18-24M",
+                "2-3Y",
+                "3-4Y",
+                "4-5Y",
+                "5-6Y",
+                "6-7Y"
+            ]
+        },
+        {
+            "id": "21599552",
+            "brand": "Googo Gaaga",
+            "name": "Googo Gaaga Cotton Woven Full Sleeves Striped Shirt With Jeans Set - Cream",
+            "shortDescription": "Stylish striped shirt and jeans set for a smart casual look.",
+            "defaultImage": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21599552a.webp",
+            "images": [
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21599552a.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21599552sz.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21599552b.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21599552c.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21599552d.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21599552e.webp"
+                }
+            ],
+            "defaultPrice": 649.74,
+            "defaultMrp": 2499,
+            "defaultClubPrice": 649.74,
+            "ageGroup": "5-7 Years",
+            "inStock": true,
+            "url": "/googo-gaaga/googo-gaaga-cotton-woven-full-sleeves-striped-shirt-with-jeans-set-cream/21599552/product-detail",
+            "colors": [
+                {
+                    "name": "Cream",
+                    "code": "#FFFDD0",
+                    "imageUrl": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/21599552a.webp",
+                    "variants": [
+                        {
+                            "id": "21599551",
+                            "size": "5-6Y",
+                            "price": 649.74,
+                            "mrp": 2499,
+                            "clubPrice": 649.74,
+                            "inStock": true
+                        },
+                        {
+                            "id": "21599552",
+                            "size": "6-7Y",
+                            "price": 649.74,
+                            "mrp": 2499,
+                            "clubPrice": 649.74,
+                            "inStock": true
+                        }
+                    ]
+                }
+            ],
+            "availableSizes": [
+                "5-6Y",
+                "6-7Y"
+            ]
+        },
+        {
+            "id": "22153573",
+            "brand": "Ruff",
+            "name": "Ruff Linen Woven Half Sleeves Co-ords Shirt & Shorts Set with Floral Print - Light Green",
+            "shortDescription": "Elegant co-ords shirt and shorts set with floral print for special occasions.",
+            "defaultImage": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22153573a.webp",
+            "images": [
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22153573a.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22153573b.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22153573c.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22153573d.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22153573e.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22153573f.webp"
+                },
+                {
+                    "url": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22153573g.webp"
+                }
+            ],
+            "defaultPrice": 1130.13,
+            "defaultMrp": 1299,
+            "defaultClubPrice": 1104.15,
+            "ageGroup": "6-24 Months",
+            "inStock": true,
+            "url": "/ruff/ruff-linen-woven-half-sleeves-co-ords-shirt-and-shorts-set-with-floral-print-light-green/22153573/product-detail",
+            "colors": [
+                {
+                    "name": "Light Green",
+                    "code": "#90EE90",
+                    "imageUrl": "https://cdn.fcglcdn.com/brainbees/images/products/300x364/22153573a.webp",
+                    "variants": [
+                        {
+                            "id": "22153572",
+                            "size": "6-12M",
+                            "price": 1130.13,
+                            "mrp": 1299,
+                            "clubPrice": 1104.15,
+                            "inStock": true
+                        },
+                        {
+                            "id": "22153573",
+                            "size": "12-18M",
+                            "price": 1130.13,
+                            "mrp": 1299,
+                            "clubPrice": 1104.15,
+                            "inStock": true
+                        },
+                        {
+                            "id": "22153574",
+                            "size": "18-24M",
+                            "price": 1130.13,
+                            "mrp": 1299,
+                            "clubPrice": 1104.15,
+                            "inStock": true
+                        }
+                    ]
+                }
+            ],
+            "availableSizes": [
+                "6-12M",
+                "12-18M",
+                "18-24M"
+            ]
+        }
+    ]
+}
